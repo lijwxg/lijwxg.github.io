@@ -3,7 +3,7 @@
 ---
 
 <div>
-<img style="position:absolute;margin-left:660px" width=100px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
+<img style="position:absolute;margin-left:70%" width=100px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
 </div>
 
 <i class="fa fa-male" aria-hidden="true"></i>:&ensp;李嘉文  
