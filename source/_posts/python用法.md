@@ -4,13 +4,17 @@ date: 2017-9-06 20:47:26
 tags: 
 categories: Python
 ---
-<!-- TOC -->
 
-- [Python基础](#Python%E5%9F%BA%E7%A1%80)
-  - [Python的函数参数传递](#Python%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92)
-  - [staticmethod和classmethod](#staticmethod%E5%92%8Cclassmethod)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-<!-- /TOC -->
+<!-- code_chunk_output -->
+
+- [Python基础](#python基础)
+  - [Python的函数参数传递](#python的函数参数传递)
+  - [staticmethod和classmethod](#staticmethod和classmethod)
+
+<!-- /code_chunk_output -->
+
 <!--more-->
 
 # Python基础

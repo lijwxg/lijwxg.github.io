@@ -5,18 +5,22 @@ tags: Kafka
 categories: BigData
 toc: true
 ---
-<!-- TOC -->
 
-- [Kafaka记录](#Kafaka%E8%AE%B0%E5%BD%95)
-  - [Kafka概述](#Kafka%E6%A6%82%E8%BF%B0)
-    - [消息系统](#%E6%B6%88%E6%81%AF%E7%B3%BB%E7%BB%9F)
-    - [什么是Kafka](#%E4%BB%80%E4%B9%88%E6%98%AFKafka)
-      - [好处](#%E5%A5%BD%E5%A4%84)
-      - [用例](#%E7%94%A8%E4%BE%8B)
-  - [Kafka基础](#Kafka%E5%9F%BA%E7%A1%80)
-  - [Kafka集群](#Kafka%E9%9B%86%E7%BE%A4)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-<!-- /TOC -->
+<!-- code_chunk_output -->
+
+- [Kafaka记录](#kafaka记录)
+  - [Kafka概述](#kafka概述)
+    - [消息系统](#消息系统)
+    - [什么是Kafka](#什么是kafka)
+      - [好处](#好处)
+      - [用例](#用例)
+  - [Kafka基础](#kafka基础)
+  - [Kafka集群](#kafka集群)
+
+<!-- /code_chunk_output -->
+
 <!--more-->
 # Kafaka记录
 

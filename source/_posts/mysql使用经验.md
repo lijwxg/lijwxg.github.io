@@ -4,12 +4,16 @@ date: 2017-12-04 19:07:05
 tags: mysql
 categories: Python
 ---
-<!-- TOC -->
 
-- [CURD](#CURD)
-  - [更新](#%E6%9B%B4%E6%96%B0)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-<!-- /TOC -->
+<!-- code_chunk_output -->
+
+- [CURD](#curd)
+  - [更新](#更新)
+
+<!-- /code_chunk_output -->
+
 <!--more-->
 # CURD
 
