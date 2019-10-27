@@ -1,3 +1,8 @@
+---
+date: 2018-12-29 19:10:53
+tags: kafaka
+---
+
 - [运行kafka和kafka-manager](#%E8%BF%90%E8%A1%8Ckafka%E5%92%8Ckafka-manager)
   - [Python代码示例](#Python%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B)
 

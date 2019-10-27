@@ -1,3 +1,7 @@
+---
+date: 2018-10-03 22:10:53
+tags: python
+---
 - [查看日志](#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97)
   - [日志模块logging](#%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97logging)
   - [通过logging.basicConfig函数对日志的输出格式及方式做相关配置](#%E9%80%9A%E8%BF%87loggingbasicConfig%E5%87%BD%E6%95%B0%E5%AF%B9%E6%97%A5%E5%BF%97%E7%9A%84%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%96%B9%E5%BC%8F%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)

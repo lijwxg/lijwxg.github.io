@@ -1,3 +1,7 @@
+---
+date: 2018-05-06 21:37:44
+tags: Kafka
+---
 - [kafaka-manager](#kafaka-manager)
   - [centos7下的javac的问题](#centos7%E4%B8%8B%E7%9A%84javac%E7%9A%84%E9%97%AE%E9%A2%98)
   - [Kafka 管理器kafka-manager安装](#Kafka-%E7%AE%A1%E7%90%86%E5%99%A8kafka-manager%E5%AE%89%E8%A3%85)

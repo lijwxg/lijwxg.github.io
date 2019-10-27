@@ -1,3 +1,8 @@
+---
+title: git基础
+date: 2018-04-06 21:37:44
+tags: git
+---
 - [Git安装设置](#Git%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE)
   - [Git的编译安装](#Git%E7%9A%84%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85)
   - [常用设置](#%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE)

@@ -1,3 +1,7 @@
+---
+date: 2018-10-02 22:10:53
+tags: python
+---
 - [conda 命令](#conda-%E5%91%BD%E4%BB%A4)
 - [使用Jupyter Notebook](#%E4%BD%BF%E7%94%A8Jupyter-Notebook)
 - [matplotlib中pyplot的汉字字体显示问题](#matplotlib%E4%B8%ADpyplot%E7%9A%84%E6%B1%89%E5%AD%97%E5%AD%97%E4%BD%93%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98)
