@@ -2,15 +2,22 @@
 date: 2018-10-02 22:10:53
 tags: python
 ---
-- [conda 命令](#conda-%E5%91%BD%E4%BB%A4)
-- [使用Jupyter Notebook](#%E4%BD%BF%E7%94%A8Jupyter-Notebook)
-- [matplotlib中pyplot的汉字字体显示问题](#matplotlib%E4%B8%ADpyplot%E7%9A%84%E6%B1%89%E5%AD%97%E5%AD%97%E4%BD%93%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98)
-- [编译scikit-image错误](#%E7%BC%96%E8%AF%91scikit-image%E9%94%99%E8%AF%AF)
-- [dlib安装](#dlib%E5%AE%89%E8%A3%85)
-- [pip-module-has-no-attribute-main的错误](#pip-module-has-no-attribute-main%E7%9A%84%E9%94%99%E8%AF%AF)
-- [pip损坏](#pip%E6%8D%9F%E5%9D%8F)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [conda 命令](#conda-命令)
+- [使用Jupyter Notebook](#使用jupyter-notebook)
+- [matplotlib中pyplot的汉字字体显示问题](#matplotlib中pyplot的汉字字体显示问题)
+- [编译scikit-image错误](#编译scikit-image错误)
+- [dlib安装](#dlib安装)
+- [pip-module-has-no-attribute-main的错误](#pip-module-has-no-attribute-main的错误)
+- [pip损坏](#pip损坏)
 - [vrtualenv](#vrtualenv)
-- [FAQ: 安装jupyter-notebook](#FAQ-%E5%AE%89%E8%A3%85jupyter-notebook)
+- [FAQ: 安装jupyter-notebook](#faq-安装jupyter-notebook)
+
+<!-- /code_chunk_output -->
 
 <!-- more -->
 ## conda 命令

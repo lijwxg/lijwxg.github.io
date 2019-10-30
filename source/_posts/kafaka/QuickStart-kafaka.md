@@ -3,21 +3,27 @@ date: 2018-12-29 19:10:53
 tags: kafaka
 ---
 
-- [运行kafka和kafka-manager](#%E8%BF%90%E8%A1%8Ckafka%E5%92%8Ckafka-manager)
-  - [Python代码示例](#Python%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [运行kafka和kafka-manager](#运行kafka和kafka-manager)
+  - [Python代码示例](#python代码示例)
+
+<!-- /code_chunk_output -->
 
 <!-- more -->
 # 运行kafka和kafka-manager
 
 ```shell
-$ tar -xzf kafka_2.11-1.0.1.tgz
-$ cd kafka_2.11-1.0.1
-$ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test    # create a topic
-$ bin/kafka-topics.sh --list --zookeeper localhost:2181                                                         # list topics
-$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test                                       # send some messages
-$ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning                 # start a consumer 
-$ cd ../kafka-manager-1.3.3.17
-$ nohup bin/kafka-manager -Dconfig.file=conf/application.conf > /dev/null 2>&1 &
+tar -xzf kafka_2.11-1.0.1.tgz
+cd kafka_2.11-1.0.1
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test    # create a topic
+bin/kafka-topics.sh --list --zookeeper localhost:2181                                                         # list topics
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test                                       # send some messages
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning                 # start a consumer
+cd ../kafka-manager-1.3.3.17
+nohup bin/kafka-manager -Dconfig.file=conf/application.conf > /dev/null 2>&1 &
 ```
 
 kafka的配置我这里就提及下重点  关于host.name这个参数

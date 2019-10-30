@@ -2,12 +2,19 @@
 date: 2018-05-06 21:37:44
 tags: Kafka
 ---
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
 - [kafaka-manager](#kafaka-manager)
-  - [centos7下的javac的问题](#centos7%E4%B8%8B%E7%9A%84javac%E7%9A%84%E9%97%AE%E9%A2%98)
-  - [Kafka 管理器kafka-manager安装](#Kafka-%E7%AE%A1%E7%90%86%E5%99%A8kafka-manager%E5%AE%89%E8%A3%85)
-  - [kafka安装](#kafka%E5%AE%89%E8%A3%85)
-  - [sbt安装](#sbt%E5%AE%89%E8%A3%85)
-  - [kafka-manager包的编译](#kafka-manager%E5%8C%85%E7%9A%84%E7%BC%96%E8%AF%91)
+  - [centos7下的javac的问题](#centos7下的javac的问题)
+  - [Kafka 管理器kafka-manager安装](#kafka-管理器kafka-manager安装)
+  - [kafka安装](#kafka安装)
+  - [sbt安装](#sbt安装)
+  - [kafka-manager包的编译](#kafka-manager包的编译)
+
+<!-- /code_chunk_output -->
 
 <!-- more -->
 # kafaka-manager

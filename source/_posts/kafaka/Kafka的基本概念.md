@@ -80,7 +80,7 @@ Kafka可以在许多用例中使用. 其中一些列举如下:
 
 ![kafka集群](http://oxug91dkh.bkt.clouddn.com/image/jpg/kafka_ecosystem.jpg)
 
-- **broker(代理)**: 
+- **broker(代理)**:
 - **ZooKeeper**
 - **Producers(生产者)**
 - **Consumers()**

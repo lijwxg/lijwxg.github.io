@@ -3,19 +3,26 @@ title: git基础
 date: 2018-04-06 21:37:44
 tags: git
 ---
-- [Git安装设置](#Git%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE)
-  - [Git的编译安装](#Git%E7%9A%84%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85)
-  - [常用设置](#%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE)
-  - [配置多git账号管理](#%E9%85%8D%E7%BD%AE%E5%A4%9Agit%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86)
-- [常用操作](#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C)
-  - [git删除分支](#git%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF)
-  - [git代码回滚](#git%E4%BB%A3%E7%A0%81%E5%9B%9E%E6%BB%9A)
-  - [重新命名本地分支](#%E9%87%8D%E6%96%B0%E5%91%BD%E5%90%8D%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF)
-  - [对已经提交的log的修改](#%E5%AF%B9%E5%B7%B2%E7%BB%8F%E6%8F%90%E4%BA%A4%E7%9A%84log%E7%9A%84%E4%BF%AE%E6%94%B9)
-  - [跟踪远程分支](#%E8%B7%9F%E8%B8%AA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
-  - [版本回退](#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80)
-  - [对tag管理](#%E5%AF%B9tag%E7%AE%A1%E7%90%86)
-- [Gitlab](#Gitlab)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Git安装设置](#git安装设置)
+  - [Git的编译安装](#git的编译安装)
+  - [常用设置](#常用设置)
+  - [配置多git账号管理](#配置多git账号管理)
+- [常用操作](#常用操作)
+  - [git删除分支](#git删除分支)
+  - [git代码回滚](#git代码回滚)
+  - [重新命名本地分支](#重新命名本地分支)
+  - [对已经提交的log的修改](#对已经提交的log的修改)
+  - [跟踪远程分支](#跟踪远程分支)
+  - [版本回退](#版本回退)
+  - [对tag管理](#对tag管理)
+- [Gitlab](#gitlab)
+
+<!-- /code_chunk_output -->
 
 <!-- more -->
 # Git安装设置
@@ -89,8 +96,8 @@ $ ssh -T git@github-yinmeng
 $ git clone git@github-yinmeng:yinlinxi/yinlinxi.github.io.git
 ```
 
-
 # 常用操作
+
 ## git删除分支
 删除本地分支
 ```
@@ -98,8 +105,9 @@ $ git branch -D br
 ```
 
 删除远程分支
-```
-$ git push origin :br           # origin后面有个空格,相同与把空分支推到远程分支,就是删除
+
+```shell
+git push origin :br           # origin后面有个空格,相同与把空分支推到远程分支,就是删除
 ```
 
 ## git代码回滚

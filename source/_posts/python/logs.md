@@ -2,13 +2,20 @@
 date: 2018-10-03 22:10:53
 tags: python
 ---
-- [查看日志](#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97)
-  - [日志模块logging](#%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97logging)
-  - [通过logging.basicConfig函数对日志的输出格式及方式做相关配置](#%E9%80%9A%E8%BF%87loggingbasicConfig%E5%87%BD%E6%95%B0%E5%AF%B9%E6%97%A5%E5%BF%97%E7%9A%84%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%96%B9%E5%BC%8F%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
-  - [通过logging.StreamHandler将日志同时输出到文件和屏幕](#%E9%80%9A%E8%BF%87loggingStreamHandler%E5%B0%86%E6%97%A5%E5%BF%97%E5%90%8C%E6%97%B6%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6%E5%92%8C%E5%B1%8F%E5%B9%95)
-  - [通过logging.handler.RotatingFileHandler对日志进行回滚](#%E9%80%9A%E8%BF%87logginghandlerRotatingFileHandler%E5%AF%B9%E6%97%A5%E5%BF%97%E8%BF%9B%E8%A1%8C%E5%9B%9E%E6%BB%9A)
-  - [通过logging.config模块配置日志](#%E9%80%9A%E8%BF%87loggingconfig%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E6%97%A5%E5%BF%97)
-  - [logging是线程安全的](#logging%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [查看日志](#查看日志)
+  - [日志模块logging](#日志模块logging)
+  - [通过logging.basicConfig函数对日志的输出格式及方式做相关配置](#通过loggingbasicconfig函数对日志的输出格式及方式做相关配置)
+  - [通过logging.StreamHandler将日志同时输出到文件和屏幕](#通过loggingstreamhandler将日志同时输出到文件和屏幕)
+  - [通过logging.handler.RotatingFileHandler对日志进行回滚](#通过logginghandlerrotatingfilehandler对日志进行回滚)
+  - [通过logging.config模块配置日志](#通过loggingconfig模块配置日志)
+  - [logging是线程安全的](#logging是线程安全的)
+
+<!-- /code_chunk_output -->
 
 <!-- more -->
 
