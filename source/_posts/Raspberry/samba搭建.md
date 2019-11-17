@@ -25,7 +25,7 @@ sudo apt-get install samba
 ```shell
 $ cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
 $ sudo vim /etc/samba/smb.conf
-$ ======================
+======================
 [share]           #共享文件的名称， 将在网络上以此名称显示
 path = /share         #共享文件的路径
 valid users = pi        #允许访问的用户
