@@ -2,10 +2,10 @@
 
 ---
 
-<!-- <div>
-<img style="position:absolute;margin-left:700px" width=150px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
-</div> -->
-@import "https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg" { width=150px style="position:absolute;margin-left:700px"}
+<div>
+<img style="position:absolute;margin-left:650px" width=150px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
+</div>
+<!-- @import "https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg" { width=150px style="position:absolute;margin-left:700px"} -->
 
 <i class="fa fa-male" aria-hidden="true"></i>:&ensp;李嘉文
 <i class="fa fa-phone" aria-hidden="true"></i>: 181****1019  
@@ -18,11 +18,11 @@
 
 ---
 
-1. 软通动力技术有限公司 -- **python开发工程师**(2019.4.24至今)  
+<!-- 1. 软通动力技术有限公司 -- **python开发工程师**(2019.4.24至今)  
    - 负责华为产品集成部署,产品迭代迁移.
 2. 北京市多牛传媒有限公司 -- **python开发工程师**(2016.5-2019.4)
    - 公司广告平台大数据API.
-   - 公司产品: 人人, NGA, TGBUS等.
+   - 公司产品: 人人, NGA, TGBUS等. -->
 
 ## **技术栈**
 
