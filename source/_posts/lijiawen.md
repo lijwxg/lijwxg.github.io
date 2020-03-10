@@ -2,14 +2,15 @@
 
 ---
 
-<div>
+<!-- <div>
 <img style="position:absolute;margin-left:700px" width=150px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
-</div>
+</div> -->
+@import "https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg" { width=150px style="position:absolute;margin-left:700px"}
 
 <i class="fa fa-male" aria-hidden="true"></i>:&ensp;李嘉文
-<i class="fa fa-phone" aria-hidden="true"></i>: 18123651019  
+<i class="fa fa-phone" aria-hidden="true"></i>: 181****1019  
 <i class="fa fa-envelope" aria-hidden="true"></i>: lijwxg@hotmail.com
-<i class="fa fa-rss-square" aria-hidden="true"></i>:  [daoji.site](https://daoji.site)
+<i class="fa fa-rss-square" aria-hidden="true"></i>:  [blog.daoji.site](http://blog.daoji.site)
 <i class="fa fa-graduation-cap" aria-hidden="true"></i>: 东北林业大学(211本科)
 <!-- more -->
 
@@ -19,11 +20,9 @@
 
 1. 软通动力技术有限公司 -- **python开发工程师**(2019.4.24至今)  
    - 负责华为产品集成部署,产品迭代迁移.
-2. 北京市多牛传媒有限公司 -- **python开发工程师**(2017.11-2019.4)
+2. 北京市多牛传媒有限公司 -- **python开发工程师**(2016.5-2019.4)
    - 公司广告平台大数据API.
    - 公司产品: 人人, NGA, TGBUS等.
-3. 深圳市花果山有限公司 -- **python开发工程师**(2016.05-2017.10)
-   - 销售系统维护.
 
 ## **技术栈**
 
