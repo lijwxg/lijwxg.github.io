@@ -2,16 +2,11 @@
 
 ---
 
-<div>
-<img style="position:absolute;margin-left:650px" width=150px src="https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg">
-</div>
-<!-- @import "https://i.loli.net/2019/10/26/9R4zjiaAkE2HOqy.jpg" { width=150px style="position:absolute;margin-left:700px"} -->
-
-<i class="fa fa-male" aria-hidden="true"></i>:&ensp;李嘉文
-<i class="fa fa-phone" aria-hidden="true"></i>: 181****1019  
-<i class="fa fa-envelope" aria-hidden="true"></i>: lijwxg@hotmail.com
-<i class="fa fa-rss-square" aria-hidden="true"></i>:  [blog.daoji.site](http://blog.daoji.site)
-<i class="fa fa-graduation-cap" aria-hidden="true"></i>: 东北林业大学(211本科)
+🦸‍♂: 李嘉文
+☎️: 181****1019  
+📥: lijwxg@hotmail.com
+🏠: [blog.daoji.site](https://lijwxg.github.com)
+🏫: 东北林业大学(211本科)
 <!-- more -->
 
 ## **工作经验**
@@ -28,9 +23,7 @@
 
 ---
 
-<div align=center>
-<img src="https://i.loli.net/2019/10/25/f3rg7JTvOhlyon1.jpg">
-</div>
+![图片](https://i.loli.net/2019/10/25/f3rg7JTvOhlyon1.jpg)
 
 ## **项目经验**
 
