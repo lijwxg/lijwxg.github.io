@@ -2,11 +2,11 @@
 
 ---
 
-🦸‍♂: 李嘉文
-☎️: 181****1019  
-📥: lijwxg@hotmail.com
-🏠: [blog.daoji.site](https://lijwxg.github.com)
-🏫: 东北林业大学(211本科)
+🦸‍♂: 李嘉文  
+☎️: 181****1019   
+📥: lijwxg@hotmail.com  
+🏠: [blog.daoji.site](https://lijwxg.github.com)  
+🏫: 东北林业大学(211本科)  
 <!-- more -->
 
 ## **工作经验**

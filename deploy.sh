@@ -1,4 +1,6 @@
 #!/bin/bash
+# author: lijiawen
+# auto deploy file to origin git branch
 
 git add .
 if [ -z $1 ] ; then
