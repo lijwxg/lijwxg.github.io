@@ -29,7 +29,7 @@ Hexo是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有�
     从主题网站选择一个好看的主题, 下载下来应用到我们的blog, 这里选择even
 
     ```shell
-    git clone https://github.com/budparr/gohugo-theme-ananke.git themes/even
+    git submodule add https://github.com/olOwOlo/hugo-theme-even themes/even
     ```
 
 4.  主题配置

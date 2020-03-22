@@ -54,7 +54,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     3.  添加主题
 
         ```shell
-        git submodule add https://github.com/ahonn/hexo-theme-even themes/even
+        git submodule add https://github.com/olOwOlo/hugo-theme-even themes/even
         ```
     4.  如果不是even主题,请忽略此步骤
         从even主题下的exampleSite文件夹中复制config.toml到blog根路径下替换原来文件配置config.toml
@@ -67,7 +67,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     git commit -m "初始化blog项目"
     ```
 
-    本方法提供一键式脚本执行: deploy.sh
+    本方法提供一键式脚本执行: [deploy.sh](https://github.com/lijwxg/lijwxg.github.io/blob/hugo/deploy.sh)
 5.  关联github 和Travis-CI, 对我们的blog仓库进行持续集成部署.
     选中我们的blog仓库, 激活. 添加配置, 注意这里要增加一个变量token, 为了安装不能把token暴露在配置文件中,所以我们选用travis CI提供的变量方法.计为下一步中$token, 变量名保持一致即可.
 6.  配置Travis-CI, 添加 .travis.yml 文件到项目下,提交. 本配置文件仅供参考, 如果有其它需求, 酌情修改.
