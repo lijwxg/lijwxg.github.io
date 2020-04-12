@@ -158,7 +158,7 @@ disown 用来将作业从作业列表中移除，即使它 不属于 会话，�
 
 使用 disown 我们可以解决上面提出的第二个问题，不重新执行将一个没使用 nohup 命令的进程不受终端关闭影响。
 
-## 守护进程
+## deamon
 
 以上介绍的都是一些临时进程的处理，后台运行的进程的最终方法是将进程变成守护进程。
 
@@ -216,4 +216,4 @@ linux 是开发者的基础技能，而进程的调度更是我们常用的功�
 
 最近可能会考虑写一个守护进程和 cron 进程调度器，嗯，希望给我算到工作量里，哈哈~想写的太多了，只怨自己还不够强大。。。
 
-来源[http://www.cnblogs.com/zhenbianshu/p/7152327.html]
+来源[http://www.cnblogs.com/zhenbianshu/p/7152327.html](http://www.cnblogs.com/zhenbianshu/p/7152327.html)

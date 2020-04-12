@@ -305,7 +305,7 @@ mysqladmin -u root -p shutdown
 
 参考:
 
-https://linux.cn/article-6719-1.html
+[https://linux.cn/article-6719-1.html](https://linux.cn/article-6719-1.html)
 
 ```shell
 wget http://download.redis.io/releases/redis-4.0.6.tar.gz
@@ -401,7 +401,7 @@ $ sudo yum makecache
 
 ## sudo命令无法使用
 
-http://blog.csdn.net/duguduchong/article/details/8804117
+[http://blog.csdn.net/duguduchong/article/details/8804117](http://blog.csdn.net/duguduchong/article/details/8804117)
 
 ```log
 1.编辑/etc/sudoers文件，把Defaults  env_reset改成Defaults ! env_reset
