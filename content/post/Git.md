@@ -20,7 +20,7 @@ $ wget https://sourceforge.net/projects/asciidoc/files/latest/download
 $ unzip download
 $ cd asciidoc-8.6.9/
 $./configure
-$ sudo make install 
+$ sudo make install
 $ yum install xmlto
 
 $ tar -zxf git-1.7.2.2.tar.gz
@@ -45,12 +45,12 @@ windows设置在提交文件时不默认修改换行符
 
 - 生成新的key
     ```shell
-    $ cd ~/.ssh
-    $ ssh-keygen -t rsa -C "lijwxg@163.com"         # 给新的key取个新的名字id_rsa_demo
+    # cd ~/.ssh
+    # ssh-keygen -t rsa -C "lijwxg@163.com"         # 给新的key取个新的名字id_rsa_demo
     ```
 - 设置配置文件
     ```shell
-    $ touch config
+    # touch config
     $ vim config
     > # Default GitHub
     > Host github.com
@@ -67,12 +67,12 @@ windows设置在提交文件时不默认修改换行符
 
 - 测试连接
     ```shell
-    $ ssh -T git@github-demo
+    # ssh -T git@github-demo
     ```
 
 - clone代码
     ```shell
-    $ git clone git@github-demo:username/username.github.io.git
+    # git clone git@github-demo:username/username.github.io.git
     ```
 
 
@@ -82,12 +82,12 @@ windows设置在提交文件时不默认修改换行符
 
 删除本地分支
 ```shell
-$ git branch -D br
+# git branch -D br
 ```
 
 删除远程分支
 ```shell
-$ git push origin :br           # origin后面有个空格,相同与把空分支推到远程分支,就是删除
+# git push origin :br           # origin后面有个空格,相同与把空分支推到远程分支,就是删除
 ```
 
 ## git代码回滚
@@ -96,8 +96,8 @@ git代码回滚: 指的是将代码库某分支退回到以前的某个commit id
 
 本地代码回滚
 ```shell
-$ git reset --hard commit id       # 回滚到commit id 将commit id之后的提交的commit都去除
-$ git reset --hard HEAD~3           # 将最近3次的提交回滚
+# git reset --hard commit id       # 回滚到commit id 将commit id之后的提交的commit都去除
+# git reset --hard HEAD~3           # 将最近3次的提交回滚
 ```
 
 远程代码回滚:
@@ -111,7 +111,7 @@ $ git reset --hard HEAD~3           # 将最近3次的提交回滚
 
 - git checkout the_branch
 - git pull
-- git branch the_branch_backup      
+- git branch the_branch_backup
 - git reset --hard commit id
 - git push origin :the_branch
 - git push origin the_branch
@@ -123,19 +123,19 @@ tips: master分支是不能进行删除操作的
 ## 重新命名本地分支
 
 ```shell
-$ git branch -m devel develop
+# git branch -m devel develop
 ```
 
 ## 对已经提交的log的修改
 
 ```shell
-$ git commit --amend
+# git commit --amend
 ```
 
 ## 跟踪远程分支
 
 ```shell
-$ git checkout --track checkversion/develop
+# git checkout --track checkversion/develop
 ```
 
 ## 版本回退
@@ -156,7 +156,7 @@ $ git checkout --track checkversion/develop
     git push --force
     ```
 
-3. git reverse和git reset的区别
+1. git reverse和git reset的区别
 
     git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。
     在回滚这一操作上看，效果差不多。但是在日后继续merge以前的老版本时有区别。因为git revert是用一次逆向的commit“中和”之前的提交，因此日后合并老的branch时，导致这部分改变不会再次出现，但是git reset是之间把某些commit在某个branch上删除，因而和老的branch再次merge时，这些被回滚的commit应该还会被引入。
@@ -178,14 +178,10 @@ $ git checkout --track checkversion/develop
         git revert + commit 号
         该命令撤销对某个commit的提交，这一撤销动作会作为一个新的修改存储起来，这样，当你和服务器同步时，就不会产生什么副作用。
 
-Yesterday is history.
-
-Tomorrow is a mystery. 
-
-But today is a gift. 
-
-That is why it's called the present. 
-
+Yesterday is history.  
+Tomorrow is a mystery.  
+But today is a gift.  
+That is why it's called the present.  
 The old game: give a wolf a taste, then keep him hungry.
 
 ## 对tag管理
