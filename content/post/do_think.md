@@ -10,4 +10,4 @@ draft = false
 
 ## 一线生机,无限希冀 {#一线生机-无限希冀}
 
-[tree](http://cdnimg103.lizhi.fm/audio%5Fcover/2016/10/21/2563735349242175495%5F580x580.jpg)
+![tree](http://cdnimg103.lizhi.fm/audio%5Fcover/2016/10/21/2563735349242175495%5F580x580.jpg)

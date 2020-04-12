@@ -1,6 +1,7 @@
 +++
 title = "orgmode使用"
 date = 2020-02-14
+tags = ["orgmode", "emacs"]
 draft = false
 +++
 
