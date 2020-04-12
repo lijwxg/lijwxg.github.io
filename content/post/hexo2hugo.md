@@ -1,7 +1,7 @@
 +++
 title = "Blog从Hexo迁移到Hugo"
 date = 2020-03-17
-tags = ["Blog", "Hugo", "Hexo"]
+tags = ["blog", "hugo", "hexo"]
 draft = false
 +++
 

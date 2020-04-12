@@ -5,6 +5,7 @@ tag:
 - Hugo
 - GitHUb
 - TravisCI
+draft: false
 ---
 
 这是介绍hugo构建方法的文章, 希望大家愉快的书写, 享受书写带来的乐趣. | truncate 100

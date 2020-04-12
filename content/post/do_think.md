@@ -1,7 +1,7 @@
 +++
 title = "知行的路和思考的方向"
 date = 2017-07-10
-tags = ["Mind"]
+tags = ["mind"]
 draft = false
 +++
 

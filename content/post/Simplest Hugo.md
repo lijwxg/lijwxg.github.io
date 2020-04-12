@@ -1,7 +1,7 @@
 +++
 title = "使用hugo构建个人blog"
 date = 2020-03-17
-tags = ["Blog"]
+tags = ["blog"]
 draft = false
 +++
 
