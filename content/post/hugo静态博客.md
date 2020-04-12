@@ -1,14 +1,13 @@
 ---
 date: "2020-04-10"
-title: "开始学blog"
+title: "开始学hugo"
 tag: 
-- Hugo
-- GitHUb
-- TravisCI
-draft: false
+- hugo
+- github
+- travisCI
 ---
 
-这是介绍hugo构建方法的文章, 希望大家愉快的书写, 享受书写带来的乐趣. | truncate 100
+这是介绍hugo构建方法的文章, 希望大家愉快的书写, 享受书写带来的乐趣.
 <!--more-->
 
 # hugo静态博客
