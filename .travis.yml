@@ -27,3 +27,4 @@ deploy:
     email: lijwxg@hotmail.com
     name: Travis CI
     target_branch: master
+	fqdn: daoji.site
