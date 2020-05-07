@@ -1,12 +1,13 @@
 ---
 title: "Linux使用指南"
 date: 2018-12-25 19:10:53
-tags: 
-- linux
+tags:
+  - linux
 ---
 
-记录linux系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.
-<!-- more -->
+记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.
+
+<!--more-->
 
 ## 查看系统信息相关命令
 
@@ -22,19 +23,19 @@ cat /ect/group                                                # 查看用户组
 
 ### 七个启动级别
 
-- 0：关机模式【系统默认运行级别不能设置为0，否则没法正常启动】
+- 0：关机模式【系统默认运行级别不能设置为 0，否则没法正常启动】
 
 - 1：单用户模式【Root 权限、禁止远程登陆】
 
 - 2：多用户模式【没有 NFS 和网络】
 
-- 3：完整的多用户文本模式【支持 NFS 和网络、登陆后进入控制台命令行模式】
+- 3：完整的多用户文本模式【支持  NFS 和网络、登陆后进入控制台命令行模式】
 
 - 4：暂未使用、系统保留
 
 - 5：图形化模式【GUI】
 
-- 6：重启模式【系统默认运行级别不能设置为6，否则没法正常启动】
+- 6：重启模式【系统默认运行级别不能设置为 6，否则没法正常启动】
 
 ### 设置启动模式
 
@@ -46,7 +47,7 @@ $systemctl set-default graphical.target  //设置成图形模式
 
 ## 网络
 
-### netstat安装
+### netstat 安装
 
 ```shell
 # yum install net-tools
@@ -54,7 +55,7 @@ $systemctl set-default graphical.target  //设置成图形模式
 
 ### ifconfig
 
-ifconfig [网络设备][down up -allmulti -arp -promisc][add<地址>][del<地址>][<硬件地址>][io_addr][irq][media<网络媒介类型>][mem_start<内存地址>][metric<数目>][mtu<字节>][netmask<子网掩码>][tunnel<地址>][-broadcast<地址>][-pointopoint<地址>][IP地址]
+ifconfig [网络设备][down up -allmulti -arp -promisc][add<地址>][del<地址>][<硬件地址>][io_addr][irq][media<网络媒介类型>][mem_start<内存地址>][metric<数目>][mtu<字节>][netmask<子网掩码>][tunnel<地址>][-broadcast<地址>][-pointopoint<地址>][ip地址]
 
 ### 网络命令
 
@@ -77,7 +78,7 @@ sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp   # 新增端口
 sudo firewall-cmd --reload                                        # 新增端口后更新防火墙
 ```
 
-## 增加root权限
+## 增加 root 权限
 
 ```shell
 $su
@@ -107,13 +108,13 @@ sudo make uninstall       # 卸载安装的文件 在某些情况下可用,前�
 make clean                # 对编译的文件进行删除, 进行重新编译
 ```
 
-## vi升级
+## vi 升级
 
 ```shell
 # yum -y install vim-enhanced
 ```
 
-## Python升级
+## Python 升级
 
 ```shell
 $sudo yum update
@@ -129,7 +130,7 @@ $./configure --prefix=/usr/local/python2.7 --enable-unicode=ucs4
 $make
 $make install
 软链接
-$mv /usr/bin/python /usr/bin/python2.7.5  
+$mv /usr/bin/python /usr/bin/python2.7.5
 $ln -s /usr/local/python2.7/bin/python2.7 /usr/bin/python
 修改yum中Python
 $sudo vi /usr/bin/yum
@@ -140,49 +141,49 @@ $ vim .bahsrc
 >> export PATH="/usr/local/python2.7/bin/:$PATH"
 ```
 
-模块         |依赖               |说明
-  --        |--                 |--
-_bsddb      |bsddb              |Interface to Berkeley DB library。Berkeley数据库的接口
-_curses     |ncurses            |Terminal handling for character-cell displays。
-_curses_    |panel              |ncurses A panel stack extension for curses。
-_sqlite3    |sqlite             |DB-API 2.0 interface for SQLite databases。SqlLite，CentOS可以安装sqlite-devel
-_ssl        |openssl-devel.i686|TLS/SSL wrapper for socket objects。
-_tkinter    |N/A                |a thin object-oriented layer on top of Tcl/Tk。如果不使用桌面程序可以忽略TKinter
-bsddb185    |old bsddb module   |老的bsddb模块，可忽略。
-bz2         |bzip2-devel.i686   |Compression compatible with bzip2。bzip2-devel
-dbm         |bsddb              |Simple “database” interface。
-dl          |N/A                |Call C functions in shared objects.Python2.6开始，已经弃用。
-gdbm        |gdbm-devel.i686    |GNU’s reinterpretation of dbm
-imageop     |N/A                |Manipulate raw image data。已经弃用。
-readline    |readline-devel     |GNU readline interface
-sunaudiodev |N/A                |Access to Sun audio hardware。这个是针对Sun平台的，CentOS下可以忽略
-zlib        |Zlib               |Compression compatible with gzip
+| 模块        | 依赖               | 说明                                                                              |
+| ----------- | ------------------ | --------------------------------------------------------------------------------- |
+| \_bsddb     | bsddb              | Interface to Berkeley DB library。Berkeley 数据库的接口                           |
+| \_curses    | ncurses            | Terminal handling for character-cell displays。                                   |
+| _curses_    | panel              | ncurses A panel stack extension for curses。                                      |
+| \_sqlite3   | sqlite             | DB-API 2.0 interface for SQLite databases。SqlLite，CentOS 可以安装 sqlite-devel  |
+| \_ssl       | openssl-devel.i686 | TLS/SSL wrapper for socket objects。                                              |
+| \_tkinter   | N/A                | a thin object-oriented layer on top of Tcl/Tk。如果不使用桌面程序可以忽略 TKinter |
+| bsddb185    | old bsddb module   | 老的 bsddb 模块，可忽略。                                                         |
+| bz2         | bzip2-devel.i686   | Compression compatible with bzip2。bzip2-devel                                    |
+| dbm         | bsddb              | Simple “database” interface。                                                     |
+| dl          | N/A                | Call C functions in shared objects.Python2.6 开始，已经弃用。                     |
+| gdbm        | gdbm-devel.i686    | GNU’s reinterpretation of dbm                                                     |
+| imageop     | N/A                | Manipulate raw image data。已经弃用。                                             |
+| readline    | readline-devel     | GNU readline interface                                                            |
+| sunaudiodev | N/A                | Access to Sun audio hardware。这个是针对 Sun 平台的，CentOS 下可以忽略            |
+| zlib        | Zlib               | Compression compatible with gzip                                                  |
 
-安装setuptools和pip在下载源码后使用python setup.py install方式安装
+安装 setuptools 和 pip 在下载源码后使用 python setup.py install 方式安装
 
 ```shell
 easy_install --upgrade pip
 ```
 
-**Pip 10.0.* doesn't support main.**
+**Pip 10.0.\* doesn't support main.**
 You have to downgrade to pip 9.0.3.
 
 ```shell
 python -m pip install pip==9.0.3
 ```
 
-### Python的unicode是ucs-2还是ucs-4
+### Python 的 unicode 是 ucs-2 还是 ucs-4
 
 ```python
 import sys
 print sys.maxunicode        # 1114111表示ucs4, 65535表示ucs2
 ```
 
-### 安装thrift
+### 安装 thrift
 
-** 安装失败
+\*\* 安装失败
 
-### anaconda安装使用
+### anaconda 安装使用
 
 ```shell
 sudo bash Anaconda2-5.0.0.1-Linux-x86_64.sh
@@ -194,7 +195,7 @@ source deactivate
 $ conda install matplotlib=2.1.1
 ```
 
-### pip换源
+### pip 换源
 
 ```shell
 $ mkdir ~/.pip
@@ -204,7 +205,7 @@ $ vim pip.conf
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-### mysql-python-1.2.5安装
+### mysql-python-1.2.5 安装
 
 ```shell
 wget https://pypi.python.org/packages/a5/e9/51b544da85a36a68debe7a7091f068d802fc515a3a202652828c73453cad/MySQL-python-1.2.5.zip#md5=654f75b302db6ed8dc5a898c625e030c
@@ -213,7 +214,7 @@ vim setup_posix.py
 sudo python setup.py install
 ```
 
-### virtualenv和virtualenvwrapper
+### virtualenv 和 virtualenvwrapper
 
 ```shell
 $ sudo pip install virtualenv
@@ -245,7 +246,7 @@ $ rmvirtualenv test
 
 ### 修改时区
 
-将Asia/shanghai-上海时区写入当前时区
+将 Asia/shanghai-上海时区写入当前时区
 
 ```shell
 # cp -f /usr/share/zoneinfo/Asia/Shanghai     /etc/localtime
@@ -279,7 +280,7 @@ $ jobs  # 查看后台运行的运行
 $ fg %s # 关闭指定的job
 ```
 
-## mysql安装
+## mysql 安装
 
 ```shell
 yum list installed | grep mysql
@@ -301,7 +302,7 @@ mkdir /home/data
 mysqladmin -u root -p shutdown
 ```
 
-## redis安装
+## redis 安装
 
 参考:
 
@@ -329,7 +330,7 @@ sudo systemctl enable nginx.service
 
 ## Emacs
 
-[清华elpa](https://mirrors.tuna.tsinghua.edu.cn/help/elpa/)
+[清华 elpa](https://mirrors.tuna.tsinghua.edu.cn/help/elpa/)
 
 ```shell
 wget https://mirrors.tuna.tsinghua.edu.cn/gnu/emacs/emacs-25.3.tar.xz
@@ -360,9 +361,9 @@ emacs --insecure              # 会报一个bind-map的错误 网络原因产生
 
 # Source
 
-## 添加yum第三方源Repofogre
+## 添加 yum 第三方源 Repofogre
 
-[清华Repoforge源](https://mirrors.tuna.tsinghua.edu.cn/help/repoforge/)
+[清华 Repoforge 源](https://mirrors.tuna.tsinghua.edu.cn/help/repoforge/)
 
 ```shell
 $ rpm --import https://mirrors.tuna.tsinghua.edu.cn/repoforge/RPM-GPG-KEY.dag.txt
@@ -389,7 +390,7 @@ gpgcheck = 1
 name = RHEL $releasever - RPMforge.net - testing
 baseurl = https://mirrors.tuna.tsinghua.edu.cn/repoforge/redhat/el7/en/$basearch/testing
 mirrorlist = http://mirrorlist.repoforge.org/el7/mirrors-rpmforge-testing
-enabled = 0  
+enabled = 0
 protect = 0
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
 gpgcheck = 1
@@ -399,7 +400,7 @@ $ sudo yum makecache
 
 # FAQ
 
-## sudo命令无法使用
+## sudo 命令无法使用
 
 [http://blog.csdn.net/duguduchong/article/details/8804117](http://blog.csdn.net/duguduchong/article/details/8804117)
 
@@ -409,19 +410,19 @@ $ sudo yum makecache
 3.source ~/.bashrc
 ```
 
-## yum命令
+## yum 命令
 
-千万别用yum remove 卸载软件！
+千万别用 yum remove 卸载软件！
 
-用yum remove你会发现吧相关依赖的软件包都卸载了。
+用 yum remove 你会发现吧相关依赖的软件包都卸载了。
 
-所以要使用rpm -e –nodeps 软件名, 不会删除依赖.
+所以要使用 rpm -e –nodeps 软件名, 不会删除依赖.
 
 ## 使用说明
 
 问题描述: error while loading shared libraries ...
 
-一般我们在Linux下执行某些外部程序的时候可能会提示找不到共享库的错误, 比如:
+一般我们在 Linux 下执行某些外部程序的时候可能会提示找不到共享库的错误, 比如:
 
 ```shell
 tmux: error while loading shared libraries: libevent-1.4.so.2: cannot open shared object file: No such file or directory
@@ -431,22 +432,22 @@ tmux: error while loading shared libraries: libevent-1.4.so.2: cannot open share
 另外一个原因就是已经安装了该共享库, 但执行需要调用该共享库的程序的时候, 程序按照默认共享库路径找不到该共享库文件.  
 所以安装共享库后要注意共享库路径设置问题, 如下:
 
-1. 如果共享库文件安装到了/lib或/usr/lib目录下, 那么需执行一下ldconfig命令
+1. 如果共享库文件安装到了/lib 或/usr/lib 目录下, 那么需执行一下 ldconfig 命令
 
-    ldconfig命令的用途, 主要是在默认搜寻目录(/lib和/usr/lib)以及动态库配置文件/etc/ld.so.conf内所列的目录下  
-    搜索出可共享的动态链接库(格式如lib*.so*), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件.  
-    缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表.
+   ldconfig 命令的用途, 主要是在默认搜寻目录(/lib 和/usr/lib)以及动态库配置文件/etc/ld.so.conf 内所列的目录下  
+   搜索出可共享的动态链接库(格式如 lib*.so*), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件.  
+   缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表.
 
-2. 如果共享库文件安装到了/usr/local/lib(很多开源的共享库都会安装到该目录下)或其它"非/lib或/usr/lib"目录下, 那么在执行ldconfig命令前, 还要把新共享库目录加入到共享库配置文件/etc/ld.so.conf中, 如下:
+2. 如果共享库文件安装到了/usr/local/lib(很多开源的共享库都会安装到该目录下)或其它"非/lib 或/usr/lib"目录下, 那么在执行 ldconfig 命令前, 还要把新共享库目录加入到共享库配置文件/etc/ld.so.conf 中, 如下:
 
-    ```shell
-    # cat /etc/ld.so.conf
-    include ld.so.conf.d/*.conf
-    # echo "/usr/local/lib" >> /etc/ld.so.conf
-    # ldconfig
-    ```
+   ```shell
+   # cat /etc/ld.so.conf
+   include ld.so.conf.d/*.conf
+   # echo "/usr/local/lib" >> /etc/ld.so.conf
+   # ldconfig
+   ```
 
-3. 如果共享库文件安装到了其它"非/lib或/usr/lib" 目录下,  但是又不想在/etc/ld.so.conf中加路径(或者是没有权限加路径). 那可以export一个全局变量LD_LIBRARY_PATH, 然后运行程序的时候就会去这个目录中找共享库.LD_LIBRARY_PATH的意思是告诉loader在哪些目录中可以找到共享库. 可以设置多个搜索目录, 这些目录之间用冒号分隔开. 比如安装了一个mysql到/usr/local/mysql目录下,其中有一大堆库文件在/usr/local/mysql/lib下面, 则可以在.bashrc或.bash_profile或shell里加入以下语句即可:
+3. 如果共享库文件安装到了其它"非/lib 或/usr/lib" 目录下, 但是又不想在/etc/ld.so.conf 中加路径(或者是没有权限加路径). 那可以 export 一个全局变量 LD_LIBRARY_PATH, 然后运行程序的时候就会去这个目录中找共享库.LD_LIBRARY_PATH 的意思是告诉 loader 在哪些目录中可以找到共享库. 可以设置多个搜索目录, 这些目录之间用冒号分隔开. 比如安装了一个 mysql 到/usr/local/mysql 目录下,其中有一大堆库文件在/usr/local/mysql/lib 下面, 则可以在.bashrc 或.bash_profile 或 shell 里加入以下语句即可:
 
 ```shell
 export LD_LIBRARY_PATH=/usr/local/mysql/lib:$LD_LIBRARY_PATH
@@ -456,7 +457,7 @@ export LD_LIBRARY_PATH=/usr/local/mysql/lib:$LD_LIBRARY_PATH
 
 ## 虚拟机连不上网
 
-### 问题描述: vwmare连接不上网络
+### 问题描述: vwmare 连接不上网络
 
 ```shell
 # ifup ens33
@@ -484,8 +485,9 @@ Nov 02 21:21:15 client01 systemd[1]: network.service failed.
 
 ### 解决方案
 
-- 网卡配置文件中没有添加MAC地址信息，处理过程如下
-  - 查看网卡对应MAC地址
+- 网卡配置文件中没有添加 MAC 地址信息，处理过程如下
+
+  - 查看网卡对应 MAC 地址
 
     ```shell
     # ip addr
@@ -505,7 +507,7 @@ Nov 02 21:21:15 client01 systemd[1]: network.service failed.
     link/ether 52:54:00:a7:c4:9b brd ff:ff:ff:ff:ff:ff
     ```
 
-  - 将MAC地址添加在配置文件中
+  - 将 MAC 地址添加在配置文件中
 
     ```shell
     # echo "HWADDR=00:0c:29:9b:e7:51" >> /etc/sysconfig/network-scripts/ifcfg-ens33
@@ -519,7 +521,7 @@ Nov 02 21:21:15 client01 systemd[1]: network.service failed.
 
 - 在尝试了上述方法后，问题依然没有解决，尝试第二种方案
 
-  - 停止NetworkManager服务
+  - 停止 NetworkManager 服务
 
     ```shell
     # systemctl stop NetworkManager
@@ -538,18 +540,18 @@ Nov 02 21:21:15 client01 systemd[1]: network.service failed.
     Restarting network (via systemctl): [ OK ]
     ```
 
-### NetworkManager和network的区别
+### NetworkManager 和 network 的区别
 
-简单说network适合使用于网路设定后固定不变的服务器，而NetworkManager则适合使用于笔记型电脑上  
+简单说 network 适合使用于网路设定后固定不变的服务器，而 NetworkManager 则适合使用于笔记型电脑上  
 必须常常在有线及无线网路环境切换时使用，并且这二个服务所读取及写入的设定档是不同的.  
-network ：读取的设定档路径为「/etc/sysconfig/network-scripts/*」下的设定档。  
-NetworkManager ：读取的设定档路径为「/etc/sysconfig/networking/*」下的设定档。  
-CentOS7 在预设情况下会启动NetworkManager 服务(包含开机启动)，因为个人习惯传统的network设定  
-因此建议将NetworkManager 服务停用后再继续后续设定作业，否则在二个服务都启动的情况下将会造成互相干扰的麻烦状况。
+network ：读取的设定档路径为「/etc/sysconfig/network-scripts/_」下的设定档。  
+NetworkManager ：读取的设定档路径为「/etc/sysconfig/networking/_」下的设定档。  
+CentOS7 在预设情况下会启动 NetworkManager 服务(包含开机启动)，因为个人习惯传统的 network 设定  
+因此建议将 NetworkManager 服务停用后再继续后续设定作业，否则在二个服务都启动的情况下将会造成互相干扰的麻烦状况。
 
 ## LAMP
 
-安装LAMP环境
+安装 LAMP 环境
 
 ```shell
 # yum -y install zlib-devel mysql-devel glibc-devel curl-devel gcc automake mysql libidn-devel openssl-devel net-snmp-devel rpm-devel OpenIPMI-devel httpd mysql-server php-gd php-mysql php-bcmath php-mbstring php-xml perl-DBI php
