@@ -1,0 +1,191 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+* blog技术                                                 :Blog:
+
+** DONE 使用hugo构建个人blog
+   CLOSED: [2020-03-17 Sat 18:07]
+:properties:
+:export_file_name: Simplest-Hugo
+:end:
+   这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利.  
+#+hugo: more
+   一个git, 一个编辑器, 生成属于自己的个人页面. 轻量, 无负担.
+*** 准备工作
+    - 安装git, 一个为了编程而生的软件, 但不再仅为了编程而生.
+    - 选择一个文本编辑工具: 小到一个记事本, 大到一框IDE, 只要你喜欢.
+    - 简单的[[https://learnxinyminutes.com/docs/zh-cn/markdown-cn/][markdown]]语言, 如果不会, 请花十分钟学习一下.
+    - 一个 github 账号, 如果没有, 请花两分钟注册一个.
+*** 配置基础环境
+    - 安装git之后, 将git命令配置为系统环境变量PATH中, git能够在终端或者git-bash中运行即可.
+    - 生成[[https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][ssh key]], 命令如下: 请在终端或者git-bash中运行. 生成秘钥文件在个人路径下的.ssh文件下, 其中需要使用的
+是公钥: id_rsa.pub.
+      #+begin_src shell 
+        ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+      #+end_src
+    - 将生成的公钥文件内容添加到 github 账户配置中: Settings --> SSH and GPG keys --> New SSH key.
+    - 在 github 页面上新建一个 GitHub Page 仓库, 注意仓库的命名规范: 用户名.github.io
+    - 生成[[https://github.com/settings/tokens][Personal access tokens]], 注意生成后记得保存好,只会出现一次.用于 travis CI 集成部署时的读写权限
+      Settings --> Developer settings --> Personal access tokens --> Generate new token  
+      生成时注意一定要选择repo public_repo 权限, 其它不选也没关系
+*** 创建 blog 项目
+    1. 从 github 上将上一步新建的仓库clone到本地.
+       #+begin_src shell
+         git clone git@github.com:用户名/用户名.github.io.git
+       #+end_src
+    2. 创建一个新的分支用来存放源文件, 注意: master分支被用来存放托管的静态页面.
+       #+begin_src shell
+         git branch -b hugo
+       #+end_src
+    3. 如果本地有安装hugo, 请略过这步. 为了简单, 和隐藏细节. 我们通过配置实现.
+       1. 创建一个content/post文件夹, 以后编写的文章放在post路径下.
+       2. 在.gitignore中增加忽略文件夹public/, resource/
+       3. 添加主题
+          #+begin_src shell
+            git submodule add https://github.com/olOwOlo/hugo-theme-even themes/even
+          #+end_src
+       4. 如果不是even主题,请忽略此步骤
+          从even主题下的exampleSite文件夹中复制config.toml到blog根路径下替换原来文件配置config.toml
+          1. 注释掉baseURL: #baseURL
+          2. 修改标题, 修改其它个人配置.
+    4. 将仓库中的修改提交到github上.
+       #+begin_src shell
+         git add .
+         git commit -m "初始化blog项目"
+       #+end_src
+       本方法提供一键式脚本执行: [[https://github.com/lijwxg/lijwxg.github.io/blob/hugo/deploy.sh][deploy.sh]]
+    5. 关联github 和Travis-CI, 对我们的blog仓库进行持续集成部署.
+       选中我们的blog仓库, 激活. 添加配置, 注意这里要增加一个变量token, 为了安装不能把token暴露在配置文件中,所以我们选用travis CI提供的变量方法.计为下一步中$token, 变量名保持一致即可.
+    6. 配置Travis-CI, 添加 .travis.yml 文件到项目下,提交. 本配置文件仅供参考, 如果有其它需求, 酌情修改.
+       #+begin_src yaml
+        language: python
+        os: linux
+        dist: xenial
+        
+        before_install:
+            - export TZ='Asia/Shanghai'  # 设置时区
+        
+        git:
+            depth: 1
+        
+        install:
+            - wget https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_0.67.1_Linux-64bit.deb
+            - sudo dpkg -i hugo*.deb
+        
+        script:
+            - hugo version
+            - hugo
+        
+        deploy:
+            strategy: git
+            provider: pages
+            skip_cleanup: true
+            token: $token
+            on:
+                branch: hugo
+            local_dir: public
+            email: username@example.com
+            name: Travis CI
+            target_branch: master 
+       #+end_src
+    7. 提交后查看[[https://www.travis-ci.org/][travis]]网上是否集成成功,如果成功. 则可以访问个人主页
+    8. username.github.io
+*** 新增文章
+    1. blog网站已经部署完成,我们可以自由的写作了, 故事从此开始...
+    2. 新建一个以.md作为后缀名的文件.按照markdown语法书写.
+       - 随着时间的增长, 你的markdown会停不下来
+       - 注意hugo有特殊的 front-matter 要求, 作为文章的基本信息, 例如作者, 创建时间等
+    3. 将文件放在创建项目是的content/post下面.
+    4. 使用一键式脚本提交, 让 travis CI 飞一会.
+    5. 新的页面已经打开.
+*** 写在后面
+    1. 一段新的旅程都是由迈出的第一步开始的, 愿你从此能流畅的书写.
+    2. 开始后, 问题也会接踵而至, 不要停下来, 解决一个问题只需要两步: 1. 找到问题, 2: 解决问题.
+
+** DONE Blog从Hexo迁移到Hugo                                      :Hugo:Hexo:
+   CLOSED: [2020-11-15 Sun 14:15]
+:properties:
+:export_file_name: hexo2hugo
+:end:
+Hexo 是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有十分丰富的主题和炫酷的效果. 同时十分喜欢一切都是纯文
+本的设计. 所想即所得. Hugo是由go语言开发的页面生成工具, 生成页面十分快捷. 关键是还支持org-mode文本渲染.在Emacs
+里面完成文本操作, 学习org-mode也可以学以致用.
+#+hugo: more
+*** [[https://gohugo.io/getting-started/quick-start/][快速入门hugo]]
+1. 使用OSX 系统的话安装 hugo 十分便捷
+   #+begin_src shell
+     brew install hugo
+   #+end_src
+
+2. 创建一个网站
+   #+begin_src shell
+     hugo new site mysite
+   #+end_src
+
+3. [[https://themes.gohugo.io/][主题下载]]
+   从主题网站选择一个好看的主题, 下载下来应用到我们的blog, 这里选择even
+   #+begin_src shell
+     git submodule add https://github.com/olOwOlo/hugo-theme-even themes/even
+   #+end_src
+
+4. 主题配置
+   *注意*: 这个主题有对配置有要求, 需要用其默认配置覆盖hugo根路径下配置. 详情参见README.md
+   #+begin_src shell
+     cp -f themes/even/exampleSite/config.toml .
+     vi config.toml
+   #+end_src
+   修改默认配置参数为自己的参数
+
+5. 进入blog项目的根目录, 生成测试文件
+   #+begin_src shell
+     cd mysite
+     hugo new posts/my_blog.md
+   #+end_src
+   在文本编辑工具中, 使用markdown语法书写一段blog
+
+6. 开启本地
+   #+begin_src shell
+     hugo server -t even -D --bind=0.0.0.0
+   #+end_src
+   如果主题选择固定主题, 可以不用在参数中提现, 直接在config.toml中配置, --bind能够让局域网中的设备访问, 
+   -D参数表示会编译所有的文件, 包含标记为草稿的文件.
+
+7. 打开浏览器查看
+   本地地址为 http://localhost:1313
+   
+*** 迁移Hexo源文件
+1. 将Hexo的markdown文件拷贝到content目录下的post路径下
+2. 使用hugo server开启本地服务, 检验blog效果
+3. 根据情况修改Hexo中的front-matter
+*** 使用org-mode编写新的blog
+1. 文件头声明属性
+   #+begin_src org
+     #+hugo_base_dir: ~/mysite
+     #+author: 
+     #+date: 
+     #+title: 
+   #+end_src
+   *注意*: author属性需要指定为空, 否则org-export-dispatch导出markdown文件的时候,会在front-matter中生成一条值为列表的author,
+   导致渲染失败
+   在导出整个文件作为markdown时,必须指定title属性, 即为标题名
+2. subtree导出
+   在一个org文件中写多个短篇文章, 按照subtree导出为markdown, 本质和文件导出没有区别,都是生成markdown文件  
+   需要在子树下面添加生成markdown的配置属性, 必须指定输出的文件名, 默认为md格式
+   #+begin_src org
+     :properties:
+     :export_file_name: test
+     :end:
+   #+end_src
+3. 流畅的使用org-mode书写
+4. 使用org-export-dispatch导出markdown文件(C-c, C-e)
+   如果是导出为一个markdown, 有title的头文件的时候, 在任意位置使用H-H导出, 如果没有,且可以subtree导出, 则需要将光标移动到子节点
+   如果是整个文件分subtree导出为多个markdown, 使用H-A导出所有的subtree分别到各各文件.
+*** 将生成的静态页面托管到GitHub Page
+1. 在github上创建一个和用户名同名的以.github.io结尾的仓库, 例如用户名: lijwxg  则新建一个名为lijwxg.github.io的仓库
+2. hugo生成静态文件在博客根路径下的public文件夹中. 使用git初始化,并推送到远端github仓库
+   #+begin_src shell
+     git init
+     git remote add origin https://github.com/lijwxg/lijwxg.github.io.git
+     git push -f origin master
+   #+end_src
+3. 在浏览器访问lijwxg.github.io

@@ -1,0 +1,28 @@
+#+hugo_base_dir: /Users/li/projects/blog/lijwxg
+#+author: 
+
+* 知行合一                                                             :Mind:
+
+** DONE 面朝大海
+   CLOSED: [2017-07-17 Mon 20:25]
+:properties:
+:export_file_name: 面朝大海
+:end:
+
+从明天起,
+做一个幸福的人
+喂马,劈柴,周游世界
+从明天起,
+关心粮食和蔬菜
+
+** DONE 知行的路和思考的方向
+   CLOSED: [2017-07-10 Mon 20:30] 
+:properties:
+:export_file_name: do_think
+:end:
+
+> 当人类的思维之舟"从其`停泊`处被砍断缆绳而颠簸在怀疑而不确定的艰难之海"时,他们会感到痛苦和困惑,只有一种方式可以`抹平`这种痛苦,清除这种困惑,那就是,思维之船必须重新进入一种"新的信仰体系和时间的体系中"<p align="right">--弗雷泽</p>
+
+*** 一线生机,无限希冀
+
+[[http://cdnimg103.lizhi.fm/audio_cover/2016/10/21/2563735349242175495_580x580.jpg][tree]]

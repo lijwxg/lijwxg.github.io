@@ -1,0 +1,54 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+* Sphinx文档                                                           :sphinx:
+** DONE sphinx文档
+CLOSED: [2020-11-07 Sat 16:12]
+:PROPERTIES:
+:export_file_name: sphinx
+:END:
+使用sphinx构建项目的说明文档, sphinx的建立之初的目的就是为python构建一个详细的文档
+
+#+hugo: more
+
+*** 安装sphinx
+
+#+begin_src
+  pip install sphinx
+#+end_src
+
+*** 在pycharm的settings中设置Docstrings为reStructedText格式
+
+
+*** 使用reStructuredText的语法
+
+reStructuredText 是扩展名为.rst的纯文本文件，含义为"重新构建的文本"，也被简称为：RST或reST； 
+是Python编程语言的Docutils项目的一部分，Python Doc-SIG (Documentation Special Interest Group)。 
+该项目类似于Java的JavaDoc或Perl的POD项目。 Docutils 能够从Python程序中提取注释和信息，格式化成程序文档。
+
+*** 在项目下建立doc文件夹, 区分源文件和代码文件
+
+1. 初始化项目
+   #+begin_src
+     cd project
+     sphinx-quickstart
+   #+end_src
+2. 修改sphinx的配置文件conf.py
+3. 为源代码生成html文件
+   #+begin_src
+     sphinx-apidoc -o sphinx_demo/source ../src/
+     make html
+   #+end_src
+
+
+
+*** 在函数下面写注释
+
+#+begin_src python
+  def funcname(self, parameter_list):
+      """
+      docstring
+      :params parameter_list 参数列表
+      """
+      pass
+#+end_src
+

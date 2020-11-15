@@ -1,18 +1,18 @@
 ---
-title: "python使用kafaka基本模块"
-date: 2018-12-29 19:10:53
-tags:
-  - kafaka
+title: "Python调用Kafka"
+date: 2018-12-29T16:01:00+08:00
+tags: ["kafka"]
+draft: false
 ---
 
-运行 kafka 和 kafka-manager, 使用 python 连接 kafaka
+运行 kafka 和 kafka-manager, 使用 python 连接 kafka
 
 <!--more-->
 
 ```shell
 tar -xzf kafka_2.11-1.0.1.tgz
 cd kafka_2.11-1.0.1
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test    # create a topic
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-fctor 1 --partitions 1 --topic test    # create a topic
 bin/kafka-topics.sh --list --zookeeper localhost:2181                                                         # list topics
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test                                       # send some messages
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning                 # start a consumer
@@ -24,7 +24,7 @@ kafka 的配置我这里就提及下重点 关于 host.name 这个参数
 
 如果我们想远程消费这个 KAFKA 一定要把这个定义成能访问的 IP 比如我想在内网消费这个 KAFKA 就要用内网 IP 绑定
 
-## Python 代码示例
+\## Python 代码示例
 
 ```python
 #!/usr/bin/env python

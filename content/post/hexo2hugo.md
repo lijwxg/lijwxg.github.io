@@ -1,19 +1,20 @@
-+++
-title = "Blog从Hexo迁移到Hugo"
-date = 2020-03-17
-tags = ["blog", "hugo", "hexo"]
-draft = false
-+++
+---
+title: "Blog从Hexo迁移到Hugo"
+date: 2020-03-18T14:15:00+08:00
+tags: ["Blog", "Hugo", "Hexo"]
+draft: false
+---
 
-Hexo是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有十分丰富的主题和炫酷的效果. 同时十分喜欢一切都是纯文
+Hexo 是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有十分丰富的主题和炫酷的效果. 同时十分喜欢一切都是纯文
 本的设计. 所想即所得. Hugo是由go语言开发的页面生成工具, 生成页面十分快捷. 关键是还支持org-mode文本渲染.在Emacs
 里面完成文本操作, 学习org-mode也可以学以致用.
+
 <!--more-->
 
 
 ## [快速入门hugo](https://gohugo.io/getting-started/quick-start/) {#快速入门hugo}
 
-1.  使用OSX系统的话安装hugo十分便捷
+1.  使用OSX 系统的话安装 hugo 十分便捷
 
     ```shell
     brew install hugo

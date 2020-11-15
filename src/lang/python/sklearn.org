@@ -1,0 +1,29 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+* sklearn                                         :sklearn:machine_learning:
+  机器学习框架
+** TODO sklearn入门
+   :properties:
+   :export_file_name: sklearn-start
+   :end:
+   通用的机器学习框架, 包含大量算法和测试用数据集
+   #+hugo: more
+
+   scikit-learn包含六大模块:
+*** [[https://scikit-learn.org/stable/supervised_learning.html#supervised-learning][Classification]] 分类
+*** [[https://scikit-learn.org/stable/supervised_learning.html#supervised-learning][Regression]] 回归
+*** [[https://scikit-learn.org/stable/modules/clustering.html#clustering][Clustering]] 聚类
+*** [[https://scikit-learn.org/stable/modules/decomposition.html#decompositions][Dimensionality reduction]] 降维
+*** [[https://scikit-learn.org/stable/model_selection.html#model-selection][Model Selection]] 模型选择
+*** [[https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing][Preprocessing]] 预处理
+** TODO 数据预处理
+   - State "DONE"       from              [2020-11-15 Sun 21:19]
+   数据预处理的目的: 让数据适应模型, 匹配模型的需求
+   从数据中检测, 纠正或删除损坏, 不准确或不适用于模型的记录的过程
+** TODO 特征工程
+   - State "TODO"       from              [2020-11-15 Sun 21:21]
+   特征工程的目的: 1. 降低计算成本, 2. 提升模型上限
+   将原始数据妆花为更能代表预测模型的潜在问题的特征的过程.
+   1. 挑选最相关的特征.
+   2. 提取特征
+   3. 创造特征, 创造特征又常以降维算法的方式实现

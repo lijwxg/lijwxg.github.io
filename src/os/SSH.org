@@ -1,0 +1,56 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+---
+title: SSH
+date: 2020-03-02
+tag:
+  - ssh
+---
+
+* 登陆
+
+** DONE SSH                                                             :ssh:
+   CLOSED: [2020-03-02 Sat 23:27]
+   :properties:
+   :export_file_name: SSH
+   :end:
+SSH 秘钥的一些使用方法
+
+#+hugo: more
+*** SSH 协议
+
+> SSH 为 Secure Shell 的缩写.SSH 为建立在应用层基础上的安全协议。SSH 是较可靠，专为远程登录会话和其他网络服务提供安全性的协议.
+
+*** 版本
+
+#+begin_src shell
+#ssh -V
+OpenSSH_7.9p1, LibreSSL 2.7.3
+#+end_src
+
+- OpenSSH 是 SSH1
+- SSL 是 SSH2
+
+*** key pair
+
+#+begin_src shell
+#ssh-keygen
+#+end_src
+
+> 默认生成的 id_ras 私钥文件是: ----BEGIN OPENSSH PRIVATE KEY-----
+
+*** 将私钥转化为 SSH2
+
+#+begin_src shell
+#puttygen id_rsa -O private-sshcom -o id_rsa.mid
+#+end_src
+
+> 生成的新文件是 ---- BEGIN SSH2 ENCRYPTED PRIVATE KEY ----
+
+*** 将 SSH2 转化为 RSA - PEM
+
+#+begin_src shell
+#ssh-keygen -i -f id_rsa.mid > id_rsa.rsa
+#+end_src
+
+> 新文件是: -----BEGIN RSA PRIVATE KEY-----

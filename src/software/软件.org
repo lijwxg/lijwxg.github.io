@@ -1,0 +1,40 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+* 软件                                                 :windows:mac:software:
+
+** DONE 常用软件
+   CLOSED: [2020-10-14 Sat 22:12]
+   :properties:
+   :export_file_name: 常用软件
+   :end:
+工欲善其事必先利其器, 记录好用的工具.
+<!--more-->
+*** 使用常用软件, 提高效率, 不用重复造轮子
+
+
+**** 跨平台
+
+ 1. sinpate, 好用的截图工具
+ 2. SwitchHosts, 好用的管理hosts的工具
+ 3. Logitech, 给罗技鼠标添加新的功能
+ 4. HHKB Keymap Tool, 自定义hhkb键盘
+ 5. NutCloud, 文件同步, 提供了webDav的服务
+ 6. VNC, 远程连接
+
+**** Windows
+
+ 1. auhotkey, 脚本神器
+ 2. SharpKeys, 修改键盘按键映射关系, 新增layout
+ 3. quicker, 快速启动
+ 4. wox, 统一的程序入口: 包含很多可拓展功能
+ 5. everything, 可以单独使用, 可以作为wox的一个组件功能使用
+ 6. Ditto, 剪贴板神器, 可以进行批量的复制, 粘贴
+ 7. cmder, 好用的命令行工具
+ 8. WSL, Windows的Liunx子系统
+
+**** MacOS
+
+ 1. Homebrew
+ 2. Alfred
+ 3. Hammerspoon
+ 4. karabiner-elements

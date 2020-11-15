@@ -1,15 +1,16 @@
 ---
-title: kafaka基使用
-date: 2018-05-06 21:37:44
-tags:
-  - kafka
+title: "使用 kafka, 基本环境和安装"
+date: 2018-05-06T15:14:00+08:00
+tags: ["kafka"]
+draft: false
 ---
 
-使用 kafaka, 基本环境和安装
+介绍基本的安装和使用
 
 <!--more-->
 
-## centos7 下的 javac 的问题
+
+## centos7 下的 javac 的问题 {#centos7-下的-javac-的问题}
 
 centos 默认安装的是 OpenJDK 没有 javac
 如果需要 javac
@@ -18,20 +19,23 @@ centos 默认安装的是 OpenJDK 没有 javac
 yum install java-devel
 ```
 
-## Kafka 管理器 kafka-manager 安装
+
+## Kafka 管理器 kafka-manager 安装 {#kafka-管理器-kafka-manager-安装}
 
 运行环境要求:
 
-1. Kafka0.8.1.1+
-2. sbt0.13.X
-3. Java 7+
+1.  Kafka0.8.1.1+
+2.  sbt0.13.X
+3.  Java 7+
 
-## kafka 安装
 
-- 下载
-- 解压
+## kafka 安装 {#kafka-安装}
 
-## sbt 安装
+-   下载
+-   解压
+
+
+## sbt 安装 {#sbt-安装}
 
 ```shell
 $ wget https://github.com/sbt/sbt/releases/download/v1.1.1/sbt-1.1.1.tgz
@@ -48,7 +52,8 @@ $ source ~/.bashrc                                                      # 使配
 $ sbt sbt-version                                                       # 测试sbt是否安装成功
 ```
 
-## kafka-manager 包的编译
+
+## kafka-manager 包的编译 {#kafka-manager-包的编译}
 
 ```shell
 $ git clone https://github.com/yahoo/kafka-manager

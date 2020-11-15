@@ -1,22 +1,20 @@
----
-title: Windows子系统linux
-date: 2020-06-13
-tags:
- - wsl
- - linux
- - windows
- - shell
----
+#+hugo_base_dir: ~/projects/blog/lijwxg
 
-## WSL
+
+* WSL                                               :windows:wsl:linux:shell:
+** DONE WSL基础                                                         :wsl:
+   CLOSED: [2020-06-13 Sun 17:51]
+   :properties:
+   :export_file_name: WSL-start
+   :end:
 
 > Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
 
-<!--more-->
+#+hugo: more
 
 在windows下更加轻量级的使用linux系统功能, 使用许多在linux下更加方便的功能.
 
-### 支持镜像
+*** 支持镜像
 
 - kali
 - ubuntu
@@ -25,15 +23,15 @@ tags:
 - openSUSE
 - Centos
 
-### 安装
+*** 安装
 
 在设置中启动Windows子系统功能, 在Windows应用商店中下载安装
 
-> 子系统默认安装在C盘下,建议使用[工具](https://github.com/DDoSolitary/LxRunOffline/releases)将子系统迁移到指定位置下
+> 子系统默认安装在C盘下,建议使用[[https://github.com/DDoSolitary/LxRunOffline/releases][工具]]将子系统迁移到指定位置下
 
-### 相关配置
+*** 相关配置
 
-#### 子系统的配置
+**** 子系统的配置
 
 1. 在cmd中执行bash,可以进去子系统的shell会话
 2. 安装oh-my-zsh
@@ -45,7 +43,7 @@ tags:
    - supervisor
    - python开发环境
 
-#### Windows系统下的配置
+**** Windows系统下的配置
 
 1. 将子系统的zsh集成到cmder中
    - 安装cmder
@@ -60,8 +58,9 @@ tags:
     Settings -> Projects -> Projects Interpreter
    - 使用Add添加WSL类型的解释器,选择python路径
 
-#### 图形化访问
+**** 图形化访问
 
 1. 图形化子系统中的emacs
-    [Emacs-wsl](https://github.com/hubisan/emacs-wsl), 从windows中使用图形化访问子系统中的应用  
+    [[https://github.com/hubisan/emacs-wsl][Emacs-wsl]], 从windows中使用图形化访问子系统中的应用  
     > 图形界面中识别不了汉字输入,需要后续解决.  
+    

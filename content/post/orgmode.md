@@ -1,11 +1,12 @@
-+++
-title = "orgmode使用"
-date = 2020-02-14
-tags = ["orgmode", "emacs"]
-draft = false
-+++
+---
+title: "orgmode"
+date: 2020-02-14T16:32:00+08:00
+tags: ["emacs", "org"]
+draft: false
+---
 
 org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的
+
 <!--more-->
 
 > Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.
@@ -100,7 +101,7 @@ print(os.path)
 
 #### 图片 {#图片}
 
-使用两对中括号定义![test](./demo.jpg)
+使用两对中括号定义![](./demo.jpg)
 
 
 ## GTD {#gtd}
@@ -113,15 +114,25 @@ Tasks manage
 
 #### 学习org {#学习org}
 
--   <span class="org-todo done DONE">DONE</span>  在互联网上查找资料
+<!--list-separator-->
 
--   <span class="org-todo done DONE">DONE</span>  安装emacs
+- <span class="org-todo done DONE">DONE</span>  在互联网上查找资料
 
--   <span class="org-todo done DONE">DONE</span>  创建org文件
+<!--list-separator-->
 
--   <span class="org-todo done DONE">DONE</span>  配置org
+- <span class="org-todo done DONE">DONE</span>  安装emacs
 
--   <span class="org-todo done DONE">DONE</span>  学习org语法规则<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-03-01 Sun 13:00&gt;&#x2013;&lt;2020-03-01 Sun 15:00&gt; </span></span> <code>[5/5]</code> <code>[100%]</code>
+<!--list-separator-->
+
+- <span class="org-todo done DONE">DONE</span>  创建org文件
+
+<!--list-separator-->
+
+- <span class="org-todo done DONE">DONE</span>  配置org
+
+<!--list-separator-->
+
+- <span class="org-todo done DONE">DONE</span>  学习org语法规则<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-03-01 Sun 13:00&gt;&#x2013;&lt;2020-03-01 Sun 15:00&gt; </span></span> <code>[5/5]</code> <code>[100%]</code>
 
     学习分五步完成
 
@@ -131,7 +142,9 @@ Tasks manage
     -   [X] 标签定义
     -   [X] demo练习
 
--   <span class="org-todo todo TODO">TODO</span>  自定义agenda的结构, 和手机同步展示, 编辑 <code>[0%]</code>
+<!--list-separator-->
+
+- <span class="org-todo todo TODO">TODO</span>  自定义agenda的结构, 和手机同步展示, 编辑 <code>[0%]</code>
 
     与手机同步管理日程计划
 
