@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on House of Heart</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 07 Nov 2020 16:12:00 +0800</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sphinx文档</title>
+      <link>/post/sphinx/</link>
+      <pubDate>Sat, 07 Nov 2020 16:12:00 +0800</pubDate>
+      
+      <guid>/post/sphinx/</guid>
+      <description>&lt;p&gt;使用sphinx构建项目的说明文档, sphinx的建立之初的目的就是为python构建一个详细的文档&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>磁盘操作</title>
+      <link>/post/%E7%A3%81%E7%9B%98%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E7%A3%81%E7%9B%98%E6%93%8D%E4%BD%9C/</guid>
+      <description>参考文档 sudo vgextend ubuntu-vg /dev/sda sudo lvextend -L +100G /dev/ubuntu-vg/tidb sudo resize2fs /dev/ubuntu-vg/tidb sudo umount /dev/ubuntu-vg/tidb</description>
+    </item>
+    
+    <item>
+      <title>常用软件</title>
+      <link>/post/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Wed, 14 Oct 2020 22:12:00 +0800</pubDate>
+      
+      <guid>/post/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</guid>
+      <description>&lt;p&gt;工欲善其事必先利其器, 记录好用的工具.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>自建GitLab</title>
+      <link>/post/gitlab/</link>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/gitlab/</guid>
+      <description>GitLab安装 安装, 使用社区版的gitlab 常用命令 1 sudo gitlab-ctl status 使用smtp邮件服务 邀请注册 成员管理</description>
+    </item>
+    
+    <item>
+      <title>AWS基础</title>
+      <link>/post/aws-start/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/post/aws-start/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://console.aws.amazon.com/&#34;&gt;亚马逊云&lt;/a&gt;是十分领先的云服务厂商, 提供了大量开箱即用服务.大大减少了开发成本.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 开发说明</title>
+      <link>/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/</guid>
+      <description>git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支,</description>
+    </item>
+    
+    <item>
+      <title>airflow入门</title>
+      <link>/post/airflow-start/</link>
+      <pubDate>Wed, 17 Jun 2020 18:02:00 +0800</pubDate>
+      
+      <guid>/post/airflow-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;airflow 是 Airbnb 贡献的 Apache 顶级项目, 一个采用 DAG（有向无环图）理念设计的任务调度框架，主要用于构造数据管线。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Airflow调度器</title>
+      <link>/post/airflow/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/airflow/</guid>
+      <description>&lt;h2 id=&#34;airflow-调度器&#34;&gt;airflow 调度器&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;airflow 是 Airbnb 贡献的 Apache 顶级项目, 一个采用 DAG（有向无环图）理念设计的任务调度框架，主要用于构造数据管线。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>WSL基础</title>
+      <link>/post/wsl-start/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/post/wsl-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>plantuml使用</title>
+      <link>/post/plantuml/</link>
+      <pubDate>Sat, 06 Jun 2020 15:54:00 +0800</pubDate>
+      
+      <guid>/post/plantuml/</guid>
+      <description>&lt;p&gt;使用plantuml画结构图&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hugo简单入门</title>
+      <link>/post/hugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;这是介绍 hugo 构建方法的文章, 希望大家愉快的书写, 享受书写带来的乐趣.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>drf使用记录</title>
+      <link>/post/drf/</link>
+      <pubDate>Mon, 06 Apr 2020 20:47:26 +0000</pubDate>
+      
+      <guid>/post/drf/</guid>
+      <description>&lt;p&gt;django-restful-framework 基于 django 的一个实现 restfurl 风格接口的框架, 有十分完备的接口设计方案&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog从Hexo迁移到Hugo</title>
+      <link>/post/hexo2hugo/</link>
+      <pubDate>Wed, 18 Mar 2020 14:15:00 +0800</pubDate>
+      
+      <guid>/post/hexo2hugo/</guid>
+      <description>&lt;p&gt;Hexo 是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有十分丰富的主题和炫酷的效果. 同时十分喜欢一切都是纯文
+本的设计. 所想即所得. Hugo是由go语言开发的页面生成工具, 生成页面十分快捷. 关键是还支持org-mode文本渲染.在Emacs
+里面完成文本操作, 学习org-mode也可以学以致用.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用hugo构建个人blog</title>
+      <link>/post/simplest-hugo/</link>
+      <pubDate>Tue, 17 Mar 2020 18:07:00 +0800</pubDate>
+      
+      <guid>/post/simplest-hugo/</guid>
+      <description>&lt;p&gt;这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>/post/ssh/</link>
+      <pubDate>Mon, 02 Mar 2020 23:27:00 +0800</pubDate>
+      
+      <guid>/post/ssh/</guid>
+      <description>&lt;p&gt;SSH 秘钥的一些使用方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript笔记</title>
+      <link>/post/js/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/js/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;JavaScript 是 EMCA 标准的实现, 各个厂商的实现是有区别的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>orgmode</title>
+      <link>/post/orgmode/</link>
+      <pubDate>Fri, 14 Feb 2020 16:32:00 +0800</pubDate>
+      
+      <guid>/post/orgmode/</guid>
+      <description>&lt;p&gt;org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sentry的部署</title>
+      <link>/post/sentry/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sentry/</guid>
+      <description>&lt;p&gt;针对后台日志采集和分析提供的整套解决方案, 使用docker部署&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>command-proxy</title>
+      <link>/post/%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E7%BD%91%E7%BB%9C/</guid>
+      <description>网络 配置命令行代理 1 export http_proxy=http://127.0.0.1:1081;export https_proxy=http://127.0.0.1:1081</description>
+    </item>
+    
+    <item>
+      <title>树莓派基本配置</title>
+      <link>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>spacemacs入门</title>
+      <link>/post/spacemacs-start/</link>
+      <pubDate>Mon, 04 Nov 2019 17:27:00 +0800</pubDate>
+      
+      <guid>/post/spacemacs-start/</guid>
+      <description>安装 Spacemaces github 提供了使用方法,建议使用 develop 分支 Mac 操作系统 使用 homebrew 安装 emacs 建议安装 emacs-plus, 尝试 emacsforosx 发现包安装有问题, 初步判断是缺少 gnutls 依赖, 最后还是有一些问题, 将清</description>
+    </item>
+    
+    <item>
+      <title>nginx使用</title>
+      <link>/post/nginx/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/nginx/</guid>
+      <description>&lt;p&gt;使用 nginx 提供高性能的静态文件服务, 作为负载均衡的代理服务器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>常用pandas方法</title>
+      <link>/post/pandas/</link>
+      <pubDate>Thu, 03 Oct 2019 16:26:00 +0800</pubDate>
+      
+      <guid>/post/pandas/</guid>
+      <description>&lt;p&gt;常用 pandas 处理数据, 有较好的实现方法和效率&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux三剑客</title>
+      <link>/post/linux%E4%B8%89%E5%89%91%E5%AE%A2/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/linux%E4%B8%89%E5%89%91%E5%AE%A2/</guid>
+      <description>&lt;p&gt;linux 下最常用和通用的文件, 字符串查询, 操作脚本命令.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python调用Kafka</title>
+      <link>/post/kafka-python/</link>
+      <pubDate>Sat, 29 Dec 2018 16:01:00 +0800</pubDate>
+      
+      <guid>/post/kafka-python/</guid>
+      <description>&lt;p&gt;运行 kafka 和 kafka-manager, 使用 python 连接 kafka&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS环境</title>
+      <link>/post/centos%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>挂后台命令</title>
+      <link>/post/%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B/</guid>
+      <description>&lt;p&gt;常在 linux 下玩耍的开发者肯定会经常遇到需要对进程调度的情况，在 windows 中点击 最小化 去干别的就 OK 了，那么在 linux 下怎么办呢。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>免秘钥登陆</title>
+      <link>/post/%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Sun, 07 Oct 2018 12:10:53 +0000</pubDate>
+      
+      <guid>/post/%E5%AE%89%E5%85%A8/</guid>
+      <description>&lt;p&gt;为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python日志模块</title>
+      <link>/post/logs/</link>
+      <pubDate>Wed, 03 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/logs/</guid>
+      <description>&lt;p&gt;python 常用的记录日志的模块, 用于日志分析等场景&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>pyecharts使用</title>
+      <link>/post/pyecharts/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/pyecharts/</guid>
+      <description>&lt;p&gt;使用 pyecharts 快速实现一个数据图&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python 包管理</title>
+      <link>/post/python%E5%8C%85%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python%E5%8C%85%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;p&gt;python 包管理,常见的一些问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python环境</title>
+      <link>/post/python_env/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python_env/</guid>
+      <description>&lt;p&gt;python 入门基础的环境配置, 多种虚拟环境实现方法的选择&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python常用数据结构</title>
+      <link>/post/python%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84/</link>
+      <pubDate>Sun, 02 Sep 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84/</guid>
+      <description>&lt;p&gt;字典是另一种可变容器模型，且可存储任意类型对象。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Samba搭建</title>
+      <link>/post/samba%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 19 Jul 2018 08:10:53 +0000</pubDate>
+      
+      <guid>/post/samba%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;p&gt;为了解决跨平台的数据共享问题, 需要提供一个数据共享服务 Samba.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派操作系统安装</title>
+      <link>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;p&gt;在入手一个新的树莓派之后第一步是给树莓派安装一个操作系统, 我们的操作系统是安装在一个存储卡上, 非常符合树莓派小巧便携的特点. 小身板, 大能耐.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kafka基本的概念</title>
+      <link>/post/kafka-basic/</link>
+      <pubDate>Sun, 06 May 2018 15:25:00 +0800</pubDate>
+      
+      <guid>/post/kafka-basic/</guid>
+      <description>&lt;p&gt;在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个挑战是如何收集大量的数据,&lt;/li&gt;
+&lt;li&gt;第二个挑战是分析收集的数据&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 kafka, 基本环境和安装</title>
+      <link>/post/kafka-start/</link>
+      <pubDate>Sun, 06 May 2018 15:14:00 +0800</pubDate>
+      
+      <guid>/post/kafka-start/</guid>
+      <description>&lt;p&gt;介绍基本的安装和使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql的行列操作</title>
+      <link>/post/%E8%A1%8C%E5%88%97%E8%BD%AC%E5%8C%96/</link>
+      <pubDate>Thu, 28 Dec 2017 16:50:13 +0000</pubDate>
+      
+      <guid>/post/%E8%A1%8C%E5%88%97%E8%BD%AC%E5%8C%96/</guid>
+      <description>&lt;p&gt;使用 mysql 的关联对数据进行一个行列操作&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql使用经验</title>
+      <link>/post/mysql%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Mon, 04 Dec 2017 19:07:05 +0000</pubDate>
+      
+      <guid>/post/mysql%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+      <description>&lt;p&gt;SQL 的常用增删改查操作&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gitlab/GitHub</title>
+      <link>/post/github-gitlab/</link>
+      <pubDate>Thu, 30 Nov 2017 15:05:00 +0800</pubDate>
+      
+      <guid>/post/github-gitlab/</guid>
+      <description>&lt;p&gt;使用网页端创建新的仓库&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用</title>
+      <link>/post/git/</link>
+      <pubDate>Thu, 30 Nov 2017 14:53:00 +0800</pubDate>
+      
+      <guid>/post/git/</guid>
+      <description>&lt;p&gt;git 由 Linus Torvalds 开发完成, 为了编程而生.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>多线程,多进程,协程</title>
+      <link>/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B-%E5%8D%8F%E7%A8%8B/</link>
+      <pubDate>Sat, 04 Nov 2017 15:11:28 +0000</pubDate>
+      
+      <guid>/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B-%E5%8D%8F%E7%A8%8B/</guid>
+      <description>&lt;p&gt;在多个级别实现程序的高效运行, 是各个资源得到充分的使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>知行的路和思考的方向</title>
+      <link>/post/do_think/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/do_think/</guid>
+      <description>当人类的思维之舟&amp;quot;从其`停泊`处被砍断缆绳而颠簸在怀疑而不确定的艰难之海&amp;quot;时,他们会感到痛苦和困惑,只有一种方式可以`抹</description>
+    </item>
+    
+    <item>
+      <title>python处理excel文件</title>
+      <link>/post/%E8%AF%BB%E5%8F%96excel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E8%AF%BB%E5%8F%96excel/</guid>
+      <description>&lt;p&gt;python 有可以使用 xlrd, xlwt 两个库实现对应 excel 文件的读写.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python用法</title>
+      <link>/post/python%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/python%E7%94%A8%E6%B3%95/</guid>
+      <description>&lt;p&gt;python 的一些基础知识记录&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

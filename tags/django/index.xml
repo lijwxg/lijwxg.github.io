@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>django on House of Heart</title>
+    <link>/tags/django/</link>
+    <description>Recent content in django on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2020 20:47:26 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>drf使用记录</title>
+      <link>/post/drf/</link>
+      <pubDate>Mon, 06 Apr 2020 20:47:26 +0000</pubDate>
+      
+      <guid>/post/drf/</guid>
+      <description>&lt;p&gt;django-restful-framework 基于 django 的一个实现 restfurl 风格接口的框架, 有十分完备的接口设计方案&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

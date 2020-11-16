@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python日志模块 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="python 常用的记录日志的模块, 用于日志分析等场景
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/logs/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="python日志模块" />
+<meta property="og:description" content="python 常用的记录日志的模块, 用于日志分析等场景" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/logs/" />
+<meta property="article:published_time" content="2018-10-03T22:10:53+00:00" />
+<meta property="article:modified_time" content="2018-10-03T22:10:53+00:00" />
+<meta itemprop="name" content="python日志模块">
+<meta itemprop="description" content="python 常用的记录日志的模块, 用于日志分析等场景">
+<meta itemprop="datePublished" content="2018-10-03T22:10:53&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-03T22:10:53&#43;00:00" />
+<meta itemprop="wordCount" content="1305">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python日志模块"/>
+<meta name="twitter:description" content="python 常用的记录日志的模块, 用于日志分析等场景"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python日志模块</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-03 </span>
+        
+          <span class="more-meta"> 约 1305 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#查看日志">查看日志</a></li>
+    <li><a href="#日志模块-logging">日志模块 logging</a></li>
+    <li><a href="#通过-loggingbasicconfig-函数对日志的输出格式及方式做相关配置">通过 logging.basicConfig 函数对日志的输出格式及方式做相关配置</a></li>
+    <li><a href="#通过-loggingstreamhandler-将日志同时输出到文件和屏幕">通过 logging.StreamHandler 将日志同时输出到文件和屏幕</a></li>
+    <li><a href="#通过-logginghandlerrotatingfilehandler-对日志进行回滚">通过 logging.handler.RotatingFileHandler 对日志进行回滚</a></li>
+    <li><a href="#通过-loggingconfig-模块配置日志">通过 logging.config 模块配置日志</a></li>
+    <li><a href="#logging-是线程安全的">logging 是线程安全的</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python 常用的记录日志的模块, 用于日志分析等场景</p>
+<h2 id="查看日志">查看日志</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">cd</span> /home/tornado/abc/logs/supervisor
+$ tail -f  abc_tornado_stdout*                     <span class="c1">#实时日志输出</span>
+$ cat tornado_stdout* <span class="p">|</span> grep <span class="s2">&#34;ader_update&#34;</span>     <span class="c1">#查看生成的日志</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="日志模块-logging">日志模块 logging</h2>
+<h2 id="通过-loggingbasicconfig-函数对日志的输出格式及方式做相关配置">通过 logging.basicConfig 函数对日志的输出格式及方式做相关配置</h2>
+<p><strong>logging.basicConfig 函数各参数:</strong></p>
+<ul>
+<li>filename: 指定日志文件名</li>
+<li>filemode: 和 file 函数意义相同，指定日志文件的打开模式，&lsquo;w'或&rsquo;a&rsquo;</li>
+<li>format: 指定输出的格式和内容，format 可以输出很多有用信息，如下例所示:
+<ul>
+<li>%(levelno)s: 打印日志级别的数值</li>
+<li>%(levelname)s: 打印日志级别名称</li>
+<li>%(pathname)s: 打印当前执行程序的路径，其实就是 sys.argv[0]</li>
+<li>%(filename)s: 打印当前执行程序名</li>
+<li>%(funcName)s: 打印日志的当前函数</li>
+<li>%(lineno)d: 打印日志的当前行号</li>
+<li>%(asctime)s: 打印日志的时间</li>
+<li>%(thread)d: 打印线程 ID</li>
+<li>%(threadName)s: 打印线程名称</li>
+<li>%(process)d: 打印进程 ID</li>
+<li>%(message)s: 打印日志信息</li>
+</ul>
+</li>
+<li>datefmt: 指定时间格式，同 time.strftime()</li>
+<li>level: 设置日志级别，默认为 logging.WARNING</li>
+<li>stream: 指定将日志的输出流，可以指定输出到 sys.stderr,sys.stdout 或者文件，默认输出到 sys.stderr，当 stream 和 filename 同时指定时，stream 被忽略</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>            <span class="c1"># 设置存入log文件的日志级别</span>
+                    <span class="n">format</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2"> [line:</span><span class="si">%(lineno)d</span><span class="s2">] </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&#34;</span><span class="p">,</span>
+                    <span class="n">datefmt</span><span class="o">=</span><span class="s2">&#34;%a, </span><span class="si">%d</span><span class="s2">, %b, %Y %H:%M:%S&#34;</span><span class="p">,</span>
+                    <span class="n">filename</span><span class="o">=</span><span class="s2">&#34;myapp.log&#34;</span><span class="p">,</span>
+                    <span class="n">filemode</span><span class="o">=</span><span class="s2">&#34;w&#34;</span>
+                    <span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;This is a error message.&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;this is a warning message!&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;this is a info message.&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&#34;this is a debug message.&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="通过-loggingstreamhandler-将日志同时输出到文件和屏幕">通过 logging.StreamHandler 将日志同时输出到文件和屏幕</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>            <span class="c1"># 设置存入log文件的日志级别</span>
+                    <span class="n">format</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2"> [line:</span><span class="si">%(lineno)d</span><span class="s2">] </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&#34;</span><span class="p">,</span>
+                    <span class="n">datefmt</span><span class="o">=</span><span class="s2">&#34;%a, </span><span class="si">%d</span><span class="s2">, %b, %Y %H:%M:%S&#34;</span><span class="p">,</span>
+                    <span class="n">filename</span><span class="o">=</span><span class="s2">&#34;myapp_stream.log&#34;</span><span class="p">,</span>
+                    <span class="n">filemode</span><span class="o">=</span><span class="s2">&#34;w&#34;</span>
+                    <span class="p">)</span>
+
+<span class="c1"># 定义一个StreamHandler, 将INFO级别或更高的日志信息打印到标注错误,并将其添加到当前的日志处理对象</span>
+<span class="n">console</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">console</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>                      <span class="c1"># 设置在控制台显示的日志级别</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%(name)-12s</span><span class="s2">: </span><span class="si">%(levelname)-8s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">console</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;This is a error message.&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;this is a warning message!&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;this is a info message.&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&#34;this is a debug message.&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="通过-logginghandlerrotatingfilehandler-对日志进行回滚">通过 logging.handler.RotatingFileHandler 对日志进行回滚</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">logging.handlers</span> <span class="kn">import</span> <span class="n">RotatingFileHandler</span>
+
+<span class="c1"># 定义一个RotatingFileHandler, 最多备份5个日志文件,每个日志文件最大10M</span>
+<span class="n">Rthandler</span> <span class="o">=</span> <span class="n">RotatingFileHandler</span><span class="p">(</span><span class="s2">&#34;myapp_rotating.log&#34;</span><span class="p">,</span> <span class="n">maxBytes</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">,</span> <span class="n">backupCount</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">Rthandler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>                    <span class="c1"># 设置存入log文件的日志级别</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2"> [line:</span><span class="si">%(lineno)d</span><span class="s2">] </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">Rthandler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">Rthandler</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;This is a error message.&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;This is a warning message!&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;This is a info message!&#34;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&#34;This is a debug message!&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>从本例和上例可以看出.logging 有一个日志处理的主对象,其它处理都是通过 addHandler 添加进来的</p>
+<p><strong>logging 的几种 handler 方式如下:</strong></p>
+<ol>
+<li>logging.StreamHandler: 日志输出到流, 可以是 sys.stderr, sys.stdout 或者文件</li>
+<li>logging.FileHandler: 日志输出到文件,</li>
+</ol>
+<p><strong>日志回滚方式, 实际使用时用 RotatingFileHandler 和 TimedRotatingFileHandler:</strong></p>
+<ul>
+<li>logging.handlers.BaseRotatingHandler</li>
+<li>logging.handlers.RotatingFileHandler</li>
+<li>logging.handlers.TimedRotatingFileHandler</li>
+<li>logging.handlers. SockHandler # 远程输出日志到 TCP/IP sockets</li>
+<li>logging.handlers.DatagramHandler # 远程输出日志到 UDP sockets</li>
+<li>logging.handlers.SMTPHandler # 远程输出日志到邮件地址</li>
+<li>logging.handlers.SysLogHandler # 日志输出到 syslog</li>
+<li>logging.handlers.NTEventLogHandler # 远程输出到内存中指定 buffer</li>
+<li>logging.handlers.HTTPHandler # 通过&quot;GET&rdquo;, &ldquo;POST&quot;远程输出到 HTTP 服务器</li>
+</ul>
+<p>由于 StreamHandler 和 FileHandler 是常用的日志处理方式, 所以直接包含在 logging 模块中,而其他方式则包含在 logging.handlers 模块中.</p>
+<h2 id="通过-loggingconfig-模块配置日志">通过 logging.config 模块配置日志</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#logger.conf
+
+###############################################
+
+[loggers]
+keys=root,example01,example02
+
+[logger_root]
+level=DEBUG
+handlers=hand01,hand02
+
+[logger_example01]
+handlers=hand01,hand02
+qualname=example01
+propagate=0
+
+[logger_example02]
+handlers=hand01,hand03
+qualname=example02
+propagate=0
+
+###############################################
+
+[handlers]
+keys=hand01,hand02,hand03
+
+[handler_hand01]
+class=StreamHandler
+level=INFO
+formatter=form02
+args=(sys.stderr,)
+
+[handler_hand02]
+class=FileHandler
+level=DEBUG
+formatter=form01
+args=(&#39;myapp.log&#39;, &#39;a&#39;)
+
+[handler_hand03]
+class=handlers.RotatingFileHandler
+level=INFO
+formatter=form02
+args=(&#39;myapp.log&#39;, &#39;a&#39;, 10*1024*1024, 5)
+
+###############################################
+
+[formatters]
+keys=form01,form02
+
+[formatter_form01]
+format=%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s
+datefmt=%a, %d %b %Y %H:%M:%S
+
+[formatter_form02]
+format=%(name)-12s: %(levelname)-8s %(message)s
+datefmt=
+</code></pre></td></tr></table>
+</div>
+</div><p>StreamHandlers</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">logging.config</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">fileConfig</span><span class="p">(</span><span class="s2">&#34;logger.conf&#34;</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;example01&#34;</span><span class="p">)</span>
+
+<span class="n">loggerloggerloggerlogger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;This is a error message  in stream.&#34;</span><span class="p">)</span>
+<span class="n">loggerloggerlogger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;This is a warning message  in stream!&#34;</span><span class="p">)</span>
+<span class="n">loggerlogger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;This is a info message  in stream!&#34;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&#34;This is a debug message  in stream!&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>RotatingFileHandlers</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">logging.config</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">fileConfig</span><span class="p">(</span><span class="s2">&#34;logger.conf&#34;</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logggin</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;example02&#34;</span><span class="p">)</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;This is a error message.&#34;</span><span class="p">)</span>
+<span class="n">loggerloggerlogger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;This is a warning message in rotating!&#34;</span><span class="p">)</span>
+<span class="n">loggerlogger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;This is a info message in rotating!&#34;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&#34;This is a debug message in rotating!&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="logging-是线程安全的">logging 是线程安全的</h2>
+<ul>
+<li>线程安全就是多线程访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程读取完，其他线程才可使用。不会出现数据不一致或者数据污染。</li>
+<li>线程不安全就是不提供数据访问保护，有可能出现多个线程先后更改数据造成所得到的数据是脏数据</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%AE%89%E5%85%A8/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">免秘钥登陆</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/pyecharts/">
+            <span class="next-text nav-default">pyecharts使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

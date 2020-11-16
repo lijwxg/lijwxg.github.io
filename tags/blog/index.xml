@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on House of Heart</title>
+    <link>/tags/blog/</link>
+    <description>Recent content in Blog on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Mar 2020 14:15:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog从Hexo迁移到Hugo</title>
+      <link>/post/hexo2hugo/</link>
+      <pubDate>Wed, 18 Mar 2020 14:15:00 +0800</pubDate>
+      
+      <guid>/post/hexo2hugo/</guid>
+      <description>&lt;p&gt;Hexo 是一个十分炫酷的前端页面生成工具, 使用node.js实现, 有十分丰富的主题和炫酷的效果. 同时十分喜欢一切都是纯文
+本的设计. 所想即所得. Hugo是由go语言开发的页面生成工具, 生成页面十分快捷. 关键是还支持org-mode文本渲染.在Emacs
+里面完成文本操作, 学习org-mode也可以学以致用.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用hugo构建个人blog</title>
+      <link>/post/simplest-hugo/</link>
+      <pubDate>Tue, 17 Mar 2020 18:07:00 +0800</pubDate>
+      
+      <guid>/post/simplest-hugo/</guid>
+      <description>&lt;p&gt;这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

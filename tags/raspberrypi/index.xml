@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>raspberrypi on House of Heart</title>
+    <link>/tags/raspberrypi/</link>
+    <description>Recent content in raspberrypi on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>树莓派基本配置</title>
+      <link>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派操作系统安装</title>
+      <link>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;p&gt;在入手一个新的树莓派之后第一步是给树莓派安装一个操作系统, 我们的操作系统是安装在一个存储卡上, 非常符合树莓派小巧便携的特点. 小身板, 大能耐.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

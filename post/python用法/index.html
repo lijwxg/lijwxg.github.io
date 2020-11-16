@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python用法 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="python 的一些基础知识记录
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/python%E7%94%A8%E6%B3%95/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="python用法" />
+<meta property="og:description" content="python 的一些基础知识记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/python%E7%94%A8%E6%B3%95/" />
+
+<meta itemprop="name" content="python用法">
+<meta itemprop="description" content="python 的一些基础知识记录">
+
+<meta itemprop="wordCount" content="617">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python用法"/>
+<meta name="twitter:description" content="python 的一些基础知识记录"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python用法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 约 617 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#python-的函数参数传递">Python 的函数参数传递</a></li>
+    <li><a href="#staticmethod-和-classmethod">staticmethod 和 classmethod</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python 的一些基础知识记录</p>
+<h2 id="python-的函数参数传递">Python 的函数参数传递</h2>
+<p>  在 Python 中所有的变量都可以理解为内存中一个对象的引用,这里的类型是属于对象的,而不是变量.而对象有两种'可更改&rsquo;,&lsquo;不可更改'两种,第一个代码块属于不可变类型的数字,同时,也可以理解为更改后的 a 为函数内部的局域变量,在外面不起作用.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">fun</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1">#1</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>  这里的函数内应用指向的是一个可变对象,对它的操作就和定位了指针地址一样,在内存里进行了修改.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fun</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1">#[1]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="staticmethod-和-classmethod">staticmethod 和 classmethod</h2>
+<p>  Python 有三种方法,包括静态方法(staticmethod),类方法(classmethod),和实例方法.如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;executing foo(</span><span class="si">%s</span><span class="s2">)&#34;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;executing foo(</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">class_foo</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;executing class_foo(</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">) % (cls, x)&#34;</span><span class="p">)</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">static_foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;excuting static_foo(</span><span class="si">%s</span><span class="s2">)&#34;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>  代码中的 self 和 cls 是对类和实例的绑定,对于一般的函数来说我们可以调用 foo(x),这是最基本的函数,最常用,它的工作和其他的类,实例无关,对于实例方法,我们知道在类里每次定义的方法都需要绑定这个实例,就是 foo(self,x),这是因为实例方法的调用离不开实例,我们需要把实例自己传给函数,调用的时候是这样的 a.foo(x)(其实就是 foo(a,x));类方法也是一样,不过它传递的是类而不是实例,A.classmethod_foo();<br>
+  而静态方法和普通方法是一样的,不需要对谁惊醒绑定,唯一的区别是调用的时候需要使用 a.static_foo(x)或者 A.static_foo()来调用</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%AF%BB%E5%8F%96excel/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python处理excel文件</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

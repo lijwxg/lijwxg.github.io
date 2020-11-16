@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>免秘钥登陆 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆.
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/%E5%AE%89%E5%85%A8/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="免秘钥登陆" />
+<meta property="og:description" content="为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/%E5%AE%89%E5%85%A8/" />
+<meta property="article:published_time" content="2018-10-07T12:10:53+00:00" />
+<meta property="article:modified_time" content="2018-10-07T12:10:53+00:00" />
+<meta itemprop="name" content="免秘钥登陆">
+<meta itemprop="description" content="为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆.">
+<meta itemprop="datePublished" content="2018-10-07T12:10:53&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-07T12:10:53&#43;00:00" />
+<meta itemprop="wordCount" content="294">
+
+
+
+<meta itemprop="keywords" content="linux,ssh," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="免秘钥登陆"/>
+<meta name="twitter:description" content="为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">免秘钥登陆</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-07 </span>
+        
+          <span class="more-meta"> 约 294 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#生成秘钥">生成秘钥</a></li>
+    <li><a href="#上传秘钥">上传秘钥</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆.</p>
+<h2 id="生成秘钥">生成秘钥</h2>
+<p>1、在客户端打开终端，执行ssh-keygen，该命令会默认在~/.ssh/目录下创建id_rsa、id_rsa.pub两个文件，分别为您的公钥和私钥。</p>
+<pre><code>```shell
+ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+```
+</code></pre>
+<p>2、将公钥id_rsa.pub文件拷贝到服务器端的~/.ssh/authorized_keys文件中，有三种方法：</p>
+<h2 id="上传秘钥">上传秘钥</h2>
+<ul>
+<li>通过scp拷贝：
+例：#可选参数-P代表指定用端口号22</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">scp -P <span class="m">22</span> ~/.ssh/id_rsa.pub user@host:~/authorized_keys
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>通过ssh-copy-id程序：</li>
+</ul>
+<p>　例：#此种方式简单，不需追加改文件名，但不能指定端口号，默认以22端口</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ssh-copy-id user@host
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>通过cat方法：</li>
+</ul>
+<p>　例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">cat ~/.ssh/id_rsa.pub <span class="p">|</span> ssh -p <span class="m">22</span> user@host <span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-07
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">linux</a>
+          <a href="/tags/ssh/">ssh</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">挂后台命令</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/logs/">
+            <span class="next-text nav-default">python日志模块</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

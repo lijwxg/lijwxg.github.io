@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kafka基本的概念 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:
+ 第一个挑战是如何收集大量的数据, 第二个挑战是分析收集的数据 " /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/kafka-basic/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Kafka基本的概念" />
+<meta property="og:description" content="在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:
+
+第一个挑战是如何收集大量的数据,
+第二个挑战是分析收集的数据
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/kafka-basic/" />
+<meta property="article:published_time" content="2018-05-06T15:25:00+08:00" />
+<meta property="article:modified_time" content="2018-05-06T15:25:00+08:00" />
+<meta itemprop="name" content="Kafka基本的概念">
+<meta itemprop="description" content="在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:
+
+第一个挑战是如何收集大量的数据,
+第二个挑战是分析收集的数据
+">
+<meta itemprop="datePublished" content="2018-05-06T15:25:00&#43;08:00" />
+<meta itemprop="dateModified" content="2018-05-06T15:25:00&#43;08:00" />
+<meta itemprop="wordCount" content="1180">
+
+
+
+<meta itemprop="keywords" content="kafka,bigdata," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kafka基本的概念"/>
+<meta name="twitter:description" content="在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:
+
+第一个挑战是如何收集大量的数据,
+第二个挑战是分析收集的数据
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kafka基本的概念</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-05-06 </span>
+        
+          <span class="more-meta"> 约 1180 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kafka-概述">Kafka 概述</a>
+      <ul>
+        <li><a href="#消息系统">消息系统</a></li>
+        <li><a href="#什么是-kafka">什么是 Kafka</a></li>
+      </ul>
+    </li>
+    <li><a href="#kafka-基础">Kafka 基础</a></li>
+    <li><a href="#kafka-集群">Kafka 集群</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>在大数据中,使用了大量的数据. 关于数据, 我们有两个主要挑战:</p>
+<ul>
+<li>第一个挑战是如何收集大量的数据,</li>
+<li>第二个挑战是分析收集的数据</li>
+</ul>
+<h2 id="kafka-概述">Kafka 概述</h2>
+<p>为了克服这些挑战, 您必须需要一个消息系统. Kafka 专为分布式高吞吐量系统而设计. 作为一个更传统的消息代理的替代品, 与其它消息传递系统相比,Kafka 具有更好的吞吐量, 内置分区, 复制和固有的容错能力, 这使得它非常适合大规模消息处理应用系统.</p>
+<h3 id="消息系统">消息系统</h3>
+<p>消息系统负责将数据从一个应用程序传输到另一个应用程序, 因此应用程序可以专注于数据, 而不担心如何共享它. 分布式消息传递基于可靠消息队列的概念. 消息在客户端应用程序和消息传递系统之间异步排队. 有两种类型的消息模式可用:</p>
+<ul>
+<li>一种是点对点</li>
+<li>另一种是发布-订阅(pub-sub)消息系统.</li>
+</ul>
+<p>大多数消息模式遵循 pub-sub</p>
+<p><strong>点对点消息系统</strong>
+在点对点系统中, 消息被保留在队列中. 一个或多个消费者可以消耗队列中的消息, 但是特定消息只能由一个消费者消费. 一旦消费者读取队列中的消息, 它就从队列中消失. 该系统的典型事例是订单处理系统, 其中每个订单将由一个订单处理器处理,但多个订单处理器也可以同时工作</p>
+<p><strong>发布-订阅消息系统</strong>
+在发布-订阅系统中, 消息被保留在主题中. 与点对点系统搞不通, 消费者可以订阅一个或多个主题并使用该主题的所有消息. 在发布-订阅系统中, 消息成为发布者, 消息使用者称为订阅者. 一个现实生活的例子是 Dish 电视, 它发布不同的渠道, 如运动, 电影, 音乐等, 任何人都可以订阅自己的频道集, 并获得他们订阅的频道时可用</p>
+<h3 id="什么是-kafka">什么是 Kafka</h3>
+<p>Apache Kafka 是一个分布式发布-订阅消息系统和一个强大的队列, 可以处理大量的数据, 并使您能过将消息从一个端点传递到另一个端点. Kafka 适合离线和在线消息消费. Kafka 消息保留在磁盘上, 并在集群内复制以防止数据丢失. Kafka 构建在 ZooKeeper 同步服务之上, 它与 Apache Storm 和 Spark 非常好的集成, 用于实时流式数据分析</p>
+<h4 id="好处">好处</h4>
+<p>以下是使用 Kafka 的几个好处:</p>
+<ul>
+<li>可靠性 Kafka 是分布式, 分区, 复制和容错的</li>
+<li>可拓展性 Kafka 消息传递系统轻松缩放, 无需停机</li>
+<li>耐用性 Kafka 使用分布式提交日志, 这以为这消息会尽可能地保留在磁盘上, 因此它是持久的.</li>
+<li>性能 Kafka 对于发布和订阅消息都具有很高的吞吐量. 计时存储了许多 TB 的消息. 它也保持稳定的性能</li>
+</ul>
+<p>Kafka 非常快, 并保证零停机和零数据丢失.</p>
+<h4 id="用例">用例</h4>
+<p>Kafka 可以在许多用例中使用. 其中一些列举如下:</p>
+<ul>
+<li>指标 Kafka 通常用于操作监控数据. 这涉及聚合来自分布式应用程序的统计信息, 以产生操作数据的几种馈送.</li>
+<li>日志聚合解决方案 Kafka 可用于跨组织从多个服务收集日志, 并使他们一标准格式提供给多个服务器.</li>
+<li>流处理 流行的框架(Storm 和 Spark Streaming)从主体中读取数据, 对其进行处理, 并将处理后的数据写入新主题, 供用户和应用程序使用. Kafka 的耐久性在流处理的上下文中也非常有用.</li>
+</ul>
+<h2 id="kafka-基础">Kafka 基础</h2>
+<p>在深入了解 kafka 之前, 需要了解主题, 经纪人, 生产者, 消费者等主要术语, 下图说明了主要术语</p>
+<h2 id="kafka-集群">Kafka 集群</h2>
+<ul>
+<li><strong>broker(代理)</strong>:</li>
+<li><strong>ZooKeeper</strong></li>
+<li><strong>Producers(生产者)</strong></li>
+<li><strong>Consumers()</strong></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-05-06
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/kafka/">kafka</a>
+          <a href="/tags/bigdata/">bigdata</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">树莓派操作系统安装</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/kafka-start/">
+            <span class="next-text nav-default">使用 kafka, 基本环境和安装</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

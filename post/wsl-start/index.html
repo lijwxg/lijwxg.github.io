@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>WSL基础 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content=" Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/wsl-start/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="WSL基础" />
+<meta property="og:description" content="
+Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/wsl-start/" />
+<meta property="article:published_time" content="2020-06-13T17:51:00+08:00" />
+<meta property="article:modified_time" content="2020-06-13T17:51:00+08:00" />
+<meta itemprop="name" content="WSL基础">
+<meta itemprop="description" content="
+Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
+">
+<meta itemprop="datePublished" content="2020-06-13T17:51:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-13T17:51:00&#43;08:00" />
+<meta itemprop="wordCount" content="593">
+
+
+
+<meta itemprop="keywords" content="windows,linux,shell,wsl," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WSL基础"/>
+<meta name="twitter:description" content="
+Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">WSL基础</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-13 </span>
+        
+          <span class="more-meta"> 约 593 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#支持镜像">支持镜像</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#相关配置">相关配置</a>
+      <ul>
+        <li><a href="#子系统的配置">子系统的配置</a></li>
+        <li><a href="#windows系统下的配置">Windows系统下的配置</a></li>
+        <li><a href="#图形化访问">图形化访问</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
+</blockquote>
+<p>在windows下更加轻量级的使用linux系统功能, 使用许多在linux下更加方便的功能.</p>
+<h2 id="支持镜像">支持镜像</h2>
+<ul>
+<li>kali</li>
+<li>ubuntu</li>
+<li>Alpine</li>
+<li>Debian</li>
+<li>openSUSE</li>
+<li>Centos</li>
+</ul>
+<h2 id="安装">安装</h2>
+<p>在设置中启动Windows子系统功能, 在Windows应用商店中下载安装</p>
+<blockquote>
+<p>子系统默认安装在C盘下,建议使用<a href="https://github.com/DDoSolitary/LxRunOffline/releases">工具</a>将子系统迁移到指定位置下</p>
+</blockquote>
+<h2 id="相关配置">相关配置</h2>
+<h3 id="子系统的配置">子系统的配置</h3>
+<ol>
+<li>在cmd中执行bash,可以进去子系统的shell会话</li>
+<li>安装oh-my-zsh</li>
+<li>安装常用软件
+<ul>
+<li>git</li>
+<li>mysql</li>
+<li>redis</li>
+<li>nginx</li>
+<li>supervisor</li>
+<li>python开发环境</li>
+</ul>
+</li>
+</ol>
+<h3 id="windows系统下的配置">Windows系统下的配置</h3>
+<ol>
+<li>将子系统的zsh集成到cmder中
+<ul>
+<li>安装cmder</li>
+<li>选择启动的shell为{WSL:bash}
+启动参数为: set &ldquo;PATH=%ConEmuBaseDirShort%\wsl;%PATH%&rdquo; &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe &ndash;wsl -cur_console:pm:/mnt</li>
+</ul>
+</li>
+<li>pycharm集成bash
+<ul>
+<li>在设置中修改terminal配置
+Settings -&gt; Tools -&gt; Terminal位置</li>
+<li>修改shell path参数为: &ldquo;bash&rdquo;. 相当于调用了bash命令</li>
+</ul>
+</li>
+<li>pycharm选择WSL中的解释器
+<ul>
+<li>在设置添加解释器
+Settings -&gt; Projects -&gt; Projects Interpreter</li>
+<li>使用Add添加WSL类型的解释器,选择python路径</li>
+</ul>
+</li>
+</ol>
+<h3 id="图形化访问">图形化访问</h3>
+<ol>
+<li>图形化子系统中的emacs
+<a href="https://github.com/hubisan/emacs-wsl">Emacs-wsl</a>, 从windows中使用图形化访问子系统中的应用
+<blockquote>
+<p>图形界面中识别不了汉字输入,需要后续解决.</p>
+</blockquote>
+</li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-06-13
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/windows/">windows</a>
+          <a href="/tags/linux/">linux</a>
+          <a href="/tags/shell/">shell</a>
+          <a href="/tags/wsl/">wsl</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/airflow/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Airflow调度器</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/plantuml/">
+            <span class="next-text nav-default">plantuml使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

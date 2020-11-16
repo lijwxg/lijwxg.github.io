@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>excel on House of Heart</title>
+    <link>/tags/excel/</link>
+    <description>Recent content in excel on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/tags/excel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python处理excel文件</title>
+      <link>/post/%E8%AF%BB%E5%8F%96excel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E8%AF%BB%E5%8F%96excel/</guid>
+      <description>&lt;p&gt;python 有可以使用 xlrd, xlwt 两个库实现对应 excel 文件的读写.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

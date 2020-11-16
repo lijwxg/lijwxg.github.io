@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>orgmode - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/orgmode/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="orgmode" />
+<meta property="og:description" content="org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/orgmode/" />
+<meta property="article:published_time" content="2020-02-14T16:32:00+08:00" />
+<meta property="article:modified_time" content="2020-02-14T16:32:00+08:00" />
+<meta itemprop="name" content="orgmode">
+<meta itemprop="description" content="org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的">
+<meta itemprop="datePublished" content="2020-02-14T16:32:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-14T16:32:00&#43;08:00" />
+<meta itemprop="wordCount" content="1036">
+
+
+
+<meta itemprop="keywords" content="emacs,org," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="orgmode"/>
+<meta name="twitter:description" content="org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">orgmode</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-14 </span>
+        
+          <span class="more-meta"> 约 1036 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#emacs安装配置">emacs安装配置</a></li>
+    <li><a href="#org-文件语法">org 文件语法</a>
+      <ul>
+        <li><a href="#文件头">文件头</a></li>
+        <li><a href="#drawer">Drawer</a></li>
+        <li><a href="#文本编程">文本编程</a></li>
+        <li><a href="#时间标签">时间标签</a></li>
+        <li><a href="#时间状态">时间状态</a></li>
+        <li><a href="#常用语义-table-links-images">常用语义[Table, links, images]</a></li>
+      </ul>
+    </li>
+    <li><a href="#gtd">GTD</a>
+      <ul>
+        <li><a href="#todolists">TODOlists</a></li>
+        <li><a href="#agenda视图">agenda视图</a></li>
+        <li><a href="#任务管理流程">任务管理流程</a></li>
+      </ul>
+    </li>
+    <li><a href="#日记">日记</a></li>
+    <li><a href="#工具">工具</a>
+      <ul>
+        <li><a href="#导出为其它格式文件-用于展示-dot">导出为其它格式文件,用于展示.</a></li>
+        <li><a href="#导出为其它格式文件-用于展示">导出为其它格式文件, 用于展示</a></li>
+      </ul>
+    </li>
+    <li><a href="#其它">其它</a>
+      <ul>
+        <li><a href="#使用git管理">使用git管理</a></li>
+        <li><a href="#使用webdev同步到其它的终端">使用webDev同步到其它的终端</a></li>
+        <li><a href="#客户端">客户端</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的</p>
+<blockquote>
+<p>Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.</p>
+</blockquote>
+<h2 id="emacs安装配置">emacs安装配置</h2>
+<p>使用spacemacs(一个EMACS的的vimer版本配置), 了解<a href="https://www.spacemacs.org/">Spacemacs</a></p>
+<h2 id="org-文件语法">org 文件语法</h2>
+<p>orgmode存在一些特殊的语义</p>
+<h3 id="文件头">文件头</h3>
+<p>在文件开始的头部定义文件的语义特点</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="cs">#+STARTUP</span><span class="c">: overview ;;默认, top-level headlines only</span>
+<span class="cs">#+STARTUP</span><span class="c">: indent     ;;使用缩进作为层级,</span>
+<span class="cs">#+STARTUP</span><span class="c">: showall    ;;no folding of any entries</span>
+<span class="cs">#+STARTUP</span><span class="c">: showeverything ;; show even drawer</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="drawer">Drawer</h3>
+<p>在全局折叠的时候不会展开, 之后在这个字段上才能展开</p>
+<h3 id="文本编程">文本编程</h3>
+<p>在#+BEGIN_SRC包围的语句中使用特定语言的语法, 使其可以用语法高亮</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="时间标签">时间标签</h3>
+<p>不同时间标签的含义和定义方法</p>
+<ol>
+<li>激活的时间标签 C-c . <!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;2020-03-01 Sun&gt;<!-- raw HTML omitted --><!-- raw HTML omitted -->
+激活的时间标签是使用尖括号, 用于确定的时间信息表达</li>
+<li>非激活的时间标签 C-c ! <!-- raw HTML omitted --><!-- raw HTML omitted -->[2020-03-01 Sun]<!-- raw HTML omitted --><!-- raw HTML omitted -->
+未激活的时间标签使用方括号, 不确定的时间表达使用</li>
+<li>加小时分钟 <!-- raw HTML omitted --><!-- raw HTML omitted -->[2020-03-01 Sun 13:00]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+<li>在两个时间戳之间用两个短横杠连接 <!-- raw HTML omitted --><!-- raw HTML omitted -->[2020-03-01 Sun 12:00]–[2020-03-01 Sun 13:00]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ol>
+<h3 id="时间状态">时间状态</h3>
+<p>不同的时间状态, 用于区分时间阶段</p>
+<ol>
+<li>
+<p>schedule: C-c C-s</p>
+</li>
+<li>
+<p>deadline: C-c C-d</p>
+</li>
+<li>
+<p>closed: 表示完成, 在状态变成done时候添加, 默认是需要在文件头中添加 BEGIN_SRC</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="cs">#+STARTUP</span><span class="c">: logdone</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="常用语义-table-links-images">常用语义[Table, links, images]</h3>
+<p>用于格式化的渲染</p>
+<h4 id="表格">表格</h4>
+<p>创建一个表格, 展示表格数据</p>
+<ol>
+<li>创建表格, 使用分隔符|创建首行, 其它行在normal mode下使用tab键自动生成
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>张三</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>李四</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>王五</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>填充表格数据
+使用tab键在数据输入框之前切换, 进行输入.</li>
+</ol>
+<h4 id="超链接">超链接</h4>
+<p>使用三对方括号进行定义<a href="https://orgmode.org/">org-mode</a></p>
+<h4 id="图片">图片</h4>
+<p>使用两对中括号定义<img src="./demo.jpg" alt=""></p>
+<h2 id="gtd">GTD</h2>
+<p>Tasks manage</p>
+<h3 id="todolists">TODOlists</h3>
+<h4 id="学习org">学习org</h4>
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->DONE<!-- raw HTML omitted -->  在互联网上查找资料</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->DONE<!-- raw HTML omitted -->  安装emacs</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->DONE<!-- raw HTML omitted -->  创建org文件</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->DONE<!-- raw HTML omitted -->  配置org</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->DONE<!-- raw HTML omitted -->  学习org语法规则<!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;2020-03-01 Sun 13:00&gt;–&lt;2020-03-01 Sun 15:00&gt; <!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->[5/5]<!-- raw HTML omitted --> <!-- raw HTML omitted -->[100%]<!-- raw HTML omitted --></p>
+<p>学习分五步完成</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox">特殊语义</li>
+<li><input checked="" disabled="" type="checkbox">时间标记</li>
+<li><input checked="" disabled="" type="checkbox">装填切换</li>
+<li><input checked="" disabled="" type="checkbox">标签定义</li>
+<li><input checked="" disabled="" type="checkbox">demo练习</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->TODO<!-- raw HTML omitted -->  自定义agenda的结构, 和手机同步展示, 编辑 <!-- raw HTML omitted -->[0%]<!-- raw HTML omitted --></p>
+<p>与手机同步管理日程计划</p>
+<ul>
+<li><input disabled="" type="checkbox">spacemacs关联org文件</li>
+<li><input disabled="" type="checkbox">自定义状态和标签.</li>
+<li><input disabled="" type="checkbox">在手机上使用beorg读取文件</li>
+<li><input disabled="" type="checkbox">在电脑上修改文件, 手机上同步</li>
+<li><input disabled="" type="checkbox">在手机上修改文件, 同步到电脑端</li>
+</ul>
+</li>
+</ul>
+<h3 id="agenda视图">agenda视图</h3>
+<h3 id="任务管理流程">任务管理流程</h3>
+<h4 id="收集信息">收集信息</h4>
+<h4 id="设置状态">设置状态</h4>
+<h4 id="设置时间">设置时间</h4>
+<h4 id="每天查看agenda">每天查看agenda</h4>
+<h4 id="及时更新状态">及时更新状态</h4>
+<h4 id="归档">归档</h4>
+<h4 id="定期回顾">定期回顾</h4>
+<h2 id="日记">日记</h2>
+<h2 id="工具">工具</h2>
+<h3 id="导出为其它格式文件-用于展示-dot">导出为其它格式文件,用于展示.</h3>
+<h3 id="导出为其它格式文件-用于展示">导出为其它格式文件, 用于展示</h3>
+<h2 id="其它">其它</h2>
+<h3 id="使用git管理">使用git管理</h3>
+<h4 id="初始化项目-对所有的编辑进行版本管理-dot-可追溯-dot">初始化项目, 对所有的编辑进行版本管理. 可追溯.</h4>
+<h4 id="将项目推送到指定的仓库-dot">将项目推送到指定的仓库.</h4>
+<h3 id="使用webdev同步到其它的终端">使用webDev同步到其它的终端</h3>
+<h4 id="坚果云">坚果云</h4>
+<h3 id="客户端">客户端</h3>
+<h4 id="ios端-beorg">IOS端 beorg</h4>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-02-14
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/emacs/">emacs</a>
+          <a href="/tags/org/">org</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/js/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">JavaScript笔记</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/sentry/">
+            <span class="next-text nav-default">Sentry的部署</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>plantuml使用 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="使用plantuml画结构图
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/plantuml/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="plantuml使用" />
+<meta property="og:description" content="使用plantuml画结构图" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/plantuml/" />
+<meta property="article:published_time" content="2020-06-06T15:54:00+08:00" />
+<meta property="article:modified_time" content="2020-06-06T15:54:00+08:00" />
+<meta itemprop="name" content="plantuml使用">
+<meta itemprop="description" content="使用plantuml画结构图">
+<meta itemprop="datePublished" content="2020-06-06T15:54:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-06T15:54:00&#43;08:00" />
+<meta itemprop="wordCount" content="2190">
+
+
+
+<meta itemprop="keywords" content="plantuml," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="plantuml使用"/>
+<meta name="twitter:description" content="使用plantuml画结构图"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">plantuml使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-06 </span>
+        
+          <span class="more-meta"> 约 2190 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#通过简单直观的语言来绘制示意图">通过简单直观的语言来绘制示意图</a></li>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#plantuml是一个开源项目-支持快速绘制">PlantUML是一个开源项目，支持快速绘制</a>
+      <ul>
+        <li><a href="#支持绘制uml图-如下">支持绘制UML图,如下</a></li>
+        <li><a href="#同时还支持以下非uml图-如下">同时还支持以下非UML图,如下</a></li>
+      </ul>
+    </li>
+    <li><a href="#图形显示">图形显示</a>
+      <ul>
+        <li><a href="#时序图">时序图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>使用plantuml画结构图</p>
+<h2 id="通过简单直观的语言来绘制示意图">通过简单直观的语言来绘制示意图</h2>
+<p><a href="https://plantuml.com/zh/">plantuml</a>是一种统一建模语言(Unified Modeling Language，UML), 能方便快捷将想法转化为图形, 所想即所得.</p>
+<h2 id="准备工作">准备工作</h2>
+<ol>
+<li>安装<a href="http://www.graphviz.org/">Graphviz</a>
+<blockquote>
+<p>plantuml使用Graphviz来生成相关图形</p>
+</blockquote>
+</li>
+<li>配置Graphviz的环境变量, dot -v命令能生效</li>
+<li>下载<a href="https://plantuml.com/zh/download">plantuml.jar</a>
+<blockquote>
+<p>plantuml.jar包可以直接运行uml的文件,进行输出</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="plantuml是一个开源项目-支持快速绘制">PlantUML是一个开源项目，支持快速绘制</h2>
+<p><strong>本文摘抄自<a href="https://plantuml.com/zh/">plantuml</a></strong></p>
+<h3 id="支持绘制uml图-如下">支持绘制UML图,如下</h3>
+<ul>
+<li><a href="#%E6%97%B6%E5%BA%8F%E5%9B%BE">时序图</a></li>
+<li><a href="#%E7%94%A8%E4%BE%8B%E5%9B%BE">用例图</a></li>
+<li>类图</li>
+<li>活动图 (旧版语法在此处)</li>
+<li>组件图</li>
+<li>状态图</li>
+<li>对象图</li>
+<li>部署图</li>
+<li>定时图</li>
+</ul>
+<h3 id="同时还支持以下非uml图-如下">同时还支持以下非UML图,如下</h3>
+<ul>
+<li>线框图形界面</li>
+<li>架构图</li>
+<li>规范和描述语言 (SDL)</li>
+<li>Ditaa diagram</li>
+<li>甘特图</li>
+<li>思维导图</li>
+<li>Work Breakdown Structure diagram</li>
+<li>以 AsciiMath 或 JLaTeXMath 符号的数学公式</li>
+<li>Entity Relationship diagram</li>
+</ul>
+<h2 id="图形显示">图形显示</h2>
+<h3 id="时序图">时序图</h3>
+<h4 id="声明参与者">声明参与者</h4>
+<p>你可以用-&gt;来绘制参与者之间传递的消息， 而不必显式地声明参与者。
+你也可以使用 &ndash;&gt; 绘制一个虚线箭头。
+另外，你还能用 &lt;- 和 &lt;&ndash;，这不影响绘图，但可以提高可读性。 注意：仅适用于时序图，对于其它示意图，规则是不同的。</p>
+<p>```plantuml
+用户 -&gt; 认证中心: 登录操作
+认证中心 -&gt; 缓存: 存放(key=token+ip,value=token)token</p>
+<p>用户 &lt;- 认证中心 : 认证成功返回token
+用户 -&gt; 认证中心: 下次访问头部携带token认证
+认证中心 &lt;- 缓存: key=token+ip获取token
+其他服务 &lt;- 认证中心: 存在且校验成功则跳转到用户请求的其他服务
+其他服务 -&gt; 用户: 信息
+```</p>
+<p>关键字 participant 用于改变参与者的先后顺序。
+你也可以使用其它关键字来声明参与者：</p>
+<ul>
+<li>actor</li>
+<li>boundary</li>
+<li>control</li>
+<li>entity</li>
+<li>database</li>
+<li>collections</li>
+</ul>
+<p>关键字 as 用于重命名参与者
+你可以使用RGB值或者颜色名修改 actor 或参与者的背景颜色。</p>
+<h4 id="给自己发消息">给自己发消息</h4>
+<p>参与者可以给自己发信息，
+消息文字可以用\n来换行。</p>
+<h4 id="修改箭头样式">修改箭头样式</h4>
+<p>修改箭头样式的方式有以下几种:</p>
+<ul>
+<li>表示一条丢失的消息：末尾加 x</li>
+<li>让箭头只有上半部分或者下半部分：将&lt;和&gt;替换成\或者 /</li>
+<li>细箭头：将箭头标记写两次 (如 &raquo; 或 //)</li>
+<li>虚线箭头：用 &ndash; 替代 -</li>
+<li>箭头末尾加圈：-&gt;o</li>
+<li>双向箭头：&lt;-&gt;</li>
+</ul>
+<h4 id="对消息序列编号">对消息序列编号</h4>
+<p>关键字 autonumber 用于自动对消息编号。</p>
+<p>语句 autonumber <strong>start</strong> 用于指定编号的初始值，而 autonumber <strong>start</strong> <strong>increment</strong> 可以同时指定编号的初始值和每次增加的值。</p>
+<p>你可以在双引号内指定编号的格式。
+格式是由 Java 的DecimalFormat类实现的： (0 表示数字；# 也表示数字，但默认为0)。
+你也可以用 HTML 标签来制定格式。</p>
+<p>你还可以用语句 autonumber stop 和 autonumber resume <strong>increment</strong> <strong>format</strong> 来表示暂停或继续使用自动编号。</p>
+<h4 id="page-title-header-and-footer">Page Title, Header and Footer</h4>
+<p>The title keyword is used to add a title to the page.
+Pages can display headers and footers using header and footer.</p>
+<h4 id="分割示意图">分割示意图</h4>
+<p>关键字 newpage 用于把一张图分割成多张。
+在 newpage 之后添加文字，作为新的示意图的标题。
+这样就能很方便地在 Word 中将长图分几页打印。</p>
+<h4 id="组合消息">组合消息</h4>
+<p>我们可以通过以下关键词将组合消息：</p>
+<ul>
+<li>alt/else</li>
+<li>opt</li>
+<li>loop</li>
+<li>par</li>
+<li>break</li>
+<li>critical</li>
+<li>group, 后面紧跟着消息内容</li>
+</ul>
+<p>可以在标头(header)添加需要显示的文字(group除外)。
+关键词 end 用来结束分组。
+注意，分组可以嵌套使用。</p>
+<h4 id="给消息添加注释">给消息添加注释</h4>
+<p>我们可以通过在消息后面添加 note left 或者 note right 关键词来给消息添加注释。
+你也可以通过使用 end note 来添加多行注释。</p>
+<h4 id="其他的注释">其他的注释</h4>
+<p>可以使用note left of，note right of或note over在节点(participant)的相对位置放置注释。
+还可以通过修改背景色来高亮显示注释。
+以及使用关键字end note来添加多行注释。</p>
+<h4 id="改变备注框的形状">改变备注框的形状</h4>
+<p>你可以使用 hnote 和 rnote 这两个关键字来修改备注框的形状。</p>
+<h4 id="creole和html">Creole和HTML</h4>
+<p><a href="https://plantuml.com/zh/creole">可以使用creole格式</a></p>
+<h4 id="分隔符">分隔符</h4>
+<p>你可以通过使用 == 关键词来将你的图表分割多个步骤。</p>
+<h4 id="引用">引用</h4>
+<p>你可以在图中通过使用ref over关键词来实现引用</p>
+<h4 id="延迟">延迟</h4>
+<p>你可以使用&hellip;来表示延迟，并且还可以给延迟添加注释。</p>
+<h4 id="空间">空间</h4>
+<p>你可以使用|||来增加空间。
+还可以使用数字指定增加的像素的数量。</p>
+<h4 id="生命线的激活与撤销">生命线的激活与撤销</h4>
+<p>关键字activate和deactivate用来表示参与者的生命活动。
+一旦参与者被激活，它的生命线就会显示出来。
+activate和deactivate适用于以上情形。
+destroy表示一个参与者的生命线的终结。</p>
+<h4 id="return">Return</h4>
+<p>A new command return for generating a return message with optional text label. The point returned to is the point that cause the most recently activated life-line. The syntax is simply return label where label, if provided, can be any string acceptable on conventional messages.</p>
+<h4 id="创建参与者">创建参与者</h4>
+<p>你可以把关键字create放在第一次接收到消息之前，以强调本次消息实际上是在创建新的对象。</p>
+<h4 id="shortcut-syntax-for-activation-deactivation-creation">Shortcut syntax for activation, deactivation, creation</h4>
+<p>Immediately after specifying the target participant, the following syntax can be used:
+++ Activate the target (optionally a #color may follow this)
+&ndash; Deactivate the source
+*Create an instance of the target
+!! Destroy an instance of the target</p>
+<h4 id="进入和发出消息">进入和发出消息</h4>
+<p>如果只想关注部分图示，你可以使用进入和发出箭头。
+使用方括号`[`和`]`表示图示的左、右两侧。</p>
+<h4 id="anchors-and-duration">Anchors and Duration</h4>
+<p>With teoz usage it is possible to add anchors to the diagram and use the anchors to specify duration time.</p>
+<h4 id="构造类型和圈点">构造类型和圈点</h4>
+<p>可以使用`<!-- raw HTML omitted --><!-- raw HTML omitted -->`给参与者添加构造类型。
+在构造类型中，你可以使用(X,color)格式的语法添加一个圆圈圈起来的字符。</p>
+<h4 id="更多标题信息">更多标题信息</h4>
+<p>你可以在标题中使用creole格式。
+在标题描述中使用`\n`表示换行。
+还可以使用关键字title和end title定义多行标题。</p>
+<h4 id="包裹参与者">包裹参与者</h4>
+<p>可以使用box和end box画一个盒子将参与者包裹起来。
+还可以在box关键字之后添加标题或者背景颜色。</p>
+<h4 id="移除脚注">移除脚注</h4>
+<p>使用hide footbox关键字移除脚注。</p>
+<h4 id="外观参数--skinparam">外观参数(skinparam)</h4>
+<p>用skinparam改变字体和颜色。
+可以在如下场景中使用：</p>
+<ul>
+<li>在图示的定义中，</li>
+<li>在引入的文件中，</li>
+<li>在命令行或者ANT任务提供的配置文件中。</li>
+</ul>
+<p>你也可以修改其他渲染元素</p>
+<h4 id="填充区设置">填充区设置</h4>
+<p>可以设定填充区的参数配置。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-06-06
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/plantuml/">plantuml</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/wsl-start/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">WSL基础</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/hugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+            <span class="next-text nav-default">hugo简单入门</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

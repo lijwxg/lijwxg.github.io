@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>airflow on House of Heart</title>
+    <link>/tags/airflow/</link>
+    <description>Recent content in airflow on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Jun 2020 18:02:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/airflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>airflow入门</title>
+      <link>/post/airflow-start/</link>
+      <pubDate>Wed, 17 Jun 2020 18:02:00 +0800</pubDate>
+      
+      <guid>/post/airflow-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;airflow 是 Airbnb 贡献的 Apache 顶级项目, 一个采用 DAG（有向无环图）理念设计的任务调度框架，主要用于构造数据管线。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Airflow调度器</title>
+      <link>/post/airflow/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/airflow/</guid>
+      <description>&lt;h2 id=&#34;airflow-调度器&#34;&gt;airflow 调度器&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;airflow 是 Airbnb 贡献的 Apache 顶级项目, 一个采用 DAG（有向无环图）理念设计的任务调度框架，主要用于构造数据管线。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on House of Heart</title>
+    <link>/tags/windows/</link>
+    <description>Recent content in windows on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Oct 2020 22:12:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>常用软件</title>
+      <link>/post/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Wed, 14 Oct 2020 22:12:00 +0800</pubDate>
+      
+      <guid>/post/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</guid>
+      <description>&lt;p&gt;工欲善其事必先利其器, 记录好用的工具.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WSL基础</title>
+      <link>/post/wsl-start/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/post/wsl-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

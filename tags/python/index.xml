@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on House of Heart</title>
+    <link>/tags/python/</link>
+    <description>Recent content in python on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2020 20:47:26 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>drf使用记录</title>
+      <link>/post/drf/</link>
+      <pubDate>Mon, 06 Apr 2020 20:47:26 +0000</pubDate>
+      
+      <guid>/post/drf/</guid>
+      <description>&lt;p&gt;django-restful-framework 基于 django 的一个实现 restfurl 风格接口的框架, 有十分完备的接口设计方案&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python日志模块</title>
+      <link>/post/logs/</link>
+      <pubDate>Wed, 03 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/logs/</guid>
+      <description>&lt;p&gt;python 常用的记录日志的模块, 用于日志分析等场景&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>pyecharts使用</title>
+      <link>/post/pyecharts/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/pyecharts/</guid>
+      <description>&lt;p&gt;使用 pyecharts 快速实现一个数据图&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python 包管理</title>
+      <link>/post/python%E5%8C%85%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python%E5%8C%85%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;p&gt;python 包管理,常见的一些问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python环境</title>
+      <link>/post/python_env/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python_env/</guid>
+      <description>&lt;p&gt;python 入门基础的环境配置, 多种虚拟环境实现方法的选择&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python常用数据结构</title>
+      <link>/post/python%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84/</link>
+      <pubDate>Sun, 02 Sep 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/post/python%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84/</guid>
+      <description>&lt;p&gt;字典是另一种可变容器模型，且可存储任意类型对象。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python用法</title>
+      <link>/post/python%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/python%E7%94%A8%E6%B3%95/</guid>
+      <description>&lt;p&gt;python 的一些基础知识记录&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

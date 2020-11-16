@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on House of Heart</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 13 Jun 2020 17:51:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WSL基础</title>
+      <link>/post/wsl-start/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/post/wsl-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的linux映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux三剑客</title>
+      <link>/post/linux%E4%B8%89%E5%89%91%E5%AE%A2/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/linux%E4%B8%89%E5%89%91%E5%AE%A2/</guid>
+      <description>&lt;p&gt;linux 下最常用和通用的文件, 字符串查询, 操作脚本命令.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS环境</title>
+      <link>/post/centos%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>免秘钥登陆</title>
+      <link>/post/%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Sun, 07 Oct 2018 12:10:53 +0000</pubDate>
+      
+      <guid>/post/%E5%AE%89%E5%85%A8/</guid>
+      <description>&lt;p&gt;为了减少重复输入密码, 和增加登陆的安全性, 使用免秘钥登陆的方式进行登陆.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Samba搭建</title>
+      <link>/post/samba%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 19 Jul 2018 08:10:53 +0000</pubDate>
+      
+      <guid>/post/samba%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;p&gt;为了解决跨平台的数据共享问题, 需要提供一个数据共享服务 Samba.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mind on House of Heart</title>
+    <link>/tags/mind/</link>
+    <description>Recent content in Mind on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 10 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mind/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>知行的路和思考的方向</title>
+      <link>/post/do_think/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/do_think/</guid>
+      <description>当人类的思维之舟&amp;quot;从其`停泊`处被砍断缆绳而颠簸在怀疑而不确定的艰难之海&amp;quot;时,他们会感到痛苦和困惑,只有一种方式可以`抹</description>
+    </item>
+    
+  </channel>
+</rss>

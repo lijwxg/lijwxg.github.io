@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on House of Heart</title>
+    <link>/tags/centos/</link>
+    <description>Recent content in centos on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 25 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS环境</title>
+      <link>/post/centos%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

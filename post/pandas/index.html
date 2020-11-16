@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>常用pandas方法 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="常用 pandas 处理数据, 有较好的实现方法和效率
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/pandas/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="常用pandas方法" />
+<meta property="og:description" content="常用 pandas 处理数据, 有较好的实现方法和效率" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/pandas/" />
+<meta property="article:published_time" content="2019-10-03T16:26:00+08:00" />
+<meta property="article:modified_time" content="2019-10-03T16:26:00+08:00" />
+<meta itemprop="name" content="常用pandas方法">
+<meta itemprop="description" content="常用 pandas 处理数据, 有较好的实现方法和效率">
+<meta itemprop="datePublished" content="2019-10-03T16:26:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-03T16:26:00&#43;08:00" />
+<meta itemprop="wordCount" content="508">
+
+
+
+<meta itemprop="keywords" content="numpy," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="常用pandas方法"/>
+<meta name="twitter:description" content="常用 pandas 处理数据, 有较好的实现方法和效率"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">常用pandas方法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-03 </span>
+        
+          <span class="more-meta"> 约 508 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#常用函数">常用函数</a></li>
+    <li><a href="#如果是对特定列求和的话">如果是对特定列求和的话</a></li>
+    <li><a href="#计算各列数据总和并作为新列添加到末尾">计算各列数据总和并作为新列添加到末尾</a></li>
+    <li><a href="#计算各行数据总和并作为新行添加到末尾">计算各行数据总和并作为新行添加到末尾</a></li>
+    <li><a href="#对于-pandas-中的-dataframe-如果需要按照列-a-进行分组-将同一组的列-b-求和-可以通过下述操作完成">对于 pandas 中的 Dataframe,如果需要按照列 A 进行分组，将同一组的列 B 求和,可以通过下述操作完成：</a></li>
+    <li><a href="#计算百分比">计算百分比</a></li>
+    <li><a href="#删除-gender-列-不改变原来的-data-数据-返回删除后的新表-data-2-axis-为-1-表示删除列-0-表示删除行-inplace-为-true-表示直接对原表修改">删除 gender 列，不改变原来的 data 数据，返回删除后的新表 data_2。axis 为 1 表示删除列，0 表示删除行。inplace 为 True 表示直接对原表修改。</a></li>
+    <li><a href="#改变某一列的位置-如-先删除-gender-列-然后在原表-data-中第-0-列插入被删掉的列">改变某一列的位置。如：先删除 gender 列，然后在原表 data 中第 0 列插入被删掉的列</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>常用 pandas 处理数据, 有较好的实现方法和效率</p>
+<h2 id="常用函数">常用函数</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array</td>
+<td>转换输入数据(列表, 数组或其它序列类型)到一个 ndarray, 可以推断一个 dtype 或明确的设置一个 dtype. 默认拷贝输入数据</td>
+</tr>
+<tr>
+<td>asarray</td>
+<td>转化输入为一个 ndarray, 当输入已经是一个 ndarray 时就不拷贝.</td>
+</tr>
+<tr>
+<td>arange</td>
+<td>同内建的 range 函数, 但不返回列表而是一个 ndarray</td>
+</tr>
+</tbody>
+</table>
+<h2 id="如果是对特定列求和的话">如果是对特定列求和的话</h2>
+<p>使用 iloc 选择再使用 apply 求和</p>
+<h2 id="计算各列数据总和并作为新列添加到末尾">计算各列数据总和并作为新列添加到末尾</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Col_sum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="计算各行数据总和并作为新行添加到末尾">计算各行数据总和并作为新行添加到末尾</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Row_sum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="对于-pandas-中的-dataframe-如果需要按照列-a-进行分组-将同一组的列-b-求和-可以通过下述操作完成">对于 pandas 中的 Dataframe,如果需要按照列 A 进行分组，将同一组的列 B 求和,可以通过下述操作完成：</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;column_A&#39;</span><span class="p">])[</span><span class="s1">&#39;column_B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>生成的数据类型是 Series,如果进一步需要将其转换为 dataframe,可以调用 Series 中的 to_frame()方法.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>可以取出上述 dataframe 中的 index,生成新的一列，并删除原 dataframe 中的 index.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_A&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">df</span> <span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="计算百分比">计算百分比</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">price</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="删除-gender-列-不改变原来的-data-数据-返回删除后的新表-data-2-axis-为-1-表示删除列-0-表示删除行-inplace-为-true-表示直接对原表修改">删除 gender 列，不改变原来的 data 数据，返回删除后的新表 data_2。axis 为 1 表示删除列，0 表示删除行。inplace 为 True 表示直接对原表修改。</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data_2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="改变某一列的位置-如-先删除-gender-列-然后在原表-data-中第-0-列插入被删掉的列">改变某一列的位置。如：先删除 gender 列，然后在原表 data 中第 0 列插入被删掉的列</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;性别&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">))</span>  <span class="o">*</span><span class="n">pop返回删除的列</span><span class="err">，插入到第</span><span class="mi">0</span><span class="err">列，并取新名为</span><span class="s1">&#39;性别&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/numpy/">numpy</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/nginx/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">nginx使用</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/linux%E4%B8%89%E5%89%91%E5%AE%A2/">
+            <span class="next-text nav-default">linux三剑客</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

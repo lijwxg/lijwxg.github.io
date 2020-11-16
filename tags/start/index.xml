@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>start on House of Heart</title>
+    <link>/tags/start/</link>
+    <description>Recent content in start on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Nov 2019 17:27:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/start/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>spacemacs入门</title>
+      <link>/post/spacemacs-start/</link>
+      <pubDate>Mon, 04 Nov 2019 17:27:00 +0800</pubDate>
+      
+      <guid>/post/spacemacs-start/</guid>
+      <description>安装 Spacemaces github 提供了使用方法,建议使用 develop 分支 Mac 操作系统 使用 homebrew 安装 emacs 建议安装 emacs-plus, 尝试 emacsforosx 发现包安装有问题, 初步判断是缺少 gnutls 依赖, 最后还是有一些问题, 将清</description>
+    </item>
+    
+  </channel>
+</rss>

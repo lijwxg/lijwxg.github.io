@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>树莓派基本配置 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="树莓派基本配置" />
+<meta property="og:description" content="在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" />
+<meta property="article:published_time" content="2019-11-17T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-11-17T00:00:00+08:00" />
+<meta itemprop="name" content="树莓派基本配置">
+<meta itemprop="description" content="在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置">
+<meta itemprop="datePublished" content="2019-11-17T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-17T00:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="618">
+
+
+
+<meta itemprop="keywords" content="raspberrypi,nginx,VNC,wpa-cli," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="树莓派基本配置"/>
+<meta name="twitter:description" content="在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">树莓派基本配置</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-11-17 </span>
+        
+          <span class="more-meta"> 约 618 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#连接配置">连接配置</a>
+      <ul>
+        <li><a href="#对于连接在同一网络中的树莓派操作系统ping-主机名可以获取到-ip-地址">对于连接在同一网络中的树莓派操作系统,ping 主机名可以获取到 IP 地址</a></li>
+        <li><a href="#无线网络配置">无线网络配置</a></li>
+        <li><a href="#vnc-配置">vnc 配置</a></li>
+        <li><a href="#配置-nginx">配置 nginx</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>在拥有一台新的树莓派之后, 进行一定的配置是十分有必要的, 方便连接和操作.下面进一些基础连接和网络配置</p>
+<h2 id="连接配置">连接配置</h2>
+<h3 id="对于连接在同一网络中的树莓派操作系统ping-主机名可以获取到-ip-地址">对于连接在同一网络中的树莓派操作系统,ping 主机名可以获取到 IP 地址</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ping raspberrypi.local
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="无线网络配置">无线网络配置</h3>
+<ol>
+<li>
+<p>网络连接树莓派</p>
+<ul>
+<li>
+<p>使用网线连接树莓派到路由器.</p>
+</li>
+<li>
+<p>从路由器管理界面获取树莓派 IP 地址.</p>
+</li>
+<li>
+<p>使用局域网内部的设备通过 ssh 连接到树莓派 pi/raspberry, 如果是 kali, 默认账号/密码: root/toor.</p>
+<ul>
+<li>
+<p>对于 kali 操作系统需要修改 NetworkManager.conf 文件, 将 managed 的值改成 true, 使 NetworkManager 能管理网卡设备, 可以通过图形化界面配置网络, 按后面步骤重启 network 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/NetworkManager/NetworkManager.conf
+<span class="o">[</span>main<span class="o">]</span>
+<span class="nv">plugins</span><span class="o">=</span>ifupdown,keyfile
+
+<span class="o">[</span>ifupdown<span class="o">]</span>
+<span class="nv">managed</span><span class="o">=</span><span class="nb">false</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>配置/etc/wpa_supplicant/wpa_supplicant.conf 文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">network={
+    ssid=&#34;li&#34;
+    psk=&#34;12345678&#34;
+    priority=1
+}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用命令行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wpa_cli -i wlan0 scan
+wpa_cli -i wlan0 scan_result
+wpa_cli -i wlan0 add_network //返回一个network_id
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wpa_cli -i wlan0 add_network   //添加一个网络连接,会返回&lt;network id&gt;
+wpa_cli set_network &lt;network id&gt;  ssid <span class="s1">&#39;&#34;name&#34;&#39;</span>  //ssid名称
+wpa_cli set_network &lt;network id&gt;  psk <span class="s1">&#39;“psk”&#39;</span>　　//密码
+wpa_cli set_network &lt;network id&gt;  scan_ssid <span class="m">1</span>
+wpa_cli set_network &lt;network id&gt;  priority  <span class="m">1</span>   //优先级
+wpa_cli -i wlan0 save_config   //信息保存到默认的配置文件中
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>交互式创建, 有 tab 键自动补全功能</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wpa_cli
+&gt; scan
+&gt; scan_result
+&gt; add_network
+&gt; set_network
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>重启网络服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo /etc/init.d/networking restart
+</code></pre></td></tr></table>
+</div>
+</div><p>使用 linux 服务管理工具 systemctl(兼容 service)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">systemctl restart network
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>通过 HDMI 连接显示屏进行图形化操作
+<img src="https://i.loli.net/2019/11/17/3otxiPMAaWpzQef.jpg" alt="rasp_wifi"></p>
+</li>
+</ol>
+<h3 id="vnc-配置">vnc 配置</h3>
+<ol>
+<li>
+<p>树莓派允许 VNC 登陆</p>
+<ul>
+<li>打开配置项(如果是其它操作系统省略此步骤)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo raspi-config
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>选择接口选择项
+<img src="https://i.loli.net/2019/11/17/FGrMNBcyWtiPaLk.jpg" alt="vnc_option"></li>
+<li>选择 VNC 接口
+<img src="https://i.loli.net/2019/11/17/bEa8wlgiX7tu64s.jpg" alt="vnc"></li>
+<li>确认
+<img src="https://i.loli.net/2019/11/17/7GQAYJ2bWZSkDi1.jpg" alt="vnc_finish"></li>
+</ul>
+</li>
+<li>
+<p>树莓派开启 VNC 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">vncserver
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用 vnc 客户端(VNC Viewer)连接到树莓派
+<img src="https://i.loli.net/2019/11/17/Ug2CQ6yFrnOEkNh.jpg" alt="vnc_viewer"></p>
+<p><img src="https://i.loli.net/2019/11/17/2yrIsjdpWkYmexQ.jpg" alt="vnc_connect"></p>
+</li>
+</ol>
+<h3 id="配置-nginx">配置 nginx</h3>
+<ol>
+<li>
+<p>安装 nginx</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install nginx
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>启动 nginx</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo /etc/init.d/nginx start
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>验证 nginx
+<img src="https://i.loli.net/2019/11/17/heV1MrYcy4HN63m.jpg" alt="nginx_start"></p>
+</li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-17
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/raspberrypi/">raspberrypi</a>
+          <a href="/tags/nginx/">nginx</a>
+          <a href="/tags/vnc/">VNC</a>
+          <a href="/tags/wpa-cli/">wpa-cli</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E7%BD%91%E7%BB%9C/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">command-proxy</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/spacemacs-start/">
+            <span class="next-text nav-default">spacemacs入门</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

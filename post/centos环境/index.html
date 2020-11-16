@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CentOS环境 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/centos%E7%8E%AF%E5%A2%83/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="CentOS环境" />
+<meta property="og:description" content="记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/centos%E7%8E%AF%E5%A2%83/" />
+<meta property="article:published_time" content="2018-12-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-12-25T00:00:00+00:00" />
+<meta itemprop="name" content="CentOS环境">
+<meta itemprop="description" content="记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.">
+<meta itemprop="datePublished" content="2018-12-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3942">
+
+
+
+<meta itemprop="keywords" content="linux,centos," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CentOS环境"/>
+<meta name="twitter:description" content="记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CentOS环境</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-25 </span>
+        
+          <span class="more-meta"> 约 3942 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#查看系统信息相关命令">查看系统信息相关命令</a>
+      <ul>
+        <li><a href="#centos-启动">CentOS 启动</a></li>
+        <li><a href="#网络">网络</a></li>
+        <li><a href="#增加-root-权限">增加 root 权限</a></li>
+        <li><a href="#修改文件权限">修改文件权限</a></li>
+      </ul>
+    </li>
+    <li><a href="#software">Software</a>
+      <ul>
+        <li></li>
+        <li><a href="#vi-升级">vi 升级</a></li>
+        <li><a href="#python-升级">Python 升级</a></li>
+        <li><a href="#时间相关">时间相关</a></li>
+        <li><a href="#nodejs">nodejs</a></li>
+        <li><a href="#imply">imply</a></li>
+        <li><a href="#mysql-安装">mysql 安装</a></li>
+        <li><a href="#redis-安装">redis 安装</a></li>
+        <li><a href="#nginx">nginx</a></li>
+        <li><a href="#emacs">Emacs</a></li>
+        <li><a href="#apache">Apache</a></li>
+      </ul>
+    </li>
+    <li><a href="#source">Source</a>
+      <ul>
+        <li><a href="#添加-yum-第三方源-repofogre">添加 yum 第三方源 Repofogre</a></li>
+      </ul>
+    </li>
+    <li><a href="#faq">FAQ</a>
+      <ul>
+        <li><a href="#sudo-命令无法使用">sudo 命令无法使用</a></li>
+        <li><a href="#yum-命令">yum 命令</a></li>
+        <li><a href="#虚拟机连不上网">虚拟机连不上网</a></li>
+        <li><a href="#networkmanager-和-network-的区别">NetworkManager 和 network 的区别</a></li>
+      </ul>
+    </li>
+    <li><a href="#lamp">LAMP</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>记录 linux 系统的使用, 在其中遇到的问题和解决方法, 对常用地技能和概念进行了总结.</p>
+<h2 id="查看系统信息相关命令">查看系统信息相关命令</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">cat /proc/cpuinfo <span class="p">|</span> grep name <span class="p">|</span> cut -f2 -d: <span class="p">|</span> uniq -c           <span class="c1"># 查看CPU信息（型号）</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">&#34;physical id&#34;</span><span class="p">|</span> sort<span class="p">|</span> uniq<span class="p">|</span> wc -l        <span class="c1"># 查看物理CPU个数</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">&#34;cpu cores&#34;</span><span class="p">|</span> uniq                       <span class="c1"># 查看每个物理CPU中core的个数(即核数)</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">&#34;processor&#34;</span><span class="p">|</span> wc -l                      <span class="c1"># 查看逻辑CPU的个数</span>
+cat /ect/group                                                <span class="c1"># 查看用户组</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="centos-启动">CentOS 启动</h3>
+<h4 id="七个启动级别">七个启动级别</h4>
+<ul>
+<li>
+<p>0：关机模式【系统默认运行级别不能设置为 0，否则没法正常启动】</p>
+</li>
+<li>
+<p>1：单用户模式【Root 权限、禁止远程登陆】</p>
+</li>
+<li>
+<p>2：多用户模式【没有 NFS 和网络】</p>
+</li>
+<li>
+<p>3：完整的多用户文本模式【支持  NFS 和网络、登陆后进入控制台命令行模式】</p>
+</li>
+<li>
+<p>4：暂未使用、系统保留</p>
+</li>
+<li>
+<p>5：图形化模式【GUI】</p>
+</li>
+<li>
+<p>6：重启模式【系统默认运行级别不能设置为 6，否则没法正常启动】</p>
+</li>
+</ul>
+<h4 id="设置启动模式">设置启动模式</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$systemctl</span> set-default multi-user.target  //设置成命令模式
+
+<span class="nv">$systemctl</span> set-default graphical.target  //设置成图形模式
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="网络">网络</h3>
+<h4 id="netstat-安装">netstat 安装</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># yum install net-tools</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="ifconfig">ifconfig</h4>
+<p>ifconfig [网络设备][down up -allmulti -arp -promisc][add&lt;地址&gt;][del&lt;地址&gt;][&lt;硬件地址&gt;][io_addr][irq][media&lt;网络媒介类型&gt;][mem_start&lt;内存地址&gt;][metric&lt;数目&gt;][mtu&lt;字节&gt;][netmask&lt;子网掩码&gt;][tunnel&lt;地址&gt;][-broadcast&lt;地址&gt;][-pointopoint&lt;地址&gt;][ip地址]</p>
+<h4 id="网络命令">网络命令</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ip a</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="联网软件">联网软件</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">nmtui
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="防火墙相关设置">防火墙相关设置</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">netstat -apn                                                      <span class="c1"># 查看端口情况</span>
+netstat -lnp                                                      <span class="c1"># 查看监听的端口</span>
+sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-port<span class="o">=</span>3306/tcp   <span class="c1"># 新增端口设置</span>
+sudo firewall-cmd --reload                                        <span class="c1"># 新增端口后更新防火墙</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="增加-root-权限">增加 root 权限</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$su</span>
+<span class="nv">$chmod</span> u+w /etc/sudoers
+<span class="nv">$vi</span> /etc/sudoers
+找到Allow root to ruan any commands anywhere
+在root  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span>  ALL 下面另起一行，输入“xx <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span>  ALL”<span class="o">(</span>xx表示你的用户名<span class="o">)</span>，然后保存退出
+<span class="nv">$chmod</span> u-w /etc/sudoers
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="修改文件权限">修改文件权限</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo chown -R vagrant:vagrant var
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="software">Software</h2>
+<h4 id="编译安装方法">编译安装方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">autoconf.sh       <span class="c1"># 如果没有configure的情况下需要运行这类文件生成configure</span>
+./configure --prefix<span class="o">=</span>/usr/local/&lt;package-name&gt;        <span class="c1"># 请谨慎的加上prefix参数,否则可能安装失败而留下很难准确删除的文件</span>
+make                      #
+sudo make install         <span class="c1"># 安装编译的文件</span>
+sudo make uninstall       <span class="c1"># 卸载安装的文件 在某些情况下可用,前期是编译文件没有被删除</span>
+make clean                <span class="c1"># 对编译的文件进行删除, 进行重新编译</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="vi-升级">vi 升级</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum -y install vim-enhanced
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="python-升级">Python 升级</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$sudo</span> yum update
+<span class="nv">$sudo</span> yum groupinstall <span class="s2">&#34;Development tools&#34;</span>
+<span class="nv">$sudo</span> yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+<span class="nv">$sudo</span> yum install -y wget tree vim make automake autoconf gcc gcc-c++ cmake git
+下载解压
+<span class="nv">$wget</span> https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
+<span class="nv">$tar</span> -xJvf Python-2.7.11.tar.xz
+编译
+<span class="nv">$cd</span> Python-2.7.12/
+$./configure --prefix<span class="o">=</span>/usr/local/python2.7 --enable-unicode<span class="o">=</span>ucs4
+<span class="nv">$make</span>
+<span class="nv">$make</span> install
+软链接
+<span class="nv">$mv</span> /usr/bin/python /usr/bin/python2.7.5
+<span class="nv">$ln</span> -s /usr/local/python2.7/bin/python2.7 /usr/bin/python
+修改yum中Python
+<span class="nv">$sudo</span> vi /usr/bin/yum
+<span class="nv">$sudo</span> vi /usr/libexec/urlgrabber-ext-down
+$ sudo vim /usr/bin/firewall-cmd
+$ sudo vim /usr/sbin/firewalld
+$ vim .bahsrc
+&gt;&gt; <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/usr/local/python2.7/bin/:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>依赖</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_bsddb</td>
+<td>bsddb</td>
+<td>Interface to Berkeley DB library。Berkeley 数据库的接口</td>
+</tr>
+<tr>
+<td>_curses</td>
+<td>ncurses</td>
+<td>Terminal handling for character-cell displays。</td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted -->curses<!-- raw HTML omitted --></td>
+<td>panel</td>
+<td>ncurses A panel stack extension for curses。</td>
+</tr>
+<tr>
+<td>_sqlite3</td>
+<td>sqlite</td>
+<td>DB-API 2.0 interface for SQLite databases。SqlLite，CentOS 可以安装 sqlite-devel</td>
+</tr>
+<tr>
+<td>_ssl</td>
+<td>openssl-devel.i686</td>
+<td>TLS/SSL wrapper for socket objects。</td>
+</tr>
+<tr>
+<td>_tkinter</td>
+<td>N/A</td>
+<td>a thin object-oriented layer on top of Tcl/Tk。如果不使用桌面程序可以忽略 TKinter</td>
+</tr>
+<tr>
+<td>bsddb185</td>
+<td>old bsddb module</td>
+<td>老的 bsddb 模块，可忽略。</td>
+</tr>
+<tr>
+<td>bz2</td>
+<td>bzip2-devel.i686</td>
+<td>Compression compatible with bzip2。bzip2-devel</td>
+</tr>
+<tr>
+<td>dbm</td>
+<td>bsddb</td>
+<td>Simple “database” interface。</td>
+</tr>
+<tr>
+<td>dl</td>
+<td>N/A</td>
+<td>Call C functions in shared objects.Python2.6 开始，已经弃用。</td>
+</tr>
+<tr>
+<td>gdbm</td>
+<td>gdbm-devel.i686</td>
+<td>GNU’s reinterpretation of dbm</td>
+</tr>
+<tr>
+<td>imageop</td>
+<td>N/A</td>
+<td>Manipulate raw image data。已经弃用。</td>
+</tr>
+<tr>
+<td>readline</td>
+<td>readline-devel</td>
+<td>GNU readline interface</td>
+</tr>
+<tr>
+<td>sunaudiodev</td>
+<td>N/A</td>
+<td>Access to Sun audio hardware。这个是针对 Sun 平台的，CentOS 下可以忽略</td>
+</tr>
+<tr>
+<td>zlib</td>
+<td>Zlib</td>
+<td>Compression compatible with gzip</td>
+</tr>
+</tbody>
+</table>
+<p>安装 setuptools 和 pip 在下载源码后使用 python setup.py install 方式安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">easy_install --upgrade pip
+</code></pre></td></tr></table>
+</div>
+</div><p>Pip 10.0.* doesn&rsquo;t support main.
+You have to downgrade to pip 9.0.3.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">python -m pip install <span class="nv">pip</span><span class="o">==</span>9.0.3
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="python-的-unicode-是-ucs-2-还是-ucs-4">Python 的 unicode 是 ucs-2 还是 ucs-4</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxunicode</span>        <span class="c1"># 1114111表示ucs4, 65535表示ucs2</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="安装-thrift">安装 thrift</h4>
+<p>安装失败</p>
+<h4 id="anaconda-安装使用">anaconda 安装使用</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo bash Anaconda2-5.0.0.1-Linux-x86_64.sh
+vim ~/.bashrc
+pip freeze &gt; packages.txt
+conda create --name opencv_py2 --all
+<span class="nb">source</span> activate opencv_py2
+<span class="nb">source</span> deactivate
+$ conda install <span class="nv">matplotlib</span><span class="o">=</span>2.1.1
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="pip-换源">pip 换源</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ mkdir ~/.pip
+$ touch pip.conf
+$ vim pip.conf
+<span class="o">[</span>global<span class="o">]</span>
+index-url <span class="o">=</span> https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="mysql-python-1-dot-2-dot-5-安装">mysql-python-1.2.5 安装</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://pypi.python.org/packages/a5/e9/51b544da85a36a68debe7a7091f068d802fc515a3a202652828c73453cad/MySQL-python-1.2.5.zip#md5<span class="o">=</span>654f75b302db6ed8dc5a898c625e030c
+sudo yum install mysql-devel
+vim setup_posix.py
+sudo python setup.py install
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="virtualenv-和-virtualenvwrapper">virtualenv 和 virtualenvwrapper</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo pip install virtualenv
+$ sudo pip install virtualenvwrapper
+$ vim ~/.bashrc
+<span class="c1"># setting for virtualenvwrapper 2018-03-23</span>
+<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="s1">&#39;~/.virtualenvs&#39;</span>
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+$ <span class="nb">source</span> ~/.bashrc
+$ mkvirtualenv <span class="nb">test</span>
+$ workon <span class="nb">test</span>
+$ deactivate
+$ rmvirtualenv <span class="nb">test</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="时间相关">时间相关</h3>
+<p>根据提示选择对应的时区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">szselect
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="查看时区">查看时区</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># date -R</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="修改时区">修改时区</h4>
+<p>将 Asia/shanghai-上海时区写入当前时区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">cp -f /usr/share/zoneinfo/Asia/Shanghai     /etc/localtime
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="修改时间">修改时间</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">date -s 03/06/2018    # 设置日期
+date -s 10:19         # 设置时间
+clock -w              # 强制将时间写入COMS, 没有这步重启会失效
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="nodejs">nodejs</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$curl</span> --silent --location https://rpm.nodesource.com/setup_8.x <span class="p">|</span> sudo bash -
+<span class="nv">$sudo</span> yum -y install nodejs
+<span class="nv">$sudo</span> npm install -g cnpm --registry<span class="o">=</span>https://registry.npm.taobao.org
+<span class="nv">$cnpm</span> install <span class="o">[</span>name<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="imply">imply</h3>
+<p>Imply=druid.io+datazoo+plywood+pivot+各种可视化工具</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># bin/supervise -c conf/supervise/quickstart.conf  -可以nohup 后台执行</span>
+$ nohup bin/supervise -c conf/supervise/quickstart.conf &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+$ <span class="nb">jobs</span>  <span class="c1"># 查看后台运行的运行</span>
+$ <span class="nb">fg</span> %s <span class="c1"># 关闭指定的job</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="mysql-安装">mysql 安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum list installed <span class="p">|</span> grep mysql
+wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+sudo yum localinstall mysql-community-release-el7-5.noarch.rpm
+yum repolist enabled <span class="p">|</span> grep <span class="s2">&#34;mysql.*-community.*&#34;</span>
+yum repolist all <span class="p">|</span> grep mysql
+sudo yum install mysql-community-server
+systemctl start mysqld
+systemctl status mysqld
+firewall-cmd --permanent --zone<span class="o">=</span>public --add-port<span class="o">=</span>3306/tcp
+firewall-cmd --permanent --zone<span class="o">=</span>public --add-port<span class="o">=</span>3306/udp
+mysql_secure_installation
+mysql
+use mysql
+update user <span class="nb">set</span> <span class="nv">password</span><span class="o">=</span>password<span class="o">(</span><span class="s2">&#34;123456&#34;</span><span class="o">)</span> where <span class="nv">user</span><span class="o">=</span><span class="s2">&#34;root&#34;</span><span class="p">;</span>
+flush privileges<span class="p">;</span>
+mkdir /home/data
+mysqladmin -u root -p shutdown
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="redis-安装">redis 安装</h3>
+<p>参考:</p>
+<p><a href="https://linux.cn/article-6719-1.html"><a href="https://linux.cn/article-6719-1.html">https://linux.cn/article-6719-1.html</a></a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget http://download.redis.io/releases/redis-4.0.6.tar.gz
+tar xzf redis-4.0.6.tar.gz
+<span class="nb">cd</span> redis-4.0.6
+make
+<span class="nb">cd</span> src
+cp redis-server redis-cli /usr/local/bin
+./utils/install_server.sh         <span class="c1"># 安装redis服务</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="nginx">nginx</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget  http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+rpm -ivh nginx-release-centos-7-0.el7.ngx.noarch.rpm
+yum install nginx
+vim /etc/nginx/nginx.conf
+sudo systemctl <span class="nb">enable</span> nginx.service
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="emacs">Emacs</h3>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/elpa/">清华 elpa</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://mirrors.tuna.tsinghua.edu.cn/gnu/emacs/emacs-25.3.tar.xz
+sudo yum install libXpm-devel libpng-devel libtiff-devel libjpeg-devel libungif-devel
+./configure --prefix<span class="o">=</span>/usr/local/emcas-25.3 --with-x-toolkit<span class="o">=</span>no
+
+<span class="c1">###  configure: error: The required function &#39;tputs&#39; was not found in any library.</span>
+<span class="c1">### The following libraries were tried (in order):</span>
+<span class="c1">###  libtinfo, libncurses, libterminfo, libtermcap, libcurses</span>
+
+sudo yum install ncurses-devel        <span class="c1"># 如果出现上面报错</span>
+make
+sudo make install
+<span class="nb">cd</span> /usr/local/bin
+sudo ln -s /usr/local/emcas-25.3/bin/emacs emacs
+git clone -b https://github.com/syl20bnr/spacemacs ~/.emacs.d
+emacs --insecure              <span class="c1"># 会报一个bind-map的错误 网络原因产生的错误, 不用https</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="apache">Apache</h3>
+<h4 id="apache-ab">Apache ab</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum -y install httpd-tools
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="source">Source</h2>
+<h3 id="添加-yum-第三方源-repofogre">添加 yum 第三方源 Repofogre</h3>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/repoforge/">清华 Repoforge 源</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ rpm --import https://mirrors.tuna.tsinghua.edu.cn/repoforge/RPM-GPG-KEY.dag.txt
+$ sudo cat &gt; /etc/yum.repos.d/rpmforge.repo <span class="s">&lt;&lt; EOF
+</span><span class="s">[rpmforge]
+</span><span class="s">name = RHEL $releasever - RPMforge.net - dag
+</span><span class="s">baseurl = https://mirrors.tuna.tsinghua.edu.cn/repoforge/redhat/el7/en/$basearch/rpmforge
+</span><span class="s">mirrorlist = http://mirrorlist.repoforge.org/el7/mirrors-rpmforge
+</span><span class="s">enabled = 1
+</span><span class="s">protect = 0
+</span><span class="s">gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+</span><span class="s">gpgcheck = 1
+</span><span class="s">
+</span><span class="s">[rpmforge-extras]
+</span><span class="s">name = RHEL $releasever - RPMforge.net - extras
+</span><span class="s">baseurl = https://mirrors.tuna.tsinghua.edu.cn/repoforge/redhat/el7/en/$basearch/extras
+</span><span class="s">mirrorlist = http://mirrorlist.repoforge.org/el7/mirrors-rpmforge-extras
+</span><span class="s">enabled = 0
+</span><span class="s">protect = 0
+</span><span class="s">gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+</span><span class="s">gpgcheck = 1
+</span><span class="s">
+</span><span class="s">[rpmforge-testing]
+</span><span class="s">name = RHEL $releasever - RPMforge.net - testing
+</span><span class="s">baseurl = https://mirrors.tuna.tsinghua.edu.cn/repoforge/redhat/el7/en/$basearch/testing
+</span><span class="s">mirrorlist = http://mirrorlist.repoforge.org/el7/mirrors-rpmforge-testing
+</span><span class="s">enabled = 0
+</span><span class="s">protect = 0
+</span><span class="s">gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+</span><span class="s">gpgcheck = 1
+</span><span class="s">EOF</span>
+$ sudo yum makecache
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="faq">FAQ</h2>
+<h3 id="sudo-命令无法使用">sudo 命令无法使用</h3>
+<p><a href="http://blog.csdn.net/duguduchong/article/details/8804117">http://blog.csdn.net/duguduchong/article/details/8804117</a></p>
+<p>1.编辑/etc/sudoers文件，把Defaults  env_reset改成Defaults ! env_reset
+2.编辑.bashrc,最后添加alias sudo='sudo env PATH=$PATH&rsquo;
+3.source ~/.bashrc</p>
+<h3 id="yum-命令">yum 命令</h3>
+<p>千万别用 yum remove 卸载软件！</p>
+<p>用 yum remove 你会发现吧相关依赖的软件包都卸载了。</p>
+<p>所以要使用 rpm -e –nodeps 软件名, 不会删除依赖.</p>
+<h4 id="使用说明">使用说明</h4>
+<p>问题描述: error while loading shared libraries &hellip;</p>
+<p>一般我们在 Linux 下执行某些外部程序的时候可能会提示找不到共享库的错误, 比如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">tmux: error <span class="k">while</span> loading shared libraries: libevent-1.4.so.2: cannot open shared object file: No such file or directory
+</code></pre></td></tr></table>
+</div>
+</div><p>原因一般有两个, 一个是操作系统里确实没有包含该共享库(lib*.so.*文件)或者共享库版本不对, 遇到这种情况那就去网上下载并安装上即可.
+另外一个原因就是已经安装了该共享库, 但执行需要调用该共享库的程序的时候, 程序按照默认共享库路径找不到该共享库文件.
+所以安装共享库后要注意共享库路径设置问题, 如下:</p>
+<ol>
+<li>
+<p>如果共享库文件安装到了/lib 或/usr/lib 目录下, 那么需执行一下 ldconfig 命令</p>
+<p>ldconfig 命令的用途, 主要是在默认搜寻目录(/lib 和/usr/lib)以及动态库配置文件/etc/ld.so.conf 内所列的目录下
+搜索出可共享的动态链接库(格式如 lib*.so*), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件.
+缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表.</p>
+</li>
+<li>
+<p>如果共享库文件安装到了/usr/local/lib(很多开源的共享库都会安装到该目录下)或其它&quot;非/lib 或/usr/lib&quot;目录下, 那么在执行 ldconfig 命令前, 还要把新共享库目录加入到共享库配置文件/etc/ld.so.conf 中, 如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">cat /etc/ld.so.conf
+include ld.so.conf.d/*.conf
+<span class="nb">echo</span> <span class="s2">&#34;/usr/local/lib&#34;</span> &gt;&gt; /etc/ld.so.conf
+ldconfig
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果共享库文件安装到了其它&quot;非/lib 或/usr/lib&rdquo; 目录下, 但是又不想在/etc/ld.so.conf 中加路径(或者是没有权限加路径). 那可以 export 一个全局变量 LD_LIBRARY_PATH, 然后运行程序的时候就会去这个目录中找共享库.LD_LIBRARY_PATH 的意思是告诉 loader 在哪些目录中可以找到共享库. 可以设置多个搜索目录, 这些目录之间用冒号分隔开. 比如安装了一个 mysql 到/usr/local/mysql 目录下,其中有一大堆库文件在/usr/local/mysql/lib 下面, 则可以在.bashrc 或.bash_profile 或 shell 里加入以下语句即可:</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/mysql/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>一般来讲这只是一种临时的解决方案, 在没有权限或临时需要的时候使用.</p>
+<h3 id="虚拟机连不上网">虚拟机连不上网</h3>
+<h4 id="问题描述-vwmare-连接不上网络">问题描述: vwmare 连接不上网络</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ifup ens33</span>
+Error: Connection activation failed: No suitable device found <span class="k">for</span> this connection.
+<span class="c1"># systemctl start network         (重启网络服务)</span>
+Job <span class="k">for</span> network.service failed because the control process exited with error code. See <span class="s2">&#34;systemctl status network.service&#34;</span> and <span class="s2">&#34;journalctl -xe&#34;</span> <span class="k">for</span> details.
+<span class="c1"># systemctl status network.service</span>
+● network.service - LSB: Bring up/down networking
+Loaded: loaded <span class="o">(</span>/etc/rc.d/init.d/network<span class="p">;</span> bad<span class="p">;</span> vendor preset: disabled<span class="o">)</span>
+Active: failed <span class="o">(</span>Result: exit-code<span class="o">)</span> since Thu 2017-11-02 21:21:15 CST<span class="p">;</span> 4s ago
+Docs: man:systemd-sysv-generator<span class="o">(</span>8<span class="o">)</span>
+Process: <span class="m">4550</span> <span class="nv">ExecStart</span><span class="o">=</span>/etc/rc.d/init.d/network start <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span>1/FAILURE<span class="o">)</span>
+
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 network<span class="o">[</span>4550<span class="o">]</span>: RTNETLINK answers: File exists
+Nov <span class="m">02</span> 21:21:15 client01 systemd<span class="o">[</span>1<span class="o">]</span>: network.service: control process exited, <span class="nv">code</span><span class="o">=</span>exited <span class="nv">status</span><span class="o">=</span>1
+Nov <span class="m">02</span> 21:21:15 client01 systemd<span class="o">[</span>1<span class="o">]</span>: Failed to start LSB: Bring up/down networking.
+Nov <span class="m">02</span> 21:21:15 client01 systemd<span class="o">[</span>1<span class="o">]</span>: Unit network.service entered failed state.
+Nov <span class="m">02</span> 21:21:15 client01 systemd<span class="o">[</span>1<span class="o">]</span>: network.service failed.
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案">解决方案</h4>
+<ul>
+<li>
+<p>网卡配置文件中没有添加 MAC 地址信息，处理过程如下</p>
+<ul>
+<li>
+<p>查看网卡对应 MAC 地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ip addr</span>
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="m">65536</span> qdisc noqueue state UNKNOWN qlen 1
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+inet 127.0.0.1/8 scope host lo
+valid_lft forever preferred_lft forever
+inet6 ::1/128 scope host
+valid_lft forever preferred_lft forever
+2: ens33: &lt;BROADCAST,MULTICAST&gt; mtu <span class="m">1500</span> qdisc noop state DOWN qlen 1000
+link/ether 00:0c:29:9b:e7:51 brd ff:ff:ff:ff:ff:ff
+3: virbr0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span class="m">1500</span> qdisc noqueue state DOWN qlen 1000
+link/ether 52:54:00:a7:c4:9b brd ff:ff:ff:ff:ff:ff
+inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+valid_lft forever preferred_lft forever
+4: virbr0-nic: &lt;BROADCAST,MULTICAST&gt; mtu <span class="m">1500</span> qdisc pfifo_fast master virbr0 state DOWN qlen 1000
+link/ether 52:54:00:a7:c4:9b brd ff:ff:ff:ff:ff:ff
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>将 MAC 地址添加在配置文件中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;HWADDR=00:0c:29:9b:e7:51&#34;</span> &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>重启网络服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">systemctl start network
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>在尝试了上述方法后，问题依然没有解决，尝试第二种方案</p>
+<ul>
+<li>
+<p>停止 NetworkManager 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">systemctl stop NetworkManager
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>取消开机启动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">systemctl disable NetworkManager
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>重启网络</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">service network restart
+Restarting network <span class="o">(</span>via systemctl<span class="o">)</span>: <span class="o">[</span> OK <span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h3 id="networkmanager-和-network-的区别">NetworkManager 和 network 的区别</h3>
+<p>简单说 network 适合使用于网路设定后固定不变的服务器，而 NetworkManager 则适合使用于笔记型电脑上
+必须常常在有线及无线网路环境切换时使用，并且这二个服务所读取及写入的设定档是不同的.
+network ：读取的设定档路径为「/etc/sysconfig/network-scripts/_」下的设定档。
+NetworkManager ：读取的设定档路径为「/etc/sysconfig/networking/_」下的设定档。
+CentOS7 在预设情况下会启动 NetworkManager 服务(包含开机启动)，因为个人习惯传统的 network 设定
+因此建议将 NetworkManager 服务停用后再继续后续设定作业，否则在二个服务都启动的情况下将会造成互相干扰的麻烦状况。</p>
+<h2 id="lamp">LAMP</h2>
+<p>安装 LAMP 环境</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum -y install zlib-devel mysql-devel glibc-devel curl-devel gcc automake mysql libidn-devel openssl-devel net-snmp-devel rpm-devel OpenIPMI-devel httpd mysql-server php-gd php-mysql php-bcmath php-mbstring php-xml perl-DBI php
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-12-25
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">linux</a>
+          <a href="/tags/centos/">centos</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/kafka-python/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python调用Kafka</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B/">
+            <span class="next-text nav-default">挂后台命令</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

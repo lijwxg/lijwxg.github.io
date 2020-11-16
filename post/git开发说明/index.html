@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git 开发说明 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支," /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Git 开发说明" />
+<meta property="og:description" content="git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/" />
+<meta property="article:published_time" content="2020-06-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
+<meta itemprop="name" content="Git 开发说明">
+<meta itemprop="description" content="git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支,">
+<meta itemprop="datePublished" content="2020-06-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="516">
+
+
+
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git 开发说明"/>
+<meta name="twitter:description" content="git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支,"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git 开发说明</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-19 </span>
+        
+          <span class="more-meta"> 约 516 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分支规划">分支规划</a></li>
+    <li><a href="#开发模式">开发模式</a>
+      <ul>
+        <li><a href="#个人分支模式">个人分支模式</a></li>
+        <li><a href="#fork模式">fork模式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率</p>
+<h2 id="分支规划">分支规划</h2>
+<ol>
+<li>master作为生产环境分支,不直接修改,代码从其它分支(功能分支, 修复分支)合入</li>
+<li>dev作为主要的开发分支, 开发新功能, 部署到测试环境中,用于功能测试</li>
+<li>bug_分支, 在master分支有需要修改的bug时, 从master分支检出(checkout), 用于临时使用. 完成bug修复之后合入到dev分支, 测试完成后再讲分支合入到master分支. 最后删除bug分支.
+<blockquote>
+<p>bug分支不用提交到origin, 在本地保留即可,使用git merge合并</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="开发模式">开发模式</h2>
+<h3 id="个人分支模式">个人分支模式</h3>
+<p>适用于小项目, 少量合作人数, 便于快速开发<br>
+每个开发人员都有自己的分支,在开发完成之后, 自行将代码合入到dev, master分支.</p>
+<h3 id="fork模式">fork模式</h3>
+<p>适用于较大项目, 多人合作, 便于实现代码质量管控<br>
+将主仓库fork到个人仓库, 不用创建个人单独仓库, 功能都在dev分支上开发</p>
+<ol>
+<li>每次提交前从主仓库拉取远程代码.</li>
+<li>再将代码提交到自己的远程仓库.</li>
+<li>前往页面发起pull request等待代码审核</li>
+<li>代码审核
+<ul>
+<li>如果代码审核通过, git自动进行合并操作,如果代码有冲突则合并失败,进入第一步再来一次</li>
+<li>如果代码审核不通过,修改后, 进入第一步再来一次</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-06-19
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/aws-start/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">AWS基础</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/airflow-start/">
+            <span class="next-text nav-default">airflow入门</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

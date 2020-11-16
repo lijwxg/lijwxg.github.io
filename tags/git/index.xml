@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on House of Heart</title>
+    <link>/tags/git/</link>
+    <description>Recent content in git on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git 开发说明</title>
+      <link>/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/</guid>
+      <description>git开发方法较多, 使用适合的方法能有效的进行合作, 提高开发效率 分支规划 master作为生产环境分支,不直接修改,代码从其它分支(功能分支,</description>
+    </item>
+    
+    <item>
+      <title>Gitlab/GitHub</title>
+      <link>/post/github-gitlab/</link>
+      <pubDate>Thu, 30 Nov 2017 15:05:00 +0800</pubDate>
+      
+      <guid>/post/github-gitlab/</guid>
+      <description>&lt;p&gt;使用网页端创建新的仓库&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用</title>
+      <link>/post/git/</link>
+      <pubDate>Thu, 30 Nov 2017 14:53:00 +0800</pubDate>
+      
+      <guid>/post/git/</guid>
+      <description>&lt;p&gt;git 由 Linus Torvalds 开发完成, 为了编程而生.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

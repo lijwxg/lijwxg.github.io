@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on House of Heart</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 07 Nov 2020 16:12:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sphinx</title>
+      <link>/tags/sphinx/</link>
+      <pubDate>Sat, 07 Nov 2020 16:12:00 +0800</pubDate>
+      
+      <guid>/tags/sphinx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disk</title>
+      <link>/tags/disk/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/disk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lvm</title>
+      <link>/tags/lvm/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>/tags/mac/</link>
+      <pubDate>Wed, 14 Oct 2020 22:12:00 +0800</pubDate>
+      
+      <guid>/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>/tags/software/</link>
+      <pubDate>Wed, 14 Oct 2020 22:12:00 +0800</pubDate>
+      
+      <guid>/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>/tags/windows/</link>
+      <pubDate>Wed, 14 Oct 2020 22:12:00 +0800</pubDate>
+      
+      <guid>/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ec2</title>
+      <link>/tags/ec2/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/tags/ec2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecr</title>
+      <link>/tags/ecr/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/tags/ecr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>/tags/s3/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sagemaker</title>
+      <link>/tags/sagemaker/</link>
+      <pubDate>Thu, 13 Aug 2020 18:11:00 +0800</pubDate>
+      
+      <guid>/tags/sagemaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>/tags/git/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>airflow</title>
+      <link>/tags/airflow/</link>
+      <pubDate>Wed, 17 Jun 2020 18:02:00 +0800</pubDate>
+      
+      <guid>/tags/airflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scheduler</title>
+      <link>/tags/scheduler/</link>
+      <pubDate>Wed, 17 Jun 2020 18:02:00 +0800</pubDate>
+      
+      <guid>/tags/scheduler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wsl</title>
+      <link>/tags/wsl/</link>
+      <pubDate>Sat, 13 Jun 2020 17:51:00 +0800</pubDate>
+      
+      <guid>/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plantuml</title>
+      <link>/tags/plantuml/</link>
+      <pubDate>Sat, 06 Jun 2020 15:54:00 +0800</pubDate>
+      
+      <guid>/tags/plantuml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>/tags/django/</link>
+      <pubDate>Mon, 06 Apr 2020 20:47:26 +0000</pubDate>
+      
+      <guid>/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Mon, 06 Apr 2020 20:47:26 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Wed, 18 Mar 2020 14:15:00 +0800</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hexo</title>
+      <link>/tags/hexo/</link>
+      <pubDate>Wed, 18 Mar 2020 14:15:00 +0800</pubDate>
+      
+      <guid>/tags/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 18 Mar 2020 14:15:00 +0800</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>/tags/ssh/</link>
+      <pubDate>Mon, 02 Mar 2020 23:27:00 +0800</pubDate>
+      
+      <guid>/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>basic</title>
+      <link>/tags/basic/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>/tags/emacs/</link>
+      <pubDate>Fri, 14 Feb 2020 16:32:00 +0800</pubDate>
+      
+      <guid>/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>/tags/org/</link>
+      <pubDate>Fri, 14 Feb 2020 16:32:00 +0800</pubDate>
+      
+      <guid>/tags/org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberrypi</title>
+      <link>/tags/raspberrypi/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/tags/raspberrypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VNC</title>
+      <link>/tags/vnc/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/tags/vnc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wpa-cli</title>
+      <link>/tags/wpa-cli/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/tags/wpa-cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>start</title>
+      <link>/tags/start/</link>
+      <pubDate>Mon, 04 Nov 2019 17:27:00 +0800</pubDate>
+      
+      <guid>/tags/start/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>/tags/numpy/</link>
+      <pubDate>Thu, 03 Oct 2019 16:26:00 +0800</pubDate>
+      
+      <guid>/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kafka</title>
+      <link>/tags/kafka/</link>
+      <pubDate>Sat, 29 Dec 2018 16:01:00 +0800</pubDate>
+      
+      <guid>/tags/kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos</title>
+      <link>/tags/centos/</link>
+      <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daemon</title>
+      <link>/tags/daemon/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/daemon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>echarts</title>
+      <link>/tags/echarts/</link>
+      <pubDate>Tue, 02 Oct 2018 22:10:53 +0000</pubDate>
+      
+      <guid>/tags/echarts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bigdata</title>
+      <link>/tags/bigdata/</link>
+      <pubDate>Sun, 06 May 2018 15:25:00 +0800</pubDate>
+      
+      <guid>/tags/bigdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>/tags/sql/</link>
+      <pubDate>Thu, 28 Dec 2017 16:50:13 +0000</pubDate>
+      
+      <guid>/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Mon, 04 Dec 2017 19:07:05 +0000</pubDate>
+      
+      <guid>/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git-web</title>
+      <link>/tags/git-web/</link>
+      <pubDate>Thu, 30 Nov 2017 15:05:00 +0800</pubDate>
+      
+      <guid>/tags/git-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>系统编程</title>
+      <link>/tags/%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sat, 04 Nov 2017 15:11:28 +0000</pubDate>
+      
+      <guid>/tags/%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mind</title>
+      <link>/tags/mind/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>excel</title>
+      <link>/tags/excel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>/tags/tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

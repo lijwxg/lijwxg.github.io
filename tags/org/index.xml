@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>org on House of Heart</title>
+    <link>/tags/org/</link>
+    <description>Recent content in org on House of Heart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 14 Feb 2020 16:32:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>orgmode</title>
+      <link>/post/orgmode/</link>
+      <pubDate>Fri, 14 Feb 2020 16:32:00 +0800</pubDate>
+      
+      <guid>/post/orgmode/</guid>
+      <description>&lt;p&gt;org-mode作为日常记录的一大杀器, 有十分强大的功能, 学好是十分有必要的&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

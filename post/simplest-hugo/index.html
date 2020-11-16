@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用hugo构建个人blog - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章 作品的所有权利, 而不是遵守了若干用户协议后的权利.
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/simplest-hugo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="使用hugo构建个人blog" />
+<meta property="og:description" content="这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/simplest-hugo/" />
+<meta property="article:published_time" content="2020-03-17T18:07:00+08:00" />
+<meta property="article:modified_time" content="2020-03-17T18:07:00+08:00" />
+<meta itemprop="name" content="使用hugo构建个人blog">
+<meta itemprop="description" content="这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利.">
+<meta itemprop="datePublished" content="2020-03-17T18:07:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-17T18:07:00&#43;08:00" />
+<meta itemprop="wordCount" content="1618">
+
+
+
+<meta itemprop="keywords" content="Blog," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用hugo构建个人blog"/>
+<meta name="twitter:description" content="这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用hugo构建个人blog</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-17 </span>
+        
+          <span class="more-meta"> 约 1618 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#配置基础环境">配置基础环境</a></li>
+    <li><a href="#创建-blog-项目">创建 blog 项目</a></li>
+    <li><a href="#新增文章">新增文章</a></li>
+    <li><a href="#写在后面">写在后面</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>这不是一个全套式的富文本编辑blog网站, 这仅是一个自生成静态页面, 网页托管在 github 上. 注意: 是托管. 你保有文章
+作品的所有权利, 而不是遵守了若干用户协议后的权利.</p>
+<p>一个git, 一个编辑器, 生成属于自己的个人页面. 轻量, 无负担.</p>
+<h2 id="准备工作">准备工作</h2>
+<ul>
+<li>安装git, 一个为了编程而生的软件, 但不再仅为了编程而生.</li>
+<li>选择一个文本编辑工具: 小到一个记事本, 大到一框IDE, 只要你喜欢.</li>
+<li>简单的<a href="https://learnxinyminutes.com/docs/zh-cn/markdown-cn/">markdown</a>语言, 如果不会, 请花十分钟学习一下.</li>
+<li>一个 github 账号, 如果没有, 请花两分钟注册一个.</li>
+</ul>
+<h2 id="配置基础环境">配置基础环境</h2>
+<ul>
+<li>安装git之后, 将git命令配置为系统环境变量PATH中, git能够在终端或者git-bash中运行即可.</li>
+<li>生成<a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">ssh key</a>, 命令如下: 请在终端或者git-bash中运行. 生成秘钥文件在个人路径下的.ssh文件下, 其中需要使用的</li>
+</ul>
+<p>是公钥: id_rsa.pub.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;your_email@example.com&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>将生成的公钥文件内容添加到 github 账户配置中: Settings &ndash;&gt; SSH and GPG keys &ndash;&gt; New SSH key.</li>
+<li>在 github 页面上新建一个 GitHub Page 仓库, 注意仓库的命名规范: 用户名.github.io</li>
+<li>生成<a href="https://github.com/settings/tokens">Personal access tokens</a>, 注意生成后记得保存好,只会出现一次.用于 travis CI 集成部署时的读写权限
+Settings &ndash;&gt; Developer settings &ndash;&gt; Personal access tokens &ndash;&gt; Generate new token
+生成时注意一定要选择repo public_repo 权限, 其它不选也没关系</li>
+</ul>
+<h2 id="创建-blog-项目">创建 blog 项目</h2>
+<ol>
+<li>
+<p>从 github 上将上一步新建的仓库clone到本地.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone git@github.com:用户名/用户名.github.io.git
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>创建一个新的分支用来存放源文件, 注意: master分支被用来存放托管的静态页面.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git branch -b hugo
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果本地有安装hugo, 请略过这步. 为了简单, 和隐藏细节. 我们通过配置实现.</p>
+<ol>
+<li>
+<p>创建一个content/post文件夹, 以后编写的文章放在post路径下.</p>
+</li>
+<li>
+<p>在.gitignore中增加忽略文件夹public/, resource/</p>
+</li>
+<li>
+<p>添加主题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git submodule add https://github.com/olOwOlo/hugo-theme-even themes/even
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果不是even主题,请忽略此步骤
+从even主题下的exampleSite文件夹中复制config.toml到blog根路径下替换原来文件配置config.toml</p>
+<ol>
+<li>注释掉baseURL: #baseURL</li>
+<li>修改标题, 修改其它个人配置.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>将仓库中的修改提交到github上.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git add .
+git commit -m <span class="s2">&#34;初始化blog项目&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>本方法提供一键式脚本执行: <a href="https://github.com/lijwxg/lijwxg.github.io/blob/hugo/deploy.sh">deploy.sh</a></p>
+</li>
+<li>
+<p>关联github 和Travis-CI, 对我们的blog仓库进行持续集成部署.
+选中我们的blog仓库, 激活. 添加配置, 注意这里要增加一个变量token, 为了安装不能把token暴露在配置文件中,所以我们选用travis CI提供的变量方法.计为下一步中$token, 变量名保持一致即可.</p>
+</li>
+<li>
+<p>配置Travis-CI, 添加 .travis.yml 文件到项目下,提交. 本配置文件仅供参考, 如果有其它需求, 酌情修改.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>python<span class="w">
+</span><span class="w"></span><span class="k">os</span><span class="p">:</span><span class="w"> </span>linux<span class="w">
+</span><span class="w"></span><span class="k">dist</span><span class="p">:</span><span class="w"> </span>xenial<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">before_install</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>​<span class="w">    </span>- export<span class="w"> </span>TZ=<span class="s1">&#39;Asia/Shanghai&#39;</span><span class="w">  </span><span class="c"># 设置时区</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">git</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">depth</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>​<span class="w">    </span>- wget<span class="w"> </span>https<span class="p">:</span>//github.com/gohugoio/hugo/releases/download/v0<span class="m">.67.1</span>/hugo_0<span class="m">.67</span>.1_Linux-64bit.deb<span class="w">
+</span><span class="w"></span>​<span class="w">    </span>- sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>hugo<span class="cp">*.deb</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>​<span class="w">    </span>- hugo<span class="w"> </span>version<span class="w">
+</span><span class="w"></span>​<span class="w">    </span>- hugo<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">strategy</span><span class="p">:</span><span class="w"> </span>git<span class="w">
+</span><span class="w">    </span><span class="k">provider</span><span class="p">:</span><span class="w"> </span>pages<span class="w">
+</span><span class="w">    </span><span class="k">skip_cleanup</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="k">token</span><span class="p">:</span><span class="w"> </span>$token<span class="w">
+</span><span class="w">    </span><span class="k">on</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>hugo<span class="w">
+</span><span class="w">    </span><span class="k">local_dir</span><span class="p">:</span><span class="w"> </span>public<span class="w">
+</span><span class="w">    </span><span class="k">email</span><span class="p">:</span><span class="w"> </span>username@example.com<span class="w">
+</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Travis<span class="w"> </span>CI<span class="w">
+</span><span class="w">    </span><span class="k">target_branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>提交后查看<a href="https://www.travis-ci.org/">travis</a>网上是否集成成功,如果成功. 则可以访问个人主页</p>
+</li>
+<li>
+<p>username.github.io</p>
+</li>
+</ol>
+<h2 id="新增文章">新增文章</h2>
+<ol>
+<li>blog网站已经部署完成,我们可以自由的写作了, 故事从此开始&hellip;</li>
+<li>新建一个以.md作为后缀名的文件.按照markdown语法书写.
+<ul>
+<li>随着时间的增长, 你的markdown会停不下来</li>
+<li>注意hugo有特殊的 front-matter 要求, 作为文章的基本信息, 例如作者, 创建时间等</li>
+</ul>
+</li>
+<li>将文件放在创建项目是的content/post下面.</li>
+<li>使用一键式脚本提交, 让 travis CI 飞一会.</li>
+<li>新的页面已经打开.</li>
+</ol>
+<h2 id="写在后面">写在后面</h2>
+<ol>
+<li>一段新的旅程都是由迈出的第一步开始的, 愿你从此能流畅的书写.</li>
+<li>开始后, 问题也会接踵而至, 不要停下来, 解决一个问题只需要两步: 1. 找到问题, 2: 解决问题.</li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-03-17
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/blog/">Blog</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/hexo2hugo/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Blog从Hexo迁移到Hugo</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/ssh/">
+            <span class="next-text nav-default">SSH</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

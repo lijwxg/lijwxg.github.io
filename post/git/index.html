@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>git使用 - House of Heart</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="li" /><meta name="description" content="git 由 Linus Torvalds 开发完成, 为了编程而生.
+" /><meta name="keywords" content="Python, Emacs, Linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.1 with theme even" />
+
+
+<link rel="canonical" href="/post/git/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="git使用" />
+<meta property="og:description" content="git 由 Linus Torvalds 开发完成, 为了编程而生." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/git/" />
+<meta property="article:published_time" content="2017-11-30T14:53:00+08:00" />
+<meta property="article:modified_time" content="2017-11-30T14:53:00+08:00" />
+<meta itemprop="name" content="git使用">
+<meta itemprop="description" content="git 由 Linus Torvalds 开发完成, 为了编程而生.">
+<meta itemprop="datePublished" content="2017-11-30T14:53:00&#43;08:00" />
+<meta itemprop="dateModified" content="2017-11-30T14:53:00&#43;08:00" />
+<meta itemprop="wordCount" content="1432">
+
+
+
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git使用"/>
+<meta name="twitter:description" content="git 由 Linus Torvalds 开发完成, 为了编程而生."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">On the Way~</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/lijiawen/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">On the Way~</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/lijiawen/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">git使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-11-30 </span>
+        
+          <span class="more-meta"> 约 1432 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git-安装设置">git 安装设置</a>
+      <ul>
+        <li><a href="#git-的编译安装">Git 的编译安装</a></li>
+        <li><a href="#常用设置">常用设置</a></li>
+        <li><a href="#配置多-git-账号管理">配置多 git 账号管理</a></li>
+      </ul>
+    </li>
+    <li><a href="#常用操作">常用操作</a>
+      <ul>
+        <li><a href="#git-删除分支">git 删除分支</a></li>
+        <li><a href="#git-代码回滚">git 代码回滚</a></li>
+        <li><a href="#重新命名本地分支">重新命名本地分支</a></li>
+        <li><a href="#对已经提交的-log-的修改">对已经提交的 log 的修改</a></li>
+        <li><a href="#跟踪远程分支">跟踪远程分支</a></li>
+        <li><a href="#版本回退">版本回退</a></li>
+      </ul>
+    </li>
+    <li><a href="#对-tag-管理">对 tag 管理</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>git 由 Linus Torvalds 开发完成, 为了编程而生.</p>
+<h2 id="git-安装设置">git 安装设置</h2>
+<h3 id="git-的编译安装">Git 的编译安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ yum remove git
+$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+$ rpm -e nodeps git
+$ wget https://sourceforge.net/projects/asciidoc/files/latest/download
+$ unzip download
+$ <span class="nb">cd</span> asciidoc-8.6.9/
+$./configure
+$ sudo make install
+$ yum install xmlto
+
+$ tar -zxf git-1.7.2.2.tar.gz
+$ <span class="nb">cd</span> git-1.7.2.2
+$ make <span class="nv">prefix</span><span class="o">=</span>/usr/local/git all
+$ sudo make <span class="nv">prefix</span><span class="o">=</span>/usr/local/git install
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="常用设置">常用设置</h3>
+<p>windows 设置在提交文件时不默认修改换行符</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git config --global core.autocrlf false</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>解决 git status 显示中文乱码的问题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git config --global core.quotepath false</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置多-git-账号管理">配置多 git 账号管理</h3>
+<ul>
+<li>
+<p>生成新的 key</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># cd ~/.ssh</span>
+<span class="c1"># ssh-keygen -t rsa -C &#34;lijwxg@163.com&#34;         # 给新的key取个新的名字id_rsa_demo</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>设置配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># touch config</span>
+$ vim config
+&gt; <span class="c1"># Default GitHub</span>
+&gt; Host github.com
+&gt;   HostName github.com
+&gt;   User git
+&gt;   IdentityFile ~/.ssh/id_rsa
+&gt;
+&gt; <span class="c1"># Second GitHub</span>
+&gt; Host github-demo
+&gt;   HostName github.com
+&gt;   User git
+&gt;   IdentityFile ~/.ssh/id_rsa_demo
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>测试连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ssh -T git@github-demo</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>clone 代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git clone git@github-demo:username/username.github.io.git</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="常用操作">常用操作</h2>
+<h3 id="git-删除分支">git 删除分支</h3>
+<p>删除本地分支</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git branch -D br</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>删除远程分支</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git push origin :br           # origin后面有个空格,相同与把空分支推到远程分支,就是删除</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="git-代码回滚">git 代码回滚</h3>
+<p>git 代码回滚: 指的是将代码库某分支退回到以前的某个 commit id</p>
+<p>本地代码回滚</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git reset --hard commit id       # 回滚到commit id 将commit id之后的提交的commit都去除</span>
+<span class="c1"># git reset --hard HEAD~3           # 将最近3次的提交回滚</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>远程代码回滚:
+远程代码回滚比本地回滚要复杂</p>
+<p>应用场景:<!-- raw HTML omitted -->
+自动部署系统发布后发现问题,需要回滚到某一个 commit, 再重新发布
+原理: <!-- raw HTML omitted -->
+现将本地分支退回到某个 commit, 删除远程分支, 再重新 push 本地分支到远程
+操作步骤:</p>
+<ul>
+<li>git checkout the_branch</li>
+<li>git pull</li>
+<li>git branch the_branch_backup</li>
+<li>git reset &ndash;hard commit id</li>
+<li>git push origin :the_branch</li>
+<li>git push origin the_branch</li>
+<li>git push origin :the_branch_backup</li>
+</ul>
+<p>tips: master 分支是不能进行删除操作的</p>
+<h3 id="重新命名本地分支">重新命名本地分支</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git branch -m devel develop</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="对已经提交的-log-的修改">对已经提交的 log 的修改</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git commit --amend</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="跟踪远程分支">跟踪远程分支</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># git checkout --track checkversion/develop</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="版本回退">版本回退</h3>
+<ol>
+<li>
+<p>git 本地版本回退</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git reset --hard commit_id<span class="o">(</span>可用 git log –oneline 查看<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>git 远程版本回退</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git push origin HEAD --force <span class="c1">#远程提交回退</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>下面的命令也可以实现远程版本回退</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git reset --hard HEAD~1
+git push --force
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>git reverse 和 git reset 的区别</p>
+<p>git revert 是用一次新的 commit 来回滚之前的 commit，git reset 是直接删除指定的 commit。
+在回滚这一操作上看，效果差不多。但是在日后继续 merge 以前的老版本时有区别。因为 git revert 是用一次逆向的 commit“中和”之前的提交，因此日后合并老的 branch 时，导致这部分改变不会再次出现，但是 git reset 是之间把某些 commit 在某个 branch 上删除，因而和老的 branch 再次 merge 时，这些被回滚的 commit 应该还会被引入。</p>
+<ul>
+<li>
+<p>git reset 是把 HEAD 向后移动了一下，而 git revert 是 HEAD 继续前进，只是新的 commit 的内容和要 revert 的内容正好相反，能够抵消要被 revert 的内容。</p>
+</li>
+<li>
+<p>git reset + commit 号</p>
+</li>
+<li>
+<p>git reset 命令后面是需要加 2 种参数的：
+”–hard”和”–soft”。</p>
+<p>这条命令默认情况下是”–soft”。执行上述命令时，这该条 commit 号之 后（时间作为参考点）的所有 commit 的修改都会退回到 git 缓冲区中。</p>
+<p>使用 git status 命令可以在缓冲区中看到这些修改。而如果加上”–hard”参数，则缓冲区中不会存储这些修改，git 会直接丢弃这部分内容。</p>
+<p>但需要注意的一 个问题是：由于这样的重置是直接在本地的修改，无法提交到远程服务器，如果直接丢弃的内容已经被推到远程服务器上了，则会造成本地和服务器无法同步的问题。</p>
+<p>即 git reset –hard 只能针对本地操作，不能针对远程服务器进行同样操作。如果从本地删掉的内容没有推到服务器上，则不会有副作用；如果被推到服务器，则下次本地和 服务器进行同步时，这部分删掉的内容仍然会回来。</p>
+<p>而上面注意中提到的问题则可以很好的被 git revert 命令解决。</p>
+<p>git revert + commit 号
+该命令撤销对某个 commit 的提交，这一撤销动作会作为一个新的修改存储起来，这样，当你和服务器同步时，就不会产生什么副作用。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Yesterday is history.
+Tomorrow is a mystery.
+But today is a gift.
+That is why it&rsquo;s called the present.
+The old game: give a wolf a taste, then keep him hungry.</p>
+<h2 id="对-tag-管理">对 tag 管理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">- 2018-08-30 Thursday
+    git tag -a used_cache 670380f0362b3b12ad09942f039e80b18a47625e -m <span class="s2">&#34;版本：used_cache，发布日期：2018-08-29&#34;</span>
+    git push origin tag used_cache
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">li</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2017-11-30
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/github-gitlab/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Gitlab/GitHub</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B-%E5%8D%8F%E7%A8%8B/">
+            <span class="next-text nav-default">多线程,多进程,协程</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lijwxg@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/8232497/jiawen-li" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/lijwxg" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="https://space.bilibili.com/131750620/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">li</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
