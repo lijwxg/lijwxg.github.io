@@ -2,7 +2,8 @@
 
 * sklearn                                         :sklearn:machine_learning:
   机器学习框架
-** TODO sklearn入门
+** DONE sklearn入门
+   CLOSED: [2020-11-15 Sun 21:25]
    :properties:
    :export_file_name: sklearn-start
    :end:
@@ -17,11 +18,9 @@
 *** [[https://scikit-learn.org/stable/model_selection.html#model-selection][Model Selection]] 模型选择
 *** [[https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing][Preprocessing]] 预处理
 ** TODO 数据预处理
-   - State "DONE"       from              [2020-11-15 Sun 21:19]
    数据预处理的目的: 让数据适应模型, 匹配模型的需求
    从数据中检测, 纠正或删除损坏, 不准确或不适用于模型的记录的过程
 ** TODO 特征工程
-   - State "TODO"       from              [2020-11-15 Sun 21:21]
    特征工程的目的: 1. 降低计算成本, 2. 提升模型上限
    将原始数据妆花为更能代表预测模型的潜在问题的特征的过程.
    1. 挑选最相关的特征.
