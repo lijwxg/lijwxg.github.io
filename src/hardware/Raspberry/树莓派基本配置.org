@@ -1,0 +1,124 @@
+#+hugo_base_dir: /Users/li/projects/blog/lijwxg
+
+* 配置
+
+** 对于连接在同一网络中的树莓派操作系统,ping主机名可以获取到IP地址
+
+#+begin_src
+ping raspberrypi.local
+#+end_src
+
+** 无线网络配置
+
+1. 网络连接树莓派
+    - 使用网线连接树莓派到路由器.
+    - 从路由器管理界面获取树莓派IP地址.
+    - 使用局域网内部的设备通过ssh连接到树莓派pi/raspberry, 如果是kali, 默认账号/密码: root/toor.
+
+        - 对于kali操作系统需要修改NetworkManager.conf文件, 将managed的值改成true, 使NetworkManager能管理网卡设备, 可以通过图形化界面配置网络, 按后面步骤重启network服务
+
+            #+begin_src 
+            vim /etc/NetworkManager/NetworkManager.conf
+            [main]
+            plugins=ifupdown,keyfile
+
+            [ifupdown]
+            managed=false
+            #+end_src
+
+        - 配置/etc/wpa_supplicant/wpa_supplicant.conf文件
+
+            #+begin_src 
+            network={
+                ssid="li"
+                psk="12345678"
+                priority=1
+            }
+            #+end_src
+
+        - 使用命令行
+
+            #+begin_src 
+            wpa_cli -i wlan0 scan
+            wpa_cli -i wlan0 scan_result
+            wpa_cli -i wlan0 add_network //返回一个network_id
+            #+end_src
+
+            #+begin_src 
+            wpa_cli -i wlan0 add_network   //添加一个网络连接,会返回<network id> 
+            wpa_cli set_network <network id>  ssid '"name"'  //ssid名称 
+            wpa_cli set_network <network id>  psk '“psk”'　　//密码
+            wpa_cli set_network <network id>  scan_ssid 1
+            wpa_cli set_network <network id>  priority  1   //优先级
+            wpa_cli -i wlan0 save_config   //信息保存到默认的配置文件中
+            #+end_src
+
+        - 交互式创建, 有tab键自动补全功能
+
+            #+begin_src 
+            wpa_cli
+            > scan
+            > scan_result
+            > add_network
+            > set_network
+            #+end_src
+
+    - 重启网络服务
+
+        #+begin_src 
+        sudo /etc/init.d/networking restart
+        #+end_src
+
+        使用linux服务管理工具systemctl(兼容service)
+
+        #+begin_src 
+        systemctl restart network
+        #+end_src
+
+1. 通过HDMI连接显示屏进行图形化操作
+    ![rasp_wifi](https://i.loli.net/2019/11/17/3otxiPMAaWpzQef.jpg)
+
+** vnc配置
+
+1. 树莓派允许VNC登陆
+
+    - 打开配置项(如果是其它操作系统省略此步骤)
+
+    #+begin_src 
+    sudo raspi-config
+    #+end_src
+
+    - 选择接口选择项
+    ![vnc_option](https://i.loli.net/2019/11/17/FGrMNBcyWtiPaLk.jpg)
+    - 选择VNC接口
+    ![vnc](https://i.loli.net/2019/11/17/bEa8wlgiX7tu64s.jpg)
+    - 确认
+    ![vnc_finish](https://i.loli.net/2019/11/17/7GQAYJ2bWZSkDi1.jpg)
+
+1. 树莓派开启VNC服务
+
+    #+begin_src 
+    vncserver
+    #+end_src
+
+1. 使用vnc客户端(VNC Viewer)连接到树莓派
+    ![vnc_viewer](https://i.loli.net/2019/11/17/Ug2CQ6yFrnOEkNh.jpg)
+
+    ![vnc_connect](https://i.loli.net/2019/11/17/2yrIsjdpWkYmexQ.jpg)
+
+** 配置nginx
+
+1. 安装nginx
+
+    #+begin_src 
+    sudo apt-get install nginx
+    #+end_src
+
+1. 启动nginx
+
+    #+begin_src 
+    sudo /etc/init.d/nginx start
+    #+end_src
+
+1. 验证nginx
+    ![nginx_start](https://i.loli.net/2019/11/17/heV1MrYcy4HN63m.jpg)

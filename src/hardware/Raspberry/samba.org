@@ -1,0 +1,38 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg
+
+---
+date: 2018-07-19 08:10:53
+tags: linux
+---
+
+** 安装samba
+
+#+begin_src 
+sudo apt-get install samba
+#+end_src
+
+** 配置samba
+
+#+begin_src 
+cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
+sudo vim /etc/samba/smb.conf
+======================
+[share]           #共享文件的名称， 将在网络上以此名称显示
+path = /share         #共享文件的路径
+valid users = pi        #允许访问的用户
+browseable = yes        #允许浏览
+public = yes        #共享开放
+writable = yes        #可写
+#+end_src
+
+** 添加samba共享用户
+
+#+begin_src 
+sudo smbpasswd -a pi
+#+end_src
+
+添加pi用户到sambashare组中, 能够使用pi用户登录到其中
+
+** 访问共享文件
+
+在运行(Ctrl+R)中输入\\\\192.168.82.119进行访问

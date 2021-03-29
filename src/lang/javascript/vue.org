@@ -1,0 +1,24 @@
+#+hugo_base_dir: /Users/li/projects/blog/lijwxg
+
+* Vue学习
+
+** 查看视频
+
+** Vue初识
+
+1. Vue是一个渐进式框架
+   - 渐进式意味着可以将Vue作为应用的一部分嵌入到web中
+   - 可以使用Vue全家桶
+1. Vue有很多特点, 以及Web开发中的高级功能
+
+** Vue基本语法
+
+** Vue组件化开发
+
+** Vue CLI
+
+** Vue-router
+
+** VueX详解
+
+** 网络封装

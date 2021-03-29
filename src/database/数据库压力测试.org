@@ -1,0 +1,10 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg/
+
+* 数据库压力测试
+
+** Sysbench
+
+*** 安装
+    #+begin_src bash
+    apt install sysbench
+    #+end_src
