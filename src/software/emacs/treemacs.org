@@ -1,0 +1,12 @@
+#+hugo_base_dir: ~/projects/blog/lijwxg/
+
+* minior mode
+** treemacs mode
+   :properties:
+   :export_file_name treemacs
+   :end:
+  - 启动
+    #+begin_src emacs-lisp
+    <spac> 
+    #+end_src
+  - 增加
